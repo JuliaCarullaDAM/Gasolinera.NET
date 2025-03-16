@@ -1,0 +1,266 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ProjecteGasolinera
+</name>
+</assembly>
+<members>
+<member name="T:ProjecteGasolinera.GasolineraDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.CARBURANTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.COMANDADataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITS_SORTIDORDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.HISTORIAL_PREUSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SORTIDORDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SUBMINISTRAMENTDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.CARBURANTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.COMANDARow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITS_SORTIDORRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.HISTORIAL_PREUSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SORTIDORRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SUBMINISTRAMENTRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.CARBURANTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.COMANDARowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.DIPOSITS_SORTIDORRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.HISTORIAL_PREUSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SORTIDORRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSet.SUBMINISTRAMENTRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.COMANDATableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITS_SORTIDORTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.HISTORIAL_PREUSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProjecteGasolinera.GasolineraDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProjecteGasolinera.GasolineraDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProjecteGasolinera.GasolineraDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.UpdateAll(ProjecteGasolinera.GasolineraDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.GasolineraDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:ProjecteGasolinera.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.adblue">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.cotxeElectricTransparent">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.diesel_e">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.efitec_95">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.efitec_98">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor4">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor5">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor6">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>

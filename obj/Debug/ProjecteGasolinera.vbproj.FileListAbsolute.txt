@@ -1,0 +1,15 @@
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\bin\Debug\ProjecteGasolinera.exe.config
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\bin\Debug\ProjecteGasolinera.exe
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\bin\Debug\ProjecteGasolinera.pdb
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\bin\Debug\ProjecteGasolinera.xml
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.vbprojResolveAssemblyReference.cache
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.Form1.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.Resources.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.vbproj.GenerateResource.Cache
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.exe
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.xml
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.pdb
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormEstatSortidor.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormCombustioSeleccio.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormCarregaElectric.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormPIN.resources

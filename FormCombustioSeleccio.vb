@@ -53,10 +53,9 @@
             resposta = MessageBox.Show("Sortidor: " + _idSortidor + vbNewLine + "Combustible: " + nomCombustible + vbNewLine + "Import: " + import.ToString + "€", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If resposta = DialogResult.Yes Then
-                Dim formPin As New FormPIN(_idSortidor)
+                Dim formPin As New FormPIN(_idSortidor, Me)
                 formPin.Show()
-                'Potser no fer close perque aqui hi ha bastantes dades per al seguent form després del pin
-                'Me.Close()
+                btCancelar.Enabled = False
             End If
         ElseIf idCombustible <= 0 Then
             MessageBox.Show("No ha seleccionat cap combustible!", "Seleccioni el combustible", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -73,5 +72,10 @@
             SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
             Me.Close()
         End If
+    End Sub
+
+    Public Sub FormRepostatge_show()
+        Dim FormRepostar As New FormRepostarCombustio(_idSortidor, idCombustible, import)
+        FormRepostar.Show()
     End Sub
 End Class

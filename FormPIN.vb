@@ -1,11 +1,18 @@
 ﻿Public Class FormPIN
     Dim segonsTimeout As Integer = 60
     Private _idSortidor As String
+    Private _formCombustio As FormCombustioSeleccio
 
     Public Sub New(sortidor As String)
         InitializeComponent()
         _idSortidor = sortidor
     End Sub
+
+    Public Sub New(sortidor As String, formCombustio As FormCombustioSeleccio)
+        Me.New(sortidor)
+        _formCombustio = formCombustio
+    End Sub
+
     Private Sub bt_click(sender As Object, e As EventArgs) Handles bt1.Click, bt2.Click, bt3.Click, bt4.Click, bt5.Click, bt6.Click, bt7.Click, bt8.Click, bt9.Click, bt0.Click
         If tbTargeta.Text.Length < 4 Then
             tbTargeta.Text = tbTargeta.Text + "*"
@@ -18,8 +25,9 @@
     End Sub
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
-        'llançar formulari nou amb l'animació de repostar i les dades que s'hagin de passar
-        'fer l'animació amb un progress bar <- pot quedar molt top en cotxes elecrics i si es pot canviar el color amb els de gasolina tb
+
+        _formCombustio.FormRepostatge_show()
+        _formCombustio.Close()
         Me.Close()
     End Sub
 
@@ -32,6 +40,7 @@
 
         If segonsTimeout <= 0 Then
             SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
+            _formCombustio.Close()
             Me.Close()
         End If
     End Sub

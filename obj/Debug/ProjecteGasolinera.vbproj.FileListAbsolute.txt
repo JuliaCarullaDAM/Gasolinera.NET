@@ -13,3 +13,4 @@ C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debu
 C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormCombustioSeleccio.resources
 C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormCarregaElectric.resources
 C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormPIN.resources
+C:\Users\28jul\Documents\.NET M07\ProjecteGasolinera\ProjecteGasolinera\obj\Debug\ProjecteGasolinera.FormRepostarCombustio.resources

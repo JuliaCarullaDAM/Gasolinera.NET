@@ -103,6 +103,12 @@
     <Compile Include="FormPIN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormRepostarCombustio.Designer.vb">
+      <DependentUpon>FormRepostarCombustio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRepostarCombustio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GasolineraDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPIN.resx">
       <DependentUpon>FormPIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRepostarCombustio.resx">
+      <DependentUpon>FormRepostarCombustio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

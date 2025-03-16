@@ -10,20 +10,4 @@
         Me.Close()
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
-    End Sub
-
-    Private Sub btCarregar_click(sender As Object, e As EventArgs) Handles btCarregar.Click
-        Dim formPin As New FormPIN(_idSortidor)
-        formPin.Show()
-    End Sub
-
-    Private Sub FormCarregaElectric_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

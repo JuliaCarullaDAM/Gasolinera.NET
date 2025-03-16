@@ -22,88 +22,99 @@ Partial Class FormRepostarCombustio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.components = New System.ComponentModel.Container()
+        Me.lbQuantitat = New System.Windows.Forms.Label()
+        Me.lbImport = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lbCapacitat = New System.Windows.Forms.Label()
+        Me.lbCombustibleActual = New System.Windows.Forms.Label()
+        Me.lbPreuLitre = New System.Windows.Forms.Label()
+        Me.lbImportIntroduit = New System.Windows.Forms.Label()
         Me.btParar = New System.Windows.Forms.Button()
         Me.btCarregar = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.btFinalitzar = New System.Windows.Forms.Button()
+        Me.TimerRepostar = New System.Windows.Forms.Timer(Me.components)
+        Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
+        Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
         Me.SuspendLayout()
         '
-        'Label1
+        'lbQuantitat
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Quantitat"
+        Me.lbQuantitat.AutoSize = True
+        Me.lbQuantitat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbQuantitat.Location = New System.Drawing.Point(34, 45)
+        Me.lbQuantitat.Name = "lbQuantitat"
+        Me.lbQuantitat.Size = New System.Drawing.Size(75, 20)
+        Me.lbQuantitat.TabIndex = 0
+        Me.lbQuantitat.Text = "Quantitat"
         '
-        'Label2
+        'lbImport
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 76)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Import"
+        Me.lbImport.AutoSize = True
+        Me.lbImport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbImport.Location = New System.Drawing.Point(34, 76)
+        Me.lbImport.Name = "lbImport"
+        Me.lbImport.Size = New System.Drawing.Size(55, 20)
+        Me.lbImport.TabIndex = 1
+        Me.lbImport.Text = "Import"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 188)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(33, 194)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 13)
+        Me.Label3.Size = New System.Drawing.Size(138, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Dades del cotxe"
         '
-        'Label4
+        'lbCapacitat
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 223)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Capacitat"
+        Me.lbCapacitat.AutoSize = True
+        Me.lbCapacitat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCapacitat.Location = New System.Drawing.Point(34, 223)
+        Me.lbCapacitat.Name = "lbCapacitat"
+        Me.lbCapacitat.Size = New System.Drawing.Size(77, 20)
+        Me.lbCapacitat.TabIndex = 3
+        Me.lbCapacitat.Text = "Capacitat"
         '
-        'Label5
+        'lbCombustibleActual
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(34, 253)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Combustible actual"
+        Me.lbCombustibleActual.AutoSize = True
+        Me.lbCombustibleActual.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCombustibleActual.Location = New System.Drawing.Point(34, 253)
+        Me.lbCombustibleActual.Name = "lbCombustibleActual"
+        Me.lbCombustibleActual.Size = New System.Drawing.Size(144, 20)
+        Me.lbCombustibleActual.TabIndex = 4
+        Me.lbCombustibleActual.Text = "Combustible actual"
         '
-        'Label6
+        'lbPreuLitre
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(34, 109)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(29, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Preu"
+        Me.lbPreuLitre.AutoSize = True
+        Me.lbPreuLitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPreuLitre.Location = New System.Drawing.Point(34, 109)
+        Me.lbPreuLitre.Name = "lbPreuLitre"
+        Me.lbPreuLitre.Size = New System.Drawing.Size(55, 20)
+        Me.lbPreuLitre.TabIndex = 5
+        Me.lbPreuLitre.Text = "Preu/L"
         '
-        'Label7
+        'lbImportIntroduit
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(205, 45)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(35, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Pagat"
+        Me.lbImportIntroduit.AutoSize = True
+        Me.lbImportIntroduit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbImportIntroduit.Location = New System.Drawing.Point(287, 45)
+        Me.lbImportIntroduit.Name = "lbImportIntroduit"
+        Me.lbImportIntroduit.Size = New System.Drawing.Size(116, 20)
+        Me.lbImportIntroduit.TabIndex = 6
+        Me.lbImportIntroduit.Text = "Import introduït"
         '
         'btParar
         '
         Me.btParar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btParar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btParar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btParar.Location = New System.Drawing.Point(395, 85)
+        Me.btParar.Location = New System.Drawing.Point(291, 185)
         Me.btParar.Name = "btParar"
         Me.btParar.Size = New System.Drawing.Size(188, 36)
         Me.btParar.TabIndex = 8
@@ -115,7 +126,7 @@ Partial Class FormRepostarCombustio
         Me.btCarregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btCarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCarregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btCarregar.Location = New System.Drawing.Point(395, 31)
+        Me.btCarregar.Location = New System.Drawing.Point(291, 135)
         Me.btCarregar.Name = "btCarregar"
         Me.btCarregar.Size = New System.Drawing.Size(188, 36)
         Me.btCarregar.TabIndex = 7
@@ -124,9 +135,9 @@ Partial Class FormRepostarCombustio
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(37, 321)
+        Me.ProgressBar1.Location = New System.Drawing.Point(37, 308)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(442, 36)
         Me.ProgressBar1.TabIndex = 9
         '
         'btFinalitzar
@@ -135,29 +146,41 @@ Partial Class FormRepostarCombustio
         Me.btFinalitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btFinalitzar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btFinalitzar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btFinalitzar.Location = New System.Drawing.Point(395, 308)
+        Me.btFinalitzar.Location = New System.Drawing.Point(291, 237)
         Me.btFinalitzar.Name = "btFinalitzar"
         Me.btFinalitzar.Size = New System.Drawing.Size(188, 36)
         Me.btFinalitzar.TabIndex = 10
         Me.btFinalitzar.Text = "Finalitzar"
         Me.btFinalitzar.UseVisualStyleBackColor = False
         '
+        'TimerRepostar
+        '
+        Me.TimerRepostar.Interval = 10
+        '
+        'CarburantTableAdapter
+        '
+        Me.CarburantTableAdapter.ClearBeforeFill = True
+        '
+        'SortidorTableAdapter
+        '
+        Me.SortidorTableAdapter.ClearBeforeFill = True
+        '
         'FormRepostarCombustio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(595, 365)
+        Me.ClientSize = New System.Drawing.Size(514, 365)
         Me.Controls.Add(Me.btFinalitzar)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btParar)
         Me.Controls.Add(Me.btCarregar)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lbImportIntroduit)
+        Me.Controls.Add(Me.lbPreuLitre)
+        Me.Controls.Add(Me.lbCombustibleActual)
+        Me.Controls.Add(Me.lbCapacitat)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbImport)
+        Me.Controls.Add(Me.lbQuantitat)
         Me.Name = "FormRepostarCombustio"
         Me.Text = "FormRepostarCombustio"
         Me.ResumeLayout(False)
@@ -165,15 +188,18 @@ Partial Class FormRepostarCombustio
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbQuantitat As Label
+    Friend WithEvents lbImport As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lbCapacitat As Label
+    Friend WithEvents lbCombustibleActual As Label
+    Friend WithEvents lbPreuLitre As Label
+    Friend WithEvents lbImportIntroduit As Label
     Friend WithEvents btParar As Button
     Friend WithEvents btCarregar As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents btFinalitzar As Button
+    Friend WithEvents TimerRepostar As Timer
+    Friend WithEvents CarburantTableAdapter As GasolineraDataSetTableAdapters.CARBURANTTableAdapter
+    Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
 End Class

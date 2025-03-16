@@ -25,8 +25,8 @@ Partial Class FormEstatSortidor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btRepostar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,30 +53,30 @@ Partial Class FormEstatSortidor
         'btRepostar
         '
         Me.btRepostar.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btRepostar.Location = New System.Drawing.Point(120, 403)
+        Me.btRepostar.Location = New System.Drawing.Point(89, 348)
         Me.btRepostar.Name = "btRepostar"
         Me.btRepostar.Size = New System.Drawing.Size(283, 45)
         Me.btRepostar.TabIndex = 2
         Me.btRepostar.Text = "Repostar vehicle" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btRepostar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(79, 170)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(385, 185)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
         'SortidorTableAdapter
         '
         Me.SortidorTableAdapter.ClearBeforeFill = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(127, 139)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(229, 182)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'FormEstatSortidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(548, 485)
+        Me.ClientSize = New System.Drawing.Size(478, 429)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btRepostar)
         Me.Controls.Add(Me.Label2)

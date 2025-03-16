@@ -25,7 +25,7 @@
     End Sub
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
-
+        'FALTA POSAR LA PART ELÈCTRICA I FER IF SEGONS ID DE SORTIDOR
         _formCombustio.FormRepostatge_show()
         _formCombustio.Close()
         Me.Close()
@@ -43,5 +43,6 @@
             _formCombustio.Close()
             Me.Close()
         End If
+
     End Sub
 End Class

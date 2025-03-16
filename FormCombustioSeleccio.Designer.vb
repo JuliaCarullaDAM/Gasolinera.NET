@@ -37,10 +37,6 @@ Partial Class FormCombustioSeleccio
         Me.tbImport = New System.Windows.Forms.TextBox()
         Me.btOK = New System.Windows.Forms.Button()
         Me.btEsborrar = New System.Windows.Forms.Button()
-        Me.pbAdBlue = New System.Windows.Forms.PictureBox()
-        Me.pbDiesel = New System.Windows.Forms.PictureBox()
-        Me.pbGasolina98 = New System.Windows.Forms.PictureBox()
-        Me.pbGasoilina95 = New System.Windows.Forms.PictureBox()
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.lbPreuGas95 = New System.Windows.Forms.Label()
         Me.lbPreuGas98 = New System.Windows.Forms.Label()
@@ -48,6 +44,10 @@ Partial Class FormCombustioSeleccio
         Me.lbPreuAdblue = New System.Windows.Forms.Label()
         Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
+        Me.pbAdBlue = New System.Windows.Forms.PictureBox()
+        Me.pbDiesel = New System.Windows.Forms.PictureBox()
+        Me.pbGasolina98 = New System.Windows.Forms.PictureBox()
+        Me.pbGasoilina95 = New System.Windows.Forms.PictureBox()
         CType(Me.pbAdBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDiesel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbGasolina98, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,50 +207,6 @@ Partial Class FormCombustioSeleccio
         Me.btEsborrar.Text = "Esborrar"
         Me.btEsborrar.UseVisualStyleBackColor = False
         '
-        'pbAdBlue
-        '
-        Me.pbAdBlue.Image = Global.ProjecteGasolinera.My.Resources.Resources.adblue
-        Me.pbAdBlue.Location = New System.Drawing.Point(539, 68)
-        Me.pbAdBlue.Name = "pbAdBlue"
-        Me.pbAdBlue.Size = New System.Drawing.Size(100, 100)
-        Me.pbAdBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbAdBlue.TabIndex = 3
-        Me.pbAdBlue.TabStop = False
-        Me.pbAdBlue.Tag = "4"
-        '
-        'pbDiesel
-        '
-        Me.pbDiesel.Image = Global.ProjecteGasolinera.My.Resources.Resources.diesel_e
-        Me.pbDiesel.Location = New System.Drawing.Point(377, 68)
-        Me.pbDiesel.Name = "pbDiesel"
-        Me.pbDiesel.Size = New System.Drawing.Size(100, 100)
-        Me.pbDiesel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbDiesel.TabIndex = 2
-        Me.pbDiesel.TabStop = False
-        Me.pbDiesel.Tag = "3"
-        '
-        'pbGasolina98
-        '
-        Me.pbGasolina98.Image = Global.ProjecteGasolinera.My.Resources.Resources.efitec_98
-        Me.pbGasolina98.Location = New System.Drawing.Point(226, 68)
-        Me.pbGasolina98.Name = "pbGasolina98"
-        Me.pbGasolina98.Size = New System.Drawing.Size(100, 100)
-        Me.pbGasolina98.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbGasolina98.TabIndex = 1
-        Me.pbGasolina98.TabStop = False
-        Me.pbGasolina98.Tag = "2"
-        '
-        'pbGasoilina95
-        '
-        Me.pbGasoilina95.Image = Global.ProjecteGasolinera.My.Resources.Resources.efitec_95
-        Me.pbGasoilina95.Location = New System.Drawing.Point(77, 68)
-        Me.pbGasoilina95.Name = "pbGasoilina95"
-        Me.pbGasoilina95.Size = New System.Drawing.Size(100, 100)
-        Me.pbGasoilina95.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbGasoilina95.TabIndex = 0
-        Me.pbGasoilina95.TabStop = False
-        Me.pbGasoilina95.Tag = "1"
-        '
         'btCancelar
         '
         Me.btCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -314,6 +270,50 @@ Partial Class FormCombustioSeleccio
         'SortidorTableAdapter
         '
         Me.SortidorTableAdapter.ClearBeforeFill = True
+        '
+        'pbAdBlue
+        '
+        Me.pbAdBlue.Image = Global.ProjecteGasolinera.My.Resources.Resources.adblue
+        Me.pbAdBlue.Location = New System.Drawing.Point(539, 68)
+        Me.pbAdBlue.Name = "pbAdBlue"
+        Me.pbAdBlue.Size = New System.Drawing.Size(100, 100)
+        Me.pbAdBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbAdBlue.TabIndex = 3
+        Me.pbAdBlue.TabStop = False
+        Me.pbAdBlue.Tag = "4"
+        '
+        'pbDiesel
+        '
+        Me.pbDiesel.Image = Global.ProjecteGasolinera.My.Resources.Resources.diesel_e
+        Me.pbDiesel.Location = New System.Drawing.Point(377, 68)
+        Me.pbDiesel.Name = "pbDiesel"
+        Me.pbDiesel.Size = New System.Drawing.Size(100, 100)
+        Me.pbDiesel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbDiesel.TabIndex = 2
+        Me.pbDiesel.TabStop = False
+        Me.pbDiesel.Tag = "3"
+        '
+        'pbGasolina98
+        '
+        Me.pbGasolina98.Image = Global.ProjecteGasolinera.My.Resources.Resources.efitec_98
+        Me.pbGasolina98.Location = New System.Drawing.Point(226, 68)
+        Me.pbGasolina98.Name = "pbGasolina98"
+        Me.pbGasolina98.Size = New System.Drawing.Size(100, 100)
+        Me.pbGasolina98.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbGasolina98.TabIndex = 1
+        Me.pbGasolina98.TabStop = False
+        Me.pbGasolina98.Tag = "2"
+        '
+        'pbGasoilina95
+        '
+        Me.pbGasoilina95.Image = Global.ProjecteGasolinera.My.Resources.Resources.efitec_95
+        Me.pbGasoilina95.Location = New System.Drawing.Point(77, 68)
+        Me.pbGasoilina95.Name = "pbGasoilina95"
+        Me.pbGasoilina95.Size = New System.Drawing.Size(100, 100)
+        Me.pbGasoilina95.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbGasoilina95.TabIndex = 0
+        Me.pbGasoilina95.TabStop = False
+        Me.pbGasoilina95.Tag = "1"
         '
         'FormCombustioSeleccio
         '

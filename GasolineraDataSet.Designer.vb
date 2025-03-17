@@ -6523,26 +6523,34 @@ Namespace GasolineraDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, False)>
-        Public Overloads Overridable Function InsertSubministrament(ByVal id_sortidor As Integer, ByVal id_carburant As Integer, ByVal import_subministrat As Double, ByVal quantitat_subministrada As Double, ByVal preu_litre As Double) As Integer
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertSubministrament(ByVal id_sortidor As Integer, ByVal id_carburant As Global.System.Nullable(Of Integer), ByVal import_subministrat As Global.System.Nullable(Of Integer), ByVal quantitat_subministrada As Double, ByVal preu_litre As Double) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(id_sortidor, Integer)
-            command.Parameters(1).Value = CType(id_carburant, Integer)
-            command.Parameters(2).Value = CType(import_subministrat, Double)
-            command.Parameters(3).Value = CType(quantitat_subministrada, Double)
-            command.Parameters(4).Value = CType(preu_litre, Double)
+            command.Parameters(0).Value = CType(id_sortidor,Integer)
+            If (id_carburant.HasValue = true) Then
+                command.Parameters(1).Value = CType(id_carburant.Value,Integer)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (import_subministrat.HasValue = true) Then
+                command.Parameters(2).Value = CType(import_subministrat.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            command.Parameters(3).Value = CType(quantitat_subministrada,Double)
+            command.Parameters(4).Value = CType(preu_litre,Double)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open()
+                command.Connection.Open
             End If
             Dim returnValue As Integer
-            Try
+            Try 
                 returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close()
+                    command.Connection.Close
                 End If
             End Try
             Return returnValue

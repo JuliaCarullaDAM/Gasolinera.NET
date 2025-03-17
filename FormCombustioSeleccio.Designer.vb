@@ -48,6 +48,7 @@ Partial Class FormCombustioSeleccio
         Me.pbDiesel = New System.Windows.Forms.PictureBox()
         Me.pbGasolina98 = New System.Windows.Forms.PictureBox()
         Me.pbGasoilina95 = New System.Windows.Forms.PictureBox()
+        Me.btPle = New System.Windows.Forms.Button()
         CType(Me.pbAdBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDiesel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbGasolina98, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -315,12 +316,25 @@ Partial Class FormCombustioSeleccio
         Me.pbGasoilina95.TabStop = False
         Me.pbGasoilina95.Tag = "1"
         '
+        'btPle
+        '
+        Me.btPle.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.btPle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btPle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btPle.Location = New System.Drawing.Point(564, 331)
+        Me.btPle.Name = "btPle"
+        Me.btPle.Size = New System.Drawing.Size(75, 23)
+        Me.btPle.TabIndex = 25
+        Me.btPle.Text = "Plenar"
+        Me.btPle.UseVisualStyleBackColor = False
+        '
         'FormCombustioSeleccio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(720, 384)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btPle)
         Me.Controls.Add(Me.lbPreuAdblue)
         Me.Controls.Add(Me.lbPreuDiesel)
         Me.Controls.Add(Me.lbPreuGas98)
@@ -382,4 +396,5 @@ Partial Class FormCombustioSeleccio
     Friend WithEvents lbPreuGas98 As Label
     Friend WithEvents lbPreuDiesel As Label
     Friend WithEvents lbPreuAdblue As Label
+    Friend WithEvents btPle As Button
 End Class

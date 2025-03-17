@@ -77,7 +77,7 @@
 
         'En cas d'haver clicat a cancel·lar, si no s'ha repostat, no es farà cap consulta ja que no té sentit comptabilitzar 0 litres i un import de 0
         If quantitatRepostada > 0.00 Then
-            SubministramentTableAdapter.InsertSubministrament(_idSortidor, _idCombustible, importCombustible, quantitatRepostada, preuLitre)
+            SubministramentTableAdapter.InsertSubministrament(_idSortidor, _idCombustible, Convert.ToDouble(importCombustible), quantitatRepostada, preuLitre)
             DipositTableAdapter.UpdateCapacitatDiposit(quantitatRepostada, _idCombustible, _idSortidor)
         End If
     End Sub

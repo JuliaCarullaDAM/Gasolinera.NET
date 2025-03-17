@@ -30,11 +30,11 @@
         If tbTargeta.Text.Length = 4 Then
             _formCombustio.FormRepostatge_show()
             _formCombustio.Close()
+            Me.Close()
         Else
             MessageBox.Show("S'ha introduït un PIN no vàlid", "PIN Incorrecte", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
-        Me.Close()
     End Sub
 
     Private Sub FormPIN_Load(sender As Object, e As EventArgs) Handles Me.Load

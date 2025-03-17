@@ -43,6 +43,10 @@
         End If
     End Sub
 
+    Private Sub btPle_Click(sender As Object, e As EventArgs) Handles btPle.Click
+        tbImport.Text = "99"
+    End Sub
+
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
 
         If idCombustible > 0 AndAlso tbImport.Text.Length > 0 Then
@@ -78,4 +82,5 @@
         Dim FormRepostar As New FormRepostarCombustio(_idSortidor, idCombustible, import)
         FormRepostar.Show()
     End Sub
+
 End Class

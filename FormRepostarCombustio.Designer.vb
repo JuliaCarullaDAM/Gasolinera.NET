@@ -39,6 +39,7 @@ Partial Class FormRepostarCombustio
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
         Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
         Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbQuantitat
@@ -175,11 +176,22 @@ Partial Class FormRepostarCombustio
         '
         Me.DipositTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(33, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(156, 20)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Dades del sortidor"
+        '
         'FormRepostarCombustio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(514, 365)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btFinalitzar)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btParar)
@@ -214,4 +226,5 @@ Partial Class FormRepostarCombustio
     Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
     Friend WithEvents SubministramentTableAdapter As GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter
     Friend WithEvents DipositTableAdapter As GasolineraDataSetTableAdapters.DIPOSITTableAdapter
+    Friend WithEvents Label1 As Label
 End Class

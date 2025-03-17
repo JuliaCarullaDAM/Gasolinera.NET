@@ -26,8 +26,14 @@
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
         'FALTA POSAR LA PART ELÈCTRICA I FER IF SEGONS ID DE SORTIDOR
-        _formCombustio.FormRepostatge_show()
-        _formCombustio.Close()
+
+        If tbTargeta.Text.Length = 4 Then
+            _formCombustio.FormRepostatge_show()
+            _formCombustio.Close()
+        Else
+            MessageBox.Show("S'ha introduït un PIN no vàlid", "PIN Incorrecte", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
         Me.Close()
     End Sub
 

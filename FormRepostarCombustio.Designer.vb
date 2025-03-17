@@ -37,6 +37,8 @@ Partial Class FormRepostarCombustio
         Me.TimerRepostar = New System.Windows.Forms.Timer(Me.components)
         Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
+        Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
+        Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SuspendLayout()
         '
         'lbQuantitat
@@ -118,7 +120,7 @@ Partial Class FormRepostarCombustio
         Me.btParar.Name = "btParar"
         Me.btParar.Size = New System.Drawing.Size(188, 36)
         Me.btParar.TabIndex = 8
-        Me.btParar.Text = "Parar càrrega"
+        Me.btParar.Text = "Parar/Cancel·lar"
         Me.btParar.UseVisualStyleBackColor = False
         '
         'btCarregar
@@ -165,6 +167,14 @@ Partial Class FormRepostarCombustio
         '
         Me.SortidorTableAdapter.ClearBeforeFill = True
         '
+        'SubministramentTableAdapter
+        '
+        Me.SubministramentTableAdapter.ClearBeforeFill = True
+        '
+        'DipositTableAdapter
+        '
+        Me.DipositTableAdapter.ClearBeforeFill = True
+        '
         'FormRepostarCombustio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -202,4 +212,6 @@ Partial Class FormRepostarCombustio
     Friend WithEvents TimerRepostar As Timer
     Friend WithEvents CarburantTableAdapter As GasolineraDataSetTableAdapters.CARBURANTTableAdapter
     Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
+    Friend WithEvents SubministramentTableAdapter As GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter
+    Friend WithEvents DipositTableAdapter As GasolineraDataSetTableAdapters.DIPOSITTableAdapter
 End Class

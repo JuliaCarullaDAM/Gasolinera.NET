@@ -32,6 +32,8 @@
 
         lbImportIntroduit.Text = "Import introduït: " + _import.ToString + "€"
         lbPreuLitre.Text = "Preu/L: " + preuLitre.ToString + "€/L"
+
+        btFinalitzar.Enabled = False
     End Sub
 
     Private Sub TimerRepostar_Tick(sender As Object, e As EventArgs) Handles TimerRepostar.Tick
@@ -48,7 +50,7 @@
             lbImport.Text = "Import: " + importCombustible.ToString("F2") + "€"
 
             combustible_actual += 0.01
-            lbCombustibleActual.Text = "Combustible actual: " + combustible_actual.ToString("F2")
+            lbCombustibleActual.Text = "Combustible actual: " + combustible_actual.ToString("F2") + " L"
 
             ProgressBar1.Value = CInt(combustible_actual * 100 / capacitat)
         End If
@@ -59,11 +61,10 @@
     End Sub
 
     Private Sub btParar_Click(sender As Object, e As EventArgs) Handles btParar.Click
-        TimerRepostar.Stop()
+        DipositPle()
     End Sub
 
     Private Sub btFinalitzar_Click(sender As Object, e As EventArgs) Handles btFinalitzar.Click
-        DipositPle()
         SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
         Me.Close()
     End Sub
@@ -72,6 +73,12 @@
         TimerRepostar.Stop()
         btCarregar.Enabled = False
         btParar.Enabled = False
-        'fer la consulta de la bbdd
+        btFinalitzar.Enabled = True
+
+        'En cas d'haver clicat a cancel·lar, si no s'ha repostat, no es farà cap consulta ja que no té sentit comptabilitzar 0 litres i un import de 0
+        If quantitatRepostada > 0.00 Then
+            SubministramentTableAdapter.InsertSubministrament(_idSortidor, _idCombustible, importCombustible, quantitatRepostada, preuLitre)
+            DipositTableAdapter.UpdateCapacitatDiposit(quantitatRepostada, _idCombustible, _idSortidor)
+        End If
     End Sub
 End Class

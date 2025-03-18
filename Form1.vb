@@ -39,4 +39,7 @@
         formNou.Show()
     End Sub
 
+    Private Sub Label66_Click(sender As Object, e As EventArgs) Handles Label66.Click
+
+    End Sub
 End Class

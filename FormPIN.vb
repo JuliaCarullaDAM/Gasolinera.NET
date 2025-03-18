@@ -4,7 +4,6 @@
     Private _formCombustio As FormCombustioSeleccio
     Private _formElectric As FormCarregaElectric
 
-
     Public Sub New(sortidor As String)
         InitializeComponent()
         _idSortidor = sortidor

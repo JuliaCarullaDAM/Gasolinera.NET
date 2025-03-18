@@ -34,6 +34,8 @@
         lbPreuLitre.Text = "Preu/L: " + preuLitre.ToString + "€/L"
 
         btFinalitzar.Enabled = False
+
+        lbIdSortidor.Text = "Sortidor: " + _idSortidor
     End Sub
 
     Private Sub TimerRepostar_Tick(sender As Object, e As EventArgs) Handles TimerRepostar.Tick

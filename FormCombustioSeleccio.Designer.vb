@@ -42,13 +42,13 @@ Partial Class FormCombustioSeleccio
         Me.lbPreuGas98 = New System.Windows.Forms.Label()
         Me.lbPreuDiesel = New System.Windows.Forms.Label()
         Me.lbPreuAdblue = New System.Windows.Forms.Label()
-        Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
         Me.pbAdBlue = New System.Windows.Forms.PictureBox()
         Me.pbDiesel = New System.Windows.Forms.PictureBox()
         Me.pbGasolina98 = New System.Windows.Forms.PictureBox()
         Me.pbGasoilina95 = New System.Windows.Forms.PictureBox()
         Me.btPle = New System.Windows.Forms.Button()
+        Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
         CType(Me.pbAdBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDiesel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbGasolina98, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -264,10 +264,6 @@ Partial Class FormCombustioSeleccio
         Me.lbPreuAdblue.Tag = "4"
         Me.lbPreuAdblue.Text = "Import:"
         '
-        'CarburantTableAdapter
-        '
-        Me.CarburantTableAdapter.ClearBeforeFill = True
-        '
         'SortidorTableAdapter
         '
         Me.SortidorTableAdapter.ClearBeforeFill = True
@@ -327,6 +323,10 @@ Partial Class FormCombustioSeleccio
         Me.btPle.TabIndex = 25
         Me.btPle.Text = "Plenar"
         Me.btPle.UseVisualStyleBackColor = False
+        '
+        'CarburantTableAdapter
+        '
+        Me.CarburantTableAdapter.ClearBeforeFill = True
         '
         'FormCombustioSeleccio
         '
@@ -389,7 +389,6 @@ Partial Class FormCombustioSeleccio
     Friend WithEvents tbImport As TextBox
     Friend WithEvents btOK As Button
     Friend WithEvents btEsborrar As Button
-    Friend WithEvents CarburantTableAdapter As GasolineraDataSetTableAdapters.CARBURANTTableAdapter
     Friend WithEvents btCancelar As Button
     Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
     Friend WithEvents lbPreuGas95 As Label
@@ -397,4 +396,5 @@ Partial Class FormCombustioSeleccio
     Friend WithEvents lbPreuDiesel As Label
     Friend WithEvents lbPreuAdblue As Label
     Friend WithEvents btPle As Button
+    Friend WithEvents CarburantTableAdapter As ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter
 End Class

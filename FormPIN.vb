@@ -25,16 +25,18 @@
     End Sub
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
-        'FALTA POSAR LA PART ELÈCTRICA I FER IF SEGONS ID DE SORTIDOR
 
-        If tbTargeta.Text.Length = 4 Then
+        If (_idSortidor = "5" Or _idSortidor = "6") AndAlso tbTargeta.Text.Length = 4 Then
+            MessageBox.Show("S'ha realitzat una preautorització de 100€", "Preautorització", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+
+        ElseIf tbTargeta.Text.Length = 4
             _formCombustio.FormRepostatge_show()
             _formCombustio.Close()
             Me.Close()
         Else
             MessageBox.Show("S'ha introduït un PIN no vàlid", "PIN Incorrecte", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
-
     End Sub
 
     Private Sub FormPIN_Load(sender As Object, e As EventArgs) Handles Me.Load

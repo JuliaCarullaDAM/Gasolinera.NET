@@ -2,6 +2,8 @@
     Dim segonsTimeout As Integer = 60
     Private _idSortidor As String
     Private _formCombustio As FormCombustioSeleccio
+    Private _formElectric As FormCarregaElectric
+
 
     Public Sub New(sortidor As String)
         InitializeComponent()
@@ -11,6 +13,11 @@
     Public Sub New(sortidor As String, formCombustio As FormCombustioSeleccio)
         Me.New(sortidor)
         _formCombustio = formCombustio
+    End Sub
+
+    Public Sub New(sortidor As String, formElectric As FormCarregaElectric)
+        Me.New(sortidor)
+        _formElectric = formElectric
     End Sub
 
     Private Sub bt_click(sender As Object, e As EventArgs) Handles bt1.Click, bt2.Click, bt3.Click, bt4.Click, bt5.Click, bt6.Click, bt7.Click, bt8.Click, bt9.Click, bt0.Click
@@ -28,6 +35,7 @@
 
         If (_idSortidor = "5" Or _idSortidor = "6") AndAlso tbTargeta.Text.Length = 4 Then
             MessageBox.Show("S'ha realitzat una preautorització de 100€", "Preautorització", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            _formElectric.TimerCarrega.Start()
             Me.Close()
 
         ElseIf tbTargeta.Text.Length = 4
@@ -48,9 +56,13 @@
 
         If segonsTimeout <= 0 Then
             SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
-            _formCombustio.Close()
-            Me.Close()
+            If _idSortidor = "5" Or _idSortidor = 6 Then
+                _formElectric.Close()
+                Me.Close()
+            Else
+                _formCombustio.Close()
+                Me.Close()
+            End If
         End If
-
     End Sub
 End Class

@@ -2,6 +2,7 @@
     Private _idSortidor As String
 
     Dim capacitatVehicle As Double
+    Dim percentatgeInicial As Integer
     Dim percentatgeActual As Integer
     Dim tempsTranscorregut As String
 
@@ -18,25 +19,23 @@
         'els vehicles tindran una capacitat aleatòria d'entre 50 i 110kW/h
         capacitatVehicle = rnd.Next(50, 111)
         'els vehicles podran arribar amb un màxim de 80% de la càrrega
-        percentatgeActual = rnd.NextDouble * 80
+        percentatgeInicial = rnd.NextDouble * 80
         preuKW = CarburantTableAdapter.PreuCarburant("5")
 
         lbEstat.Text = "Estat: en espera"
         lbPreuKW.Text = "Preu kW/h: " + preuKW.ToString + " €"
 
         lbCapacitat.Text = "Capacitat: " + capacitatVehicle.ToString("F0") + " kW/h"
-        lbBateria.Text = "Percentatge actual: " + percentatgeActual.ToString + "%"
+        lbBateria.Text = "Percentatge actual: " + percentatgeInicial.ToString + "%"
 
         btFinalitzar.Enabled = False
-        ProgressBar1.Value = percentatgeActual
+        ProgressBar1.Value = percentatgeInicial
     End Sub
     Private Sub btCarregar_Click(sender As Object, e As EventArgs) Handles btCarregar.Click
-        Dim formPin As New FormPIN(_idSortidor)
+        Dim formPin As New FormPIN(_idSortidor, Me)
         formPin.Show()
 
         btCarregar.Enabled = False
-        'vigilar perque salta un cop li dona ok, no quan es passa el pin i si fa un timeout, que l'estat torni a en espera
-        TimerCarrega.Start()
         lbEstat.Text = "Estat: carregant"
     End Sub
     Private Sub btParar_Click(sender As Object, e As EventArgs) Handles btParar.Click
@@ -54,6 +53,11 @@
         btParar.Enabled = False
 
         TimerCarrega.Stop()
+
+        If energiaSubministrada > 0.00 Then
+            SubministramentTableAdapter.InsertSubministrament(_idSortidor, "5", importTotalCarrega, energiaSubministrada, preuKW)
+            DipositTableAdapter.UpdateQuantitatElectricitat(energiaSubministrada, 5, _idSortidor)
+        End If
     End Sub
 
     Dim minuts As Integer = 0
@@ -63,6 +67,7 @@
         energiaSubministrada += 0.025
         importTotalCarrega = preuKW * energiaSubministrada
 
+        CarregarBateria()
         FormatarTemps(ticks, segons, minuts)
 
         lbEnergiaSubministrada.Text = "Subministre: " + energiaSubministrada.ToString("F2") + " kW/h"
@@ -82,5 +87,18 @@
         End If
 
         lbTemps.Text = "Temps transcorregut: " + String.Format("{0:D2}:{1:D2}", minuts, segons)
+    End Sub
+
+    Private Sub CarregarBateria()
+        Dim percentatgeCarregat As Double = (energiaSubministrada / capacitatVehicle) * 100
+        percentatgeActual = CInt(percentatgeInicial + percentatgeCarregat)
+
+        If percentatgeActual >= 100 Then
+            percentatgeActual = 100
+            btParar.PerformClick()
+        End If
+
+        ProgressBar1.Value = percentatgeActual
+        lbBateria.Text = "Percentatge actual: " + percentatgeActual.ToString + "%"
     End Sub
 End Class

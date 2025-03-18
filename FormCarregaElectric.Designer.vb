@@ -38,6 +38,8 @@ Partial Class FormCarregaElectric
         Me.TimerCarrega = New System.Windows.Forms.Timer(Me.components)
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
         Me.CarburantTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.CARBURANTTableAdapter()
+        Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
+        Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SuspendLayout()
         '
         'btCarregar
@@ -180,6 +182,14 @@ Partial Class FormCarregaElectric
         '
         Me.CarburantTableAdapter.ClearBeforeFill = True
         '
+        'SubministramentTableAdapter
+        '
+        Me.SubministramentTableAdapter.ClearBeforeFill = True
+        '
+        'DipositTableAdapter
+        '
+        Me.DipositTableAdapter.ClearBeforeFill = True
+        '
         'FormCarregaElectric
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -220,4 +230,6 @@ Partial Class FormCarregaElectric
     Friend WithEvents TimerCarrega As Timer
     Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
     Friend WithEvents CarburantTableAdapter As GasolineraDataSetTableAdapters.CARBURANTTableAdapter
+    Friend WithEvents SubministramentTableAdapter As GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter
+    Friend WithEvents DipositTableAdapter As GasolineraDataSetTableAdapters.DIPOSITTableAdapter
 End Class

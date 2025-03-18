@@ -191,6 +191,7 @@ Partial Class FormRepostarCombustio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(514, 365)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lbIdSortidor)
         Me.Controls.Add(Me.btFinalitzar)
         Me.Controls.Add(Me.ProgressBar1)
@@ -204,7 +205,7 @@ Partial Class FormRepostarCombustio
         Me.Controls.Add(Me.lbImport)
         Me.Controls.Add(Me.lbQuantitat)
         Me.Name = "FormRepostarCombustio"
-        Me.Text = "FormRepostarCombustio"
+        Me.Text = "Repostatge vehicles combustió"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

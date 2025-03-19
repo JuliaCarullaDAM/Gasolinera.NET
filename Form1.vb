@@ -39,7 +39,45 @@
         formNou.Show()
     End Sub
 
-    Private Sub Label66_Click(sender As Object, e As EventArgs) Handles Label66.Click
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        If TabControl1.SelectedIndex = 1 Then
+            ActualitzarInfoDiposits()
+        End If
+    End Sub
+
+    Private Sub ActualitzarInfoDiposits()
+        'Gasolina 95
+        lbTotal95.Text = "Total combinat: " + DipositTableAdapter.SelectTotalTipusCombustible(gbGasolina95.Tag.ToString).ToString
+        lbDisponible95.Text = "Disponible combinat: " + DipositTableAdapter.SelectActualTipusCombustible(gbGasolina95.Tag.ToString).ToString
+
+        tg95s1.Text = DipositsLabelInfo(gbGasolina95.Tag.ToString, tg95s1.Tag.ToString)
+        tg95s2.Text = DipositsLabelInfo(gbGasolina95.Tag.ToString, tg95s2.Tag.ToString)
+        tg95s3.Text = DipositsLabelInfo(gbGasolina95.Tag.ToString, tg95s3.Tag.ToString)
+        tg95s4.Text = DipositsLabelInfo(gbGasolina95.Tag.ToString, tg95s4.Tag.ToString)
+
+        'Gasolina 98
+        lbTotal98.Text = "Total combinat: " + DipositTableAdapter.SelectTotalTipusCombustible(gbGasolina98.Tag.ToString).ToString
+        lbDisponible98.Text = "Disponible combinat: " + DipositTableAdapter.SelectActualTipusCombustible(gbGasolina98.Tag.ToString).ToString
+
+        tg98s1.Text = DipositsLabelInfo(gbGasolina98.Tag.ToString, tg98s1.Tag.ToString)
+        tg98s2.Text = DipositsLabelInfo(gbGasolina98.Tag.ToString, tg98s2.Tag.ToString)
+        tg98s3.Text = DipositsLabelInfo(gbGasolina98.Tag.ToString, tg98s3.Tag.ToString)
+        tg98s4.Text = DipositsLabelInfo(gbGasolina98.Tag.ToString, tg98s4.Tag.ToString)
 
     End Sub
+
+    Private Function DipositsLabelInfo(combustibleTag As String, sortidorTag As String) As String
+        Dim tmpTotal, tmpActual As Double
+        Dim percentatge As Integer
+        Dim text As String
+
+        tmpTotal = DipositTableAdapter.SelectTotalSortidor(combustibleTag, sortidorTag).ToString
+        tmpActual = DipositTableAdapter.SelectActualSortidor(combustibleTag, sortidorTag).ToString
+
+        text = "Total: " + tmpTotal.ToString + Space(5) +
+                    "Disponible: " + tmpActual.ToString + Space(5) +
+                    "Percentatge: " + CInt(tmpActual / tmpTotal * 100).ToString + "%"
+
+        Return text
+    End Function
 End Class

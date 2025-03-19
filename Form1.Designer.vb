@@ -35,23 +35,15 @@ Partial Class Form1
         Me.pbSortidor1 = New System.Windows.Forms.PictureBox()
         Me.TabPageDiposits = New System.Windows.Forms.TabPage()
         Me.gbAdBlue = New System.Windows.Forms.GroupBox()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
+        Me.lbDisponibleAdBlue = New System.Windows.Forms.Label()
+        Me.lbTotalAdblue = New System.Windows.Forms.Label()
+        Me.tAs4 = New System.Windows.Forms.Label()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
+        Me.tAs3 = New System.Windows.Forms.Label()
         Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
+        Me.tAs2 = New System.Windows.Forms.Label()
         Me.Button15 = New System.Windows.Forms.Button()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.Label60 = New System.Windows.Forms.Label()
+        Me.tAs1 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
@@ -75,23 +67,15 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.tg98s2 = New System.Windows.Forms.Label()
         Me.gbDiesel = New System.Windows.Forms.GroupBox()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbDisponibleDiesel = New System.Windows.Forms.Label()
+        Me.lbTotalDiesel = New System.Windows.Forms.Label()
+        Me.tDs4 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
+        Me.tDs3 = New System.Windows.Forms.Label()
         Me.Button10 = New System.Windows.Forms.Button()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
+        Me.tDs2 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
+        Me.tDs1 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
@@ -267,23 +251,15 @@ Partial Class Form1
         '
         'gbAdBlue
         '
-        Me.gbAdBlue.Controls.Add(Me.Label71)
-        Me.gbAdBlue.Controls.Add(Me.Label49)
-        Me.gbAdBlue.Controls.Add(Me.Label72)
-        Me.gbAdBlue.Controls.Add(Me.Label50)
-        Me.gbAdBlue.Controls.Add(Me.Label51)
+        Me.gbAdBlue.Controls.Add(Me.lbDisponibleAdBlue)
+        Me.gbAdBlue.Controls.Add(Me.lbTotalAdblue)
+        Me.gbAdBlue.Controls.Add(Me.tAs4)
         Me.gbAdBlue.Controls.Add(Me.Button13)
-        Me.gbAdBlue.Controls.Add(Me.Label52)
-        Me.gbAdBlue.Controls.Add(Me.Label53)
-        Me.gbAdBlue.Controls.Add(Me.Label54)
+        Me.gbAdBlue.Controls.Add(Me.tAs3)
         Me.gbAdBlue.Controls.Add(Me.Button14)
-        Me.gbAdBlue.Controls.Add(Me.Label55)
-        Me.gbAdBlue.Controls.Add(Me.Label56)
-        Me.gbAdBlue.Controls.Add(Me.Label57)
+        Me.gbAdBlue.Controls.Add(Me.tAs2)
         Me.gbAdBlue.Controls.Add(Me.Button15)
-        Me.gbAdBlue.Controls.Add(Me.Label58)
-        Me.gbAdBlue.Controls.Add(Me.Label59)
-        Me.gbAdBlue.Controls.Add(Me.Label60)
+        Me.gbAdBlue.Controls.Add(Me.tAs1)
         Me.gbAdBlue.Controls.Add(Me.Label61)
         Me.gbAdBlue.Controls.Add(Me.Label62)
         Me.gbAdBlue.Controls.Add(Me.Label63)
@@ -298,58 +274,40 @@ Partial Class Form1
         Me.gbAdBlue.Tag = "4"
         Me.gbAdBlue.Text = "AdBlue"
         '
-        'Label71
+        'lbDisponibleAdBlue
         '
-        Me.Label71.AutoSize = True
-        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(74, 39)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(226, 20)
-        Me.Label71.TabIndex = 47
-        Me.Label71.Text = "Disponible combinat 90000"
+        Me.lbDisponibleAdBlue.AutoSize = True
+        Me.lbDisponibleAdBlue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDisponibleAdBlue.Location = New System.Drawing.Point(74, 39)
+        Me.lbDisponibleAdBlue.Name = "lbDisponibleAdBlue"
+        Me.lbDisponibleAdBlue.Size = New System.Drawing.Size(226, 20)
+        Me.lbDisponibleAdBlue.TabIndex = 47
+        Me.lbDisponibleAdBlue.Text = "Disponible combinat 90000"
         '
-        'Label49
+        'lbTotalAdblue
         '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(269, 208)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(117, 16)
-        Me.Label49.TabIndex = 43
-        Me.Label49.Text = "Percentatge 100%"
+        Me.lbTotalAdblue.AutoSize = True
+        Me.lbTotalAdblue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTotalAdblue.Location = New System.Drawing.Point(74, 19)
+        Me.lbTotalAdblue.Name = "lbTotalAdblue"
+        Me.lbTotalAdblue.Size = New System.Drawing.Size(192, 20)
+        Me.lbTotalAdblue.TabIndex = 46
+        Me.lbTotalAdblue.Text = "Total combinat 160000"
         '
-        'Label72
+        'tAs4
         '
-        Me.Label72.AutoSize = True
-        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.Location = New System.Drawing.Point(74, 19)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(192, 20)
-        Me.Label72.TabIndex = 46
-        Me.Label72.Text = "Total combinat 160000"
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(148, 207)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(111, 16)
-        Me.Label50.TabIndex = 42
-        Me.Label50.Text = "Disponible 15000"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Location = New System.Drawing.Point(45, 208)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(80, 16)
-        Me.Label51.TabIndex = 41
-        Me.Label51.Text = "Total: 40000"
+        Me.tAs4.AutoSize = True
+        Me.tAs4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tAs4.Location = New System.Drawing.Point(45, 208)
+        Me.tAs4.Name = "tAs4"
+        Me.tAs4.Size = New System.Drawing.Size(80, 16)
+        Me.tAs4.TabIndex = 41
+        Me.tAs4.Tag = "4"
+        Me.tAs4.Text = "Total: 40000"
         '
         'Button13
         '
+        Me.Button13.Enabled = False
         Me.Button13.Location = New System.Drawing.Point(397, 208)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(48, 23)
@@ -357,38 +315,20 @@ Partial Class Form1
         Me.Button13.Text = "Plenar"
         Me.Button13.UseVisualStyleBackColor = True
         '
-        'Label52
+        'tAs3
         '
-        Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(269, 171)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(117, 16)
-        Me.Label52.TabIndex = 39
-        Me.Label52.Text = "Percentatge 100%"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(148, 171)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(111, 16)
-        Me.Label53.TabIndex = 38
-        Me.Label53.Text = "Disponible 15000"
-        '
-        'Label54
-        '
-        Me.Label54.AutoSize = True
-        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(45, 171)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(80, 16)
-        Me.Label54.TabIndex = 37
-        Me.Label54.Text = "Total: 40000"
+        Me.tAs3.AutoSize = True
+        Me.tAs3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tAs3.Location = New System.Drawing.Point(45, 171)
+        Me.tAs3.Name = "tAs3"
+        Me.tAs3.Size = New System.Drawing.Size(80, 16)
+        Me.tAs3.TabIndex = 37
+        Me.tAs3.Tag = "3"
+        Me.tAs3.Text = "Total: 40000"
         '
         'Button14
         '
+        Me.Button14.Enabled = False
         Me.Button14.Location = New System.Drawing.Point(397, 168)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(48, 23)
@@ -396,38 +336,20 @@ Partial Class Form1
         Me.Button14.Text = "Plenar"
         Me.Button14.UseVisualStyleBackColor = True
         '
-        'Label55
+        'tAs2
         '
-        Me.Label55.AutoSize = True
-        Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(269, 127)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(117, 16)
-        Me.Label55.TabIndex = 35
-        Me.Label55.Text = "Percentatge 100%"
-        '
-        'Label56
-        '
-        Me.Label56.AutoSize = True
-        Me.Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(148, 127)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(111, 16)
-        Me.Label56.TabIndex = 34
-        Me.Label56.Text = "Disponible 15000"
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = True
-        Me.Label57.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label57.Location = New System.Drawing.Point(45, 128)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(80, 16)
-        Me.Label57.TabIndex = 33
-        Me.Label57.Text = "Total: 40000"
+        Me.tAs2.AutoSize = True
+        Me.tAs2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tAs2.Location = New System.Drawing.Point(45, 128)
+        Me.tAs2.Name = "tAs2"
+        Me.tAs2.Size = New System.Drawing.Size(80, 16)
+        Me.tAs2.TabIndex = 33
+        Me.tAs2.Tag = "2"
+        Me.tAs2.Text = "Total: 40000"
         '
         'Button15
         '
+        Me.Button15.Enabled = False
         Me.Button15.Location = New System.Drawing.Point(397, 128)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(48, 23)
@@ -435,35 +357,16 @@ Partial Class Form1
         Me.Button15.Text = "Plenar"
         Me.Button15.UseVisualStyleBackColor = True
         '
-        'Label58
+        'tAs1
         '
-        Me.Label58.AutoSize = True
-        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(269, 85)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(117, 16)
-        Me.Label58.TabIndex = 31
-        Me.Label58.Text = "Percentatge 100%"
-        '
-        'Label59
-        '
-        Me.Label59.AutoSize = True
-        Me.Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label59.Location = New System.Drawing.Point(148, 85)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(111, 16)
-        Me.Label59.TabIndex = 30
-        Me.Label59.Text = "Disponible 15000"
-        '
-        'Label60
-        '
-        Me.Label60.AutoSize = True
-        Me.Label60.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.Location = New System.Drawing.Point(45, 85)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(80, 16)
-        Me.Label60.TabIndex = 29
-        Me.Label60.Text = "Total: 40000"
+        Me.tAs1.AutoSize = True
+        Me.tAs1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tAs1.Location = New System.Drawing.Point(45, 85)
+        Me.tAs1.Name = "tAs1"
+        Me.tAs1.Size = New System.Drawing.Size(80, 16)
+        Me.tAs1.TabIndex = 29
+        Me.tAs1.Tag = "1"
+        Me.tAs1.Text = "Total: 40000"
         '
         'Label61
         '
@@ -507,6 +410,7 @@ Partial Class Form1
         '
         'Button16
         '
+        Me.Button16.Enabled = False
         Me.Button16.Location = New System.Drawing.Point(397, 85)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(48, 23)
@@ -602,6 +506,7 @@ Partial Class Form1
         '
         'Button8
         '
+        Me.Button8.Enabled = False
         Me.Button8.Location = New System.Drawing.Point(397, 93)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(48, 23)
@@ -611,6 +516,7 @@ Partial Class Form1
         '
         'Button5
         '
+        Me.Button5.Enabled = False
         Me.Button5.Location = New System.Drawing.Point(397, 216)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(48, 23)
@@ -672,6 +578,7 @@ Partial Class Form1
         '
         'Button6
         '
+        Me.Button6.Enabled = False
         Me.Button6.Location = New System.Drawing.Point(397, 176)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(48, 23)
@@ -681,6 +588,7 @@ Partial Class Form1
         '
         'Button7
         '
+        Me.Button7.Enabled = False
         Me.Button7.Location = New System.Drawing.Point(397, 136)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(48, 23)
@@ -701,23 +609,15 @@ Partial Class Form1
         '
         'gbDiesel
         '
-        Me.gbDiesel.Controls.Add(Me.Label69)
-        Me.gbDiesel.Controls.Add(Me.Label33)
-        Me.gbDiesel.Controls.Add(Me.Label70)
-        Me.gbDiesel.Controls.Add(Me.Label34)
-        Me.gbDiesel.Controls.Add(Me.Label35)
+        Me.gbDiesel.Controls.Add(Me.lbDisponibleDiesel)
+        Me.gbDiesel.Controls.Add(Me.lbTotalDiesel)
+        Me.gbDiesel.Controls.Add(Me.tDs4)
         Me.gbDiesel.Controls.Add(Me.Button9)
-        Me.gbDiesel.Controls.Add(Me.Label36)
-        Me.gbDiesel.Controls.Add(Me.Label37)
-        Me.gbDiesel.Controls.Add(Me.Label38)
+        Me.gbDiesel.Controls.Add(Me.tDs3)
         Me.gbDiesel.Controls.Add(Me.Button10)
-        Me.gbDiesel.Controls.Add(Me.Label39)
-        Me.gbDiesel.Controls.Add(Me.Label40)
-        Me.gbDiesel.Controls.Add(Me.Label41)
+        Me.gbDiesel.Controls.Add(Me.tDs2)
         Me.gbDiesel.Controls.Add(Me.Button11)
-        Me.gbDiesel.Controls.Add(Me.Label42)
-        Me.gbDiesel.Controls.Add(Me.Label43)
-        Me.gbDiesel.Controls.Add(Me.Label44)
+        Me.gbDiesel.Controls.Add(Me.tDs1)
         Me.gbDiesel.Controls.Add(Me.Label45)
         Me.gbDiesel.Controls.Add(Me.Label46)
         Me.gbDiesel.Controls.Add(Me.Label47)
@@ -732,58 +632,40 @@ Partial Class Form1
         Me.gbDiesel.Tag = "3"
         Me.gbDiesel.Text = "Diesel"
         '
-        'Label69
+        'lbDisponibleDiesel
         '
-        Me.Label69.AutoSize = True
-        Me.Label69.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(74, 39)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(226, 20)
-        Me.Label69.TabIndex = 45
-        Me.Label69.Text = "Disponible combinat 90000"
+        Me.lbDisponibleDiesel.AutoSize = True
+        Me.lbDisponibleDiesel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbDisponibleDiesel.Location = New System.Drawing.Point(74, 39)
+        Me.lbDisponibleDiesel.Name = "lbDisponibleDiesel"
+        Me.lbDisponibleDiesel.Size = New System.Drawing.Size(226, 20)
+        Me.lbDisponibleDiesel.TabIndex = 45
+        Me.lbDisponibleDiesel.Text = "Disponible combinat 90000"
         '
-        'Label33
+        'lbTotalDiesel
         '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(269, 208)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(117, 16)
-        Me.Label33.TabIndex = 43
-        Me.Label33.Text = "Percentatge 100%"
+        Me.lbTotalDiesel.AutoSize = True
+        Me.lbTotalDiesel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTotalDiesel.Location = New System.Drawing.Point(74, 19)
+        Me.lbTotalDiesel.Name = "lbTotalDiesel"
+        Me.lbTotalDiesel.Size = New System.Drawing.Size(192, 20)
+        Me.lbTotalDiesel.TabIndex = 44
+        Me.lbTotalDiesel.Text = "Total combinat 160000"
         '
-        'Label70
+        'tDs4
         '
-        Me.Label70.AutoSize = True
-        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.Location = New System.Drawing.Point(74, 19)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(192, 20)
-        Me.Label70.TabIndex = 44
-        Me.Label70.Text = "Total combinat 160000"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(148, 207)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(111, 16)
-        Me.Label34.TabIndex = 42
-        Me.Label34.Text = "Disponible 15000"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(45, 208)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(80, 16)
-        Me.Label35.TabIndex = 41
-        Me.Label35.Text = "Total: 40000"
+        Me.tDs4.AutoSize = True
+        Me.tDs4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tDs4.Location = New System.Drawing.Point(45, 208)
+        Me.tDs4.Name = "tDs4"
+        Me.tDs4.Size = New System.Drawing.Size(80, 16)
+        Me.tDs4.TabIndex = 41
+        Me.tDs4.Tag = "4"
+        Me.tDs4.Text = "Total: 40000"
         '
         'Button9
         '
+        Me.Button9.Enabled = False
         Me.Button9.Location = New System.Drawing.Point(397, 208)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(48, 23)
@@ -791,38 +673,20 @@ Partial Class Form1
         Me.Button9.Text = "Plenar"
         Me.Button9.UseVisualStyleBackColor = True
         '
-        'Label36
+        'tDs3
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(269, 171)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(117, 16)
-        Me.Label36.TabIndex = 39
-        Me.Label36.Text = "Percentatge 100%"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(148, 171)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(111, 16)
-        Me.Label37.TabIndex = 38
-        Me.Label37.Text = "Disponible 15000"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(45, 171)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(80, 16)
-        Me.Label38.TabIndex = 37
-        Me.Label38.Text = "Total: 40000"
+        Me.tDs3.AutoSize = True
+        Me.tDs3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tDs3.Location = New System.Drawing.Point(45, 171)
+        Me.tDs3.Name = "tDs3"
+        Me.tDs3.Size = New System.Drawing.Size(80, 16)
+        Me.tDs3.TabIndex = 37
+        Me.tDs3.Tag = "3"
+        Me.tDs3.Text = "Total: 40000"
         '
         'Button10
         '
+        Me.Button10.Enabled = False
         Me.Button10.Location = New System.Drawing.Point(397, 168)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(48, 23)
@@ -830,38 +694,20 @@ Partial Class Form1
         Me.Button10.Text = "Plenar"
         Me.Button10.UseVisualStyleBackColor = True
         '
-        'Label39
+        'tDs2
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(269, 127)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(117, 16)
-        Me.Label39.TabIndex = 35
-        Me.Label39.Text = "Percentatge 100%"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(148, 127)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(111, 16)
-        Me.Label40.TabIndex = 34
-        Me.Label40.Text = "Disponible 15000"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(45, 128)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(80, 16)
-        Me.Label41.TabIndex = 33
-        Me.Label41.Text = "Total: 40000"
+        Me.tDs2.AutoSize = True
+        Me.tDs2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tDs2.Location = New System.Drawing.Point(45, 128)
+        Me.tDs2.Name = "tDs2"
+        Me.tDs2.Size = New System.Drawing.Size(80, 16)
+        Me.tDs2.TabIndex = 33
+        Me.tDs2.Tag = "2"
+        Me.tDs2.Text = "Total: 40000"
         '
         'Button11
         '
+        Me.Button11.Enabled = False
         Me.Button11.Location = New System.Drawing.Point(397, 128)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(48, 23)
@@ -869,35 +715,16 @@ Partial Class Form1
         Me.Button11.Text = "Plenar"
         Me.Button11.UseVisualStyleBackColor = True
         '
-        'Label42
+        'tDs1
         '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(269, 85)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(117, 16)
-        Me.Label42.TabIndex = 31
-        Me.Label42.Text = "Percentatge 100%"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(148, 85)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(111, 16)
-        Me.Label43.TabIndex = 30
-        Me.Label43.Text = "Disponible 15000"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(45, 85)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(80, 16)
-        Me.Label44.TabIndex = 29
-        Me.Label44.Text = "Total: 40000"
+        Me.tDs1.AutoSize = True
+        Me.tDs1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tDs1.Location = New System.Drawing.Point(45, 85)
+        Me.tDs1.Name = "tDs1"
+        Me.tDs1.Size = New System.Drawing.Size(80, 16)
+        Me.tDs1.TabIndex = 29
+        Me.tDs1.Tag = "1"
+        Me.tDs1.Text = "Total: 40000"
         '
         'Label45
         '
@@ -941,6 +768,7 @@ Partial Class Form1
         '
         'Button12
         '
+        Me.Button12.Enabled = False
         Me.Button12.Location = New System.Drawing.Point(397, 85)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(48, 23)
@@ -1016,6 +844,7 @@ Partial Class Form1
         '
         'Button4
         '
+        Me.Button4.Enabled = False
         Me.Button4.Location = New System.Drawing.Point(397, 216)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(48, 23)
@@ -1036,6 +865,7 @@ Partial Class Form1
         '
         'Button3
         '
+        Me.Button3.Enabled = False
         Me.Button3.Location = New System.Drawing.Point(397, 176)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(48, 23)
@@ -1056,6 +886,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(397, 136)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(48, 23)
@@ -1116,6 +947,7 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(397, 93)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(48, 23)
@@ -1250,21 +1082,13 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents tg95s2 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label49 As Label
-    Friend WithEvents Label50 As Label
-    Friend WithEvents Label51 As Label
+    Friend WithEvents tAs4 As Label
     Friend WithEvents Button13 As Button
-    Friend WithEvents Label52 As Label
-    Friend WithEvents Label53 As Label
-    Friend WithEvents Label54 As Label
+    Friend WithEvents tAs3 As Label
     Friend WithEvents Button14 As Button
-    Friend WithEvents Label55 As Label
-    Friend WithEvents Label56 As Label
-    Friend WithEvents Label57 As Label
+    Friend WithEvents tAs2 As Label
     Friend WithEvents Button15 As Button
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Label59 As Label
-    Friend WithEvents Label60 As Label
+    Friend WithEvents tAs1 As Label
     Friend WithEvents Label61 As Label
     Friend WithEvents Label62 As Label
     Friend WithEvents Label63 As Label
@@ -1282,21 +1106,13 @@ Partial Class Form1
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents tg98s2 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
+    Friend WithEvents tDs4 As Label
     Friend WithEvents Button9 As Button
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
+    Friend WithEvents tDs3 As Label
     Friend WithEvents Button10 As Button
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
+    Friend WithEvents tDs2 As Label
     Friend WithEvents Button11 As Button
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label44 As Label
+    Friend WithEvents tDs1 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label47 As Label
@@ -1305,11 +1121,11 @@ Partial Class Form1
     Friend WithEvents lbDisponible95 As Label
     Friend WithEvents lbTotal95 As Label
     Friend WithEvents TabPageComandes As TabPage
-    Friend WithEvents Label71 As Label
-    Friend WithEvents Label72 As Label
+    Friend WithEvents lbDisponibleAdBlue As Label
+    Friend WithEvents lbTotalAdblue As Label
     Friend WithEvents lbDisponible98 As Label
     Friend WithEvents lbTotal98 As Label
-    Friend WithEvents Label69 As Label
-    Friend WithEvents Label70 As Label
+    Friend WithEvents lbDisponibleDiesel As Label
+    Friend WithEvents lbTotalDiesel As Label
     Friend WithEvents DipositTableAdapter As GasolineraDataSetTableAdapters.DIPOSITTableAdapter
 End Class

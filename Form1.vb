@@ -42,7 +42,14 @@
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         If TabControl1.SelectedIndex = 1 Then
             ActualitzarInfoDiposits()
+        ElseIf TabControl1.SelectedIndex = 2
+            ActualitzarInfoEnergia()
         End If
+    End Sub
+
+    Private Sub ActualitzarInfoEnergia()
+        lbVehiclesSubministratsEnergia5.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(gbSortidor5Energia.Tag.ToString, dataInici.Value, dataFi.Value).ToString
+        dgvSortidor5.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor5Energia.Tag.ToString, dataInici.Value, dataFi.Value)
     End Sub
 
     Private Sub ActualitzarInfoDiposits()
@@ -97,4 +104,14 @@
 
         Return text
     End Function
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'GasolineraDataSet.SUBMINISTRAMENT' Puede moverla o quitarla según sea necesario.
+        Me.SubministramentTableAdapter.Fill(Me.GasolineraDataSet.SUBMINISTRAMENT)
+
+    End Sub
+
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+
+    End Sub
 End Class

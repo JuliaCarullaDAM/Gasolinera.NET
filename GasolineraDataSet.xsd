@@ -220,7 +220,7 @@ SELECT id_diposit, id_carburant, capacitat_total, capacitat_actual FROM DIPOSIT 
               <Mapping SourceColumn="capacitat_actual" DataSetColumn="capacitat_actual" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectActualSortidor" Modifier="Public" Name="SelectActualSortidor" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="SelectActualSortidor">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectActualSortidor" Modifier="Public" Name="SelectActualSortidor" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SelectActualSortidor">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select sum(capacitat_actual) from DIPOSIT d
@@ -233,7 +233,7 @@ where id_carburant = @idCombustible and id_sortidor = @idSortidor</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectActualTipusCombustible" Modifier="Public" Name="SelectActualTipusCombustible" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="SelectActualTipusCombustible">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectActualTipusCombustible" Modifier="Public" Name="SelectActualTipusCombustible" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SelectActualTipusCombustible">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select sum(capacitat_actual) from DIPOSIT
@@ -245,7 +245,7 @@ where id_carburant = @idCombustible
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectTotalSortidor" Modifier="Public" Name="SelectTotalSortidor" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="SelectTotalSortidor">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectTotalSortidor" Modifier="Public" Name="SelectTotalSortidor" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SelectTotalSortidor">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select sum(capacitat_total) from DIPOSIT d
@@ -259,7 +259,7 @@ where id_carburant = @idCombustible and id_sortidor = @idSortidor
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectTotalTipusCombustible" Modifier="Public" Name="SelectTotalTipusCombustible" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SelectTotalTipusCombustible">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectTotalTipusCombustible" Modifier="Public" Name="SelectTotalTipusCombustible" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="SelectTotalTipusCombustible">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select sum(capacitat_total) from DIPOSIT
@@ -270,7 +270,7 @@ where id_carburant = @idCombustible</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateCapacitatDiposit" Modifier="Public" Name="UpdateCapacitatDiposit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateCapacitatDiposit">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateCapacitatDiposit" Modifier="Public" Name="UpdateCapacitatDiposit" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateCapacitatDiposit">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE DIPOSIT
@@ -284,7 +284,7 @@ WHERE id_carburant = @idcarburant AND id_diposit IN(select id_diposit from DIPOS
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuantitatElectricitat" Modifier="Public" Name="UpdateQuantitatElectricitat" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateQuantitatElectricitat">
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuantitatElectricitat" Modifier="Public" Name="UpdateQuantitatElectricitat" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateQuantitatElectricitat">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE DIPOSIT
@@ -578,6 +578,21 @@ SELECT id_subministrament, id_sortidor, id_carburant, import_total, quantitat, p
               <Mapping SourceColumn="data" DataSetColumn="data" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="GASOLINERA.dbo.SUBMINISTRAMENT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillEnergiaSortidorData" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEnergiaSortidorData" GeneratorSourceName="FillEnergiaSortidorData" GetMethodModifier="Public" GetMethodName="GetDataByEnergiaSortidorData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEnergiaSortidorData" UserSourceName="FillEnergiaSortidorData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select * from SUBMINISTRAMENT
+where id_sortidor = @idSortidor and id_carburant = 5
+and (data between @data_inici and @data_fi)
+order by data desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="idSortidor" ColumnName="id_sortidor" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idSortidor" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_sortidor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data_inici" ColumnName="data" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@data_inici" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data_fi" ColumnName="data" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@data_fi" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertSubministrament" Modifier="Public" Name="InsertSubministrament" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertSubministrament">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -593,6 +608,20 @@ VALUES (@id_sortidor, @id_carburant, @import_subministrat, @quantitat_subministr
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="GASOLINERAConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SelectCountVehiclesElectrics" Modifier="Public" Name="SelectCountVehiclesElectrics" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SelectCountVehiclesElectrics">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select count(*) from SUBMINISTRAMENT
+where id_sortidor = @idSortidor and id_carburant = 5
+and (data between @data_inici and @data_fi)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="idSortidor" ColumnName="id_sortidor" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idSortidor" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_sortidor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data_inici" ColumnName="data" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@data_inici" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data_fi" ColumnName="data" DataSourceName="GASOLINERA.dbo.SUBMINISTRAMENT" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@data_fi" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="data" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
               </DbSource>
             </Sources>
           </TableAdapter>

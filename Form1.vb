@@ -48,8 +48,16 @@
     End Sub
 
     Private Sub ActualitzarInfoEnergia()
-        lbVehiclesSubministratsEnergia5.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(gbSortidor5Energia.Tag.ToString, dataInici.Value, dataFi.Value).ToString
-        dgvSortidor5.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor5Energia.Tag.ToString, dataInici.Value, dataFi.Value)
+        'gestionar resultats nulls!!!
+        lbVehiclesSubministratsEnergia5.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value).ToString
+        lbEnergiaS5.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatSortidor(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value).ToString + "kW/h"
+        lbPreuMigS5.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData("5", dataIniciS5.Value, dataFiS5.Value).ToString + " €"
+
+        'DataGrids
+        dgvSortidor5.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value)
+        dgvSortidor6.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor6Energia.Tag.ToString, dataIniciS6.Value, dataFiS6.Value)
+        dgvSortidorsElectrics.DataSource = SubministramentTableAdapter.GetDataEnergiaData(dataIniciTotal.Value, dataFiTotal.Value)
+
     End Sub
 
     Private Sub ActualitzarInfoDiposits()
@@ -105,13 +113,27 @@
         Return text
     End Function
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'GasolineraDataSet.SUBMINISTRAMENT' Puede moverla o quitarla según sea necesario.
-        Me.SubministramentTableAdapter.Fill(Me.GasolineraDataSet.SUBMINISTRAMENT)
-
+    Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOKS5.Click, btOKS6.Click, btOKTotal.Click
+        ActualitzarInfoEnergia()
     End Sub
 
-    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+    Private Sub btReset_Click(sender As Object, e As EventArgs) Handles btResetS5.Click, btResetS6.Click, btResetTotal.Click
+        Dim bt As Button = CType(sender, Button)
 
+        If bt.Tag.ToString = "5" Then
+            dataIniciS5.Value = "01/01/2025"
+            dataFiS5.Value = "31/12/2025"
+            ActualitzarInfoEnergia()
+
+        ElseIf bt.Tag.ToString = "6"
+            dataIniciS6.Value = "01/01/2025"
+            dataFiS6.Value = "31/12/2025"
+            ActualitzarInfoEnergia()
+
+        ElseIf bt.Tag.ToString = "0"
+            dataIniciTotal.Value = "01/01/2025"
+            dataFiTotal.Value = "31/12/2025"
+            ActualitzarInfoEnergia()
+        End If
     End Sub
 End Class

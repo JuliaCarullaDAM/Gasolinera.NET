@@ -6411,13 +6411,13 @@ Namespace GasolineraDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[SUBMINISTRAMENT] WHERE (([id_subministrament] = @Original_id_s"& _ 
-                "ubministrament) AND ((@IsNull_id_sortidor = 1 AND [id_sortidor] IS NULL) OR ([id"& _ 
-                "_sortidor] = @Original_id_sortidor)) AND ((@IsNull_id_carburant = 1 AND [id_carb"& _ 
-                "urant] IS NULL) OR ([id_carburant] = @Original_id_carburant)) AND ([import_total"& _ 
-                "] = @Original_import_total) AND ([quantitat] = @Original_quantitat) AND ([preu] "& _ 
-                "= @Original_preu) AND ((@IsNull_data = 1 AND [data] IS NULL) OR ([data] = @Origi"& _ 
-                "nal_data)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [SUBMINISTRAMENT] WHERE (([id_subministrament] = @Original_id_submini"& _ 
+                "strament) AND ((@IsNull_id_sortidor = 1 AND [id_sortidor] IS NULL) OR ([id_sorti"& _ 
+                "dor] = @Original_id_sortidor)) AND ((@IsNull_id_carburant = 1 AND [id_carburant]"& _ 
+                " IS NULL) OR ([id_carburant] = @Original_id_carburant)) AND ([import_total] = @O"& _ 
+                "riginal_import_total) AND ([quantitat] = @Original_quantitat) AND ([preu] = @Ori"& _ 
+                "ginal_preu) AND ((@IsNull_data = 1 AND [data] IS NULL) OR ([data] = @Original_da"& _ 
+                "ta)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_subministrament", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_subministrament", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_sortidor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -6431,11 +6431,11 @@ Namespace GasolineraDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_data", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[SUBMINISTRAMENT] ([id_sortidor], [id_carburant], [import_total"& _ 
-                "], [quantitat], [preu], [data]) VALUES (@id_sortidor, @id_carburant, @import_tot"& _ 
-                "al, @quantitat, @preu, @data);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_subministrament, id_sortidor, id_carbu"& _ 
-                "rant, import_total, quantitat, preu, data FROM SUBMINISTRAMENT WHERE (id_submini"& _ 
-                "strament = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [SUBMINISTRAMENT] ([id_sortidor], [id_carburant], [import_total], [qu"& _ 
+                "antitat], [preu], [data]) VALUES (@id_sortidor, @id_carburant, @import_total, @q"& _ 
+                "uantitat, @preu, @data);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_subministrament, id_sortidor, id_carburant, "& _ 
+                "import_total, quantitat, preu, data FROM SUBMINISTRAMENT WHERE (id_subministrame"& _ 
+                "nt = SCOPE_IDENTITY()) ORDER BY data DESC"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_sortidor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_carburant", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_carburant", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6445,17 +6445,17 @@ Namespace GasolineraDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[SUBMINISTRAMENT] SET [id_sortidor] = @id_sortidor, [id_carburant] ="& _ 
-                " @id_carburant, [import_total] = @import_total, [quantitat] = @quantitat, [preu]"& _ 
-                " = @preu, [data] = @data WHERE (([id_subministrament] = @Original_id_subministra"& _ 
-                "ment) AND ((@IsNull_id_sortidor = 1 AND [id_sortidor] IS NULL) OR ([id_sortidor]"& _ 
-                " = @Original_id_sortidor)) AND ((@IsNull_id_carburant = 1 AND [id_carburant] IS "& _ 
-                "NULL) OR ([id_carburant] = @Original_id_carburant)) AND ([import_total] = @Origi"& _ 
-                "nal_import_total) AND ([quantitat] = @Original_quantitat) AND ([preu] = @Origina"& _ 
-                "l_preu) AND ((@IsNull_data = 1 AND [data] IS NULL) OR ([data] = @Original_data))"& _ 
-                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_subministrament, id_sortidor, id_carburant, import_total, quantita"& _ 
-                "t, preu, data FROM SUBMINISTRAMENT WHERE (id_subministrament = @id_subministrame"& _ 
-                "nt)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [SUBMINISTRAMENT] SET [id_sortidor] = @id_sortidor, [id_carburant] = @id_c"& _ 
+                "arburant, [import_total] = @import_total, [quantitat] = @quantitat, [preu] = @pr"& _ 
+                "eu, [data] = @data WHERE (([id_subministrament] = @Original_id_subministrament) "& _ 
+                "AND ((@IsNull_id_sortidor = 1 AND [id_sortidor] IS NULL) OR ([id_sortidor] = @Or"& _ 
+                "iginal_id_sortidor)) AND ((@IsNull_id_carburant = 1 AND [id_carburant] IS NULL) "& _ 
+                "OR ([id_carburant] = @Original_id_carburant)) AND ([import_total] = @Original_im"& _ 
+                "port_total) AND ([quantitat] = @Original_quantitat) AND ([preu] = @Original_preu"& _ 
+                ") AND ((@IsNull_data = 1 AND [data] IS NULL) OR ([data] = @Original_data)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT id_subministrament, id_sortidor, id_carburant, import_total, quantitat, pre"& _ 
+                "u, data FROM SUBMINISTRAMENT WHERE (id_subministrament = @id_subministrament) OR"& _ 
+                "DER BY data DESC"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_sortidor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_carburant", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_carburant", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6486,16 +6486,19 @@ Namespace GasolineraDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT id_subministrament, id_sortidor, id_carburant, import_total, quantitat, pr"& _ 
-                "eu, data FROM dbo.SUBMINISTRAMENT"
+            Me._commandCollection(0).CommandText = "select * from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_carburant = 5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (data between @data_in"& _ 
+                "ici and @data_fi)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"order by data desc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_inici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_fi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "select * from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_sortidor = @idSortidor and id_carburant ="& _ 
-                " 5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (data between @data_inici and @data_fi)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"order by data desc"
+            Me._commandCollection(1).CommandText = "SELECT data, id_carburant, id_sortidor, id_subministrament, import_total, preu, q"& _ 
+                "uantitat FROM SUBMINISTRAMENT WHERE (id_sortidor = @idSortidor) AND (id_carburan"& _ 
+                "t = 5) AND (data BETWEEN @data_inici AND @data_fi) ORDER BY data DESC"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idSortidor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_inici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6513,20 +6516,46 @@ Namespace GasolineraDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@preu_litre", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "preu", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "select count(*) from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_sortidor = @idSortidor and id_carb"& _ 
-                "urant = 5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (data between @data_inici and @data_fi)"
+            Me._commandCollection(3).CommandText = "select avg(preu) from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_carburant = @idCarburant"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (da"& _ 
+                "ta between @dataInici and @dataFi)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idSortidor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_inici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_fi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCarburant", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_carburant", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dataInici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dataFi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "select count(*) from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_sortidor = @idSortidor and id_carb"& _ 
+                "urant = 5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (data between @data_inici and @data_fi)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idSortidor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_inici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_fi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "select sum(quantitat) from SUBMINISTRAMENT"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where id_sortidor =@idSortidor and id"& _ 
+                "_carburant = 5"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"and (data between @data_inici and @data_fi)"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idSortidor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_sortidor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_inici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@data_fi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As GasolineraDataSet.SUBMINISTRAMENTDataTable) As Integer
+        Public Overloads Overridable Function FillEnergiaData(ByVal dataTable As GasolineraDataSet.SUBMINISTRAMENTDataTable, ByVal data_inici As String, ByVal data_fi As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (data_inici Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(data_inici,String)
+            End If
+            If (data_fi Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(data_fi,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -6538,8 +6567,18 @@ Namespace GasolineraDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As GasolineraDataSet.SUBMINISTRAMENTDataTable
+        Public Overloads Overridable Function GetDataEnergiaData(ByVal data_inici As String, ByVal data_fi As String) As GasolineraDataSet.SUBMINISTRAMENTDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (data_inici Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(data_inici,String)
+            End If
+            If (data_fi Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(data_fi,String)
+            End If
             Dim dataTable As GasolineraDataSet.SUBMINISTRAMENTDataTable = New GasolineraDataSet.SUBMINISTRAMENTDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -6820,8 +6859,49 @@ Namespace GasolineraDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function SelectCountVehiclesElectrics(ByVal idSortidor As Global.System.Nullable(Of Integer), ByVal data_inici As String, ByVal data_fi As String) As Global.System.Nullable(Of Integer)
+        Public Overloads Overridable Function PreuMitjaData(ByVal idCarburant As Global.System.Nullable(Of Integer), ByVal dataInici As String, ByVal dataFi As String) As Object
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            If (idCarburant.HasValue = true) Then
+                command.Parameters(0).Value = CType(idCarburant.Value,Integer)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (dataInici Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(dataInici,String)
+            End If
+            If (dataFi Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(dataFi,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function SelectCountVehiclesElectrics(ByVal idSortidor As Global.System.Nullable(Of Integer), ByVal data_inici As String, ByVal data_fi As String) As Global.System.Nullable(Of Integer)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             If (idSortidor.HasValue = true) Then
                 command.Parameters(0).Value = CType(idSortidor.Value,Integer)
             Else
@@ -6855,6 +6935,47 @@ Namespace GasolineraDataSetTableAdapters
                 Return New Global.System.Nullable(Of Integer)()
             Else
                 Return New Global.System.Nullable(Of Integer)(CType(returnValue,Integer))
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function SelectQuantitatSortidor(ByVal idSortidor As Global.System.Nullable(Of Integer), ByVal data_inici As String, ByVal data_fi As String) As Object
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
+            If (idSortidor.HasValue = true) Then
+                command.Parameters(0).Value = CType(idSortidor.Value,Integer)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (data_inici Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(data_inici,String)
+            End If
+            If (data_fi Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(data_fi,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
             End If
         End Function
     End Class

@@ -106,6 +106,11 @@ Partial Class Form1
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lbIngressosTotal = New System.Windows.Forms.Label()
         Me.dgvSortidorsElectrics = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SUBMINISTRAMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GasolineraDataSet = New ProjecteGasolinera.GasolineraDataSet()
         Me.dataIniciTotal = New System.Windows.Forms.DateTimePicker()
         Me.lbPreuMitjaTotal = New System.Windows.Forms.Label()
         Me.dataFiTotal = New System.Windows.Forms.DateTimePicker()
@@ -119,6 +124,9 @@ Partial Class Form1
         Me.Label15 = New System.Windows.Forms.Label()
         Me.lbIngressosS6 = New System.Windows.Forms.Label()
         Me.dgvSortidor6 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataIniciS6 = New System.Windows.Forms.DateTimePicker()
         Me.lbPreuMigS6 = New System.Windows.Forms.Label()
         Me.dataFiS6 = New System.Windows.Forms.DateTimePicker()
@@ -138,21 +146,13 @@ Partial Class Form1
         Me.dataFiS5 = New System.Windows.Forms.DateTimePicker()
         Me.dataIniciS5 = New System.Windows.Forms.DateTimePicker()
         Me.dgvSortidor5 = New System.Windows.Forms.DataGridView()
+        Me.QuantitatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImporttotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPageInformes = New System.Windows.Forms.TabPage()
         Me.TabPageComandes = New System.Windows.Forms.TabPage()
         Me.TabPagePreus = New System.Windows.Forms.TabPage()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SUBMINISTRAMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GasolineraDataSet = New ProjecteGasolinera.GasolineraDataSet()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantitatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImporttotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
         Me.MenuStrip1.SuspendLayout()
@@ -176,12 +176,12 @@ Partial Class Form1
         Me.TabPageElectricitat.SuspendLayout()
         Me.gbSortidorsEnergia.SuspendLayout()
         CType(Me.dgvSortidorsElectrics, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbSortidor6Energia.SuspendLayout()
         CType(Me.dgvSortidor6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbSortidor5Energia.SuspendLayout()
         CType(Me.dgvSortidor5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -244,6 +244,7 @@ Partial Class Form1
         Me.pbSortidor6.Size = New System.Drawing.Size(300, 200)
         Me.pbSortidor6.TabIndex = 5
         Me.pbSortidor6.TabStop = False
+        Me.pbSortidor6.Tag = "6"
         '
         'pbSortidor4
         '
@@ -254,6 +255,7 @@ Partial Class Form1
         Me.pbSortidor4.Size = New System.Drawing.Size(300, 200)
         Me.pbSortidor4.TabIndex = 4
         Me.pbSortidor4.TabStop = False
+        Me.pbSortidor4.Tag = "4"
         '
         'pbSortidor3
         '
@@ -264,6 +266,7 @@ Partial Class Form1
         Me.pbSortidor3.Size = New System.Drawing.Size(300, 200)
         Me.pbSortidor3.TabIndex = 3
         Me.pbSortidor3.TabStop = False
+        Me.pbSortidor3.Tag = "3"
         '
         'pbSortidor5
         '
@@ -274,6 +277,7 @@ Partial Class Form1
         Me.pbSortidor5.Size = New System.Drawing.Size(300, 200)
         Me.pbSortidor5.TabIndex = 2
         Me.pbSortidor5.TabStop = False
+        Me.pbSortidor5.Tag = "5"
         '
         'pbSortidor2
         '
@@ -284,6 +288,7 @@ Partial Class Form1
         Me.pbSortidor2.Size = New System.Drawing.Size(300, 200)
         Me.pbSortidor2.TabIndex = 1
         Me.pbSortidor2.TabStop = False
+        Me.pbSortidor2.Tag = "2"
         '
         'pbSortidor1
         '
@@ -295,6 +300,7 @@ Partial Class Form1
         Me.pbSortidor1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.pbSortidor1.TabIndex = 0
         Me.pbSortidor1.TabStop = False
+        Me.pbSortidor1.Tag = "1"
         '
         'TabPageDiposits
         '
@@ -1112,6 +1118,37 @@ Partial Class Form1
         Me.dgvSortidorsElectrics.Size = New System.Drawing.Size(292, 292)
         Me.dgvSortidorsElectrics.TabIndex = 25
         '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "quantitat"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Qty (kW/h)"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "import_total"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Import total (€)"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "data"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Data"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'SUBMINISTRAMENTBindingSource
+        '
+        Me.SUBMINISTRAMENTBindingSource.DataMember = "SUBMINISTRAMENT"
+        Me.SUBMINISTRAMENTBindingSource.DataSource = Me.GasolineraDataSet
+        '
+        'GasolineraDataSet
+        '
+        Me.GasolineraDataSet.DataSetName = "GasolineraDataSet"
+        Me.GasolineraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'dataIniciTotal
         '
         Me.dataIniciTotal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -1251,6 +1288,27 @@ Partial Class Form1
         Me.dgvSortidor6.ReadOnly = True
         Me.dgvSortidor6.Size = New System.Drawing.Size(292, 297)
         Me.dgvSortidor6.TabIndex = 13
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quantitat"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Qty (kW/h)"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "import_total"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Import total (€)"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "data"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Data"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'dataIniciS6
         '
@@ -1449,6 +1507,27 @@ Partial Class Form1
         Me.dgvSortidor5.Size = New System.Drawing.Size(292, 295)
         Me.dgvSortidor5.TabIndex = 1
         '
+        'QuantitatDataGridViewTextBoxColumn
+        '
+        Me.QuantitatDataGridViewTextBoxColumn.DataPropertyName = "quantitat"
+        Me.QuantitatDataGridViewTextBoxColumn.HeaderText = "Qty (kW/h)"
+        Me.QuantitatDataGridViewTextBoxColumn.Name = "QuantitatDataGridViewTextBoxColumn"
+        Me.QuantitatDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ImporttotalDataGridViewTextBoxColumn
+        '
+        Me.ImporttotalDataGridViewTextBoxColumn.DataPropertyName = "import_total"
+        Me.ImporttotalDataGridViewTextBoxColumn.HeaderText = "Import total (€)"
+        Me.ImporttotalDataGridViewTextBoxColumn.Name = "ImporttotalDataGridViewTextBoxColumn"
+        Me.ImporttotalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DataDataGridViewTextBoxColumn
+        '
+        Me.DataDataGridViewTextBoxColumn.DataPropertyName = "data"
+        Me.DataDataGridViewTextBoxColumn.HeaderText = "Data"
+        Me.DataDataGridViewTextBoxColumn.Name = "DataDataGridViewTextBoxColumn"
+        Me.DataDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -1488,79 +1567,6 @@ Partial Class Form1
         Me.TabPagePreus.TabIndex = 3
         Me.TabPagePreus.Text = "Preus"
         Me.TabPagePreus.UseVisualStyleBackColor = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "quantitat"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Qty (kW/h)"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "import_total"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Import total (€)"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Data"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'SUBMINISTRAMENTBindingSource
-        '
-        Me.SUBMINISTRAMENTBindingSource.DataMember = "SUBMINISTRAMENT"
-        Me.SUBMINISTRAMENTBindingSource.DataSource = Me.GasolineraDataSet
-        '
-        'GasolineraDataSet
-        '
-        Me.GasolineraDataSet.DataSetName = "GasolineraDataSet"
-        Me.GasolineraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quantitat"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Qty (kW/h)"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "import_total"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Import total (€)"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Data"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'QuantitatDataGridViewTextBoxColumn
-        '
-        Me.QuantitatDataGridViewTextBoxColumn.DataPropertyName = "quantitat"
-        Me.QuantitatDataGridViewTextBoxColumn.HeaderText = "Qty (kW/h)"
-        Me.QuantitatDataGridViewTextBoxColumn.Name = "QuantitatDataGridViewTextBoxColumn"
-        Me.QuantitatDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ImporttotalDataGridViewTextBoxColumn
-        '
-        Me.ImporttotalDataGridViewTextBoxColumn.DataPropertyName = "import_total"
-        Me.ImporttotalDataGridViewTextBoxColumn.HeaderText = "Import total (€)"
-        Me.ImporttotalDataGridViewTextBoxColumn.Name = "ImporttotalDataGridViewTextBoxColumn"
-        Me.ImporttotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DataDataGridViewTextBoxColumn
-        '
-        Me.DataDataGridViewTextBoxColumn.DataPropertyName = "data"
-        Me.DataDataGridViewTextBoxColumn.HeaderText = "Data"
-        Me.DataDataGridViewTextBoxColumn.Name = "DataDataGridViewTextBoxColumn"
-        Me.DataDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DipositTableAdapter
         '
@@ -1607,14 +1613,14 @@ Partial Class Form1
         Me.gbSortidorsEnergia.ResumeLayout(False)
         Me.gbSortidorsEnergia.PerformLayout()
         CType(Me.dgvSortidorsElectrics, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbSortidor6Energia.ResumeLayout(False)
         Me.gbSortidor6Energia.PerformLayout()
         CType(Me.dgvSortidor6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbSortidor5Energia.ResumeLayout(False)
         Me.gbSortidor5Energia.PerformLayout()
         CType(Me.dgvSortidor5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

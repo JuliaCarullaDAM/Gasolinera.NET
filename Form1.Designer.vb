@@ -104,43 +104,32 @@ Partial Class Form1
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.lbIngressosTotal = New System.Windows.Forms.Label()
         Me.dgvSortidorsElectrics = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SUBMINISTRAMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GasolineraDataSet = New ProjecteGasolinera.GasolineraDataSet()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.dataIniciTotal = New System.Windows.Forms.DateTimePicker()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.lbPreuMitjaTotal = New System.Windows.Forms.Label()
         Me.dataFiTotal = New System.Windows.Forms.DateTimePicker()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.lbVehiclesSubministratsEnergiaTotal = New System.Windows.Forms.Label()
         Me.btResetTotal = New System.Windows.Forms.Button()
         Me.btOKTotal = New System.Windows.Forms.Button()
-        Me.Label27 = New System.Windows.Forms.Label()
+        Me.lbEnergiaTotal = New System.Windows.Forms.Label()
         Me.gbSortidor6Energia = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lbIngressosS6 = New System.Windows.Forms.Label()
         Me.dgvSortidor6 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.dataIniciS6 = New System.Windows.Forms.DateTimePicker()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.lbPreuMigS6 = New System.Windows.Forms.Label()
         Me.dataFiS6 = New System.Windows.Forms.DateTimePicker()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.lbVehiclesSubministratsEnergia6 = New System.Windows.Forms.Label()
         Me.btResetS6 = New System.Windows.Forms.Button()
         Me.btOKS6 = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lbEnergiaS6 = New System.Windows.Forms.Label()
         Me.gbSortidor5Energia = New System.Windows.Forms.GroupBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lbIngressosS5 = New System.Windows.Forms.Label()
         Me.lbPreuMigS5 = New System.Windows.Forms.Label()
         Me.lbVehiclesSubministratsEnergia5 = New System.Windows.Forms.Label()
         Me.btOKS5 = New System.Windows.Forms.Button()
@@ -149,13 +138,21 @@ Partial Class Form1
         Me.dataFiS5 = New System.Windows.Forms.DateTimePicker()
         Me.dataIniciS5 = New System.Windows.Forms.DateTimePicker()
         Me.dgvSortidor5 = New System.Windows.Forms.DataGridView()
-        Me.QuantitatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImporttotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TabPageInformes = New System.Windows.Forms.TabPage()
         Me.TabPageComandes = New System.Windows.Forms.TabPage()
         Me.TabPagePreus = New System.Windows.Forms.TabPage()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SUBMINISTRAMENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GasolineraDataSet = New ProjecteGasolinera.GasolineraDataSet()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantitatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImporttotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
         Me.MenuStrip1.SuspendLayout()
@@ -179,12 +176,12 @@ Partial Class Form1
         Me.TabPageElectricitat.SuspendLayout()
         Me.gbSortidorsEnergia.SuspendLayout()
         CType(Me.dgvSortidorsElectrics, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbSortidor6Energia.SuspendLayout()
         CType(Me.dgvSortidor6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbSortidor5Energia.SuspendLayout()
         CType(Me.dgvSortidor5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -1047,16 +1044,15 @@ Partial Class Form1
         Me.gbSortidorsEnergia.Controls.Add(Me.Label21)
         Me.gbSortidorsEnergia.Controls.Add(Me.Label7)
         Me.gbSortidorsEnergia.Controls.Add(Me.Label22)
-        Me.gbSortidorsEnergia.Controls.Add(Me.Label23)
+        Me.gbSortidorsEnergia.Controls.Add(Me.lbIngressosTotal)
         Me.gbSortidorsEnergia.Controls.Add(Me.dgvSortidorsElectrics)
-        Me.gbSortidorsEnergia.Controls.Add(Me.Label24)
         Me.gbSortidorsEnergia.Controls.Add(Me.dataIniciTotal)
-        Me.gbSortidorsEnergia.Controls.Add(Me.Label25)
+        Me.gbSortidorsEnergia.Controls.Add(Me.lbPreuMitjaTotal)
         Me.gbSortidorsEnergia.Controls.Add(Me.dataFiTotal)
-        Me.gbSortidorsEnergia.Controls.Add(Me.Label26)
+        Me.gbSortidorsEnergia.Controls.Add(Me.lbVehiclesSubministratsEnergiaTotal)
         Me.gbSortidorsEnergia.Controls.Add(Me.btResetTotal)
         Me.gbSortidorsEnergia.Controls.Add(Me.btOKTotal)
-        Me.gbSortidorsEnergia.Controls.Add(Me.Label27)
+        Me.gbSortidorsEnergia.Controls.Add(Me.lbEnergiaTotal)
         Me.gbSortidorsEnergia.Location = New System.Drawing.Point(740, 8)
         Me.gbSortidorsEnergia.Name = "gbSortidorsEnergia"
         Me.gbSortidorsEnergia.Size = New System.Drawing.Size(330, 539)
@@ -1092,15 +1088,15 @@ Partial Class Form1
         Me.Label22.TabIndex = 35
         Me.Label22.Text = "Data inici:"
         '
-        'Label23
+        'lbIngressosTotal
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(22, 201)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(87, 20)
-        Me.Label23.TabIndex = 34
-        Me.Label23.Text = "Ingressos: "
+        Me.lbIngressosTotal.AutoSize = True
+        Me.lbIngressosTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbIngressosTotal.Location = New System.Drawing.Point(22, 201)
+        Me.lbIngressosTotal.Name = "lbIngressosTotal"
+        Me.lbIngressosTotal.Size = New System.Drawing.Size(87, 20)
+        Me.lbIngressosTotal.TabIndex = 34
+        Me.lbIngressosTotal.Text = "Ingressos: "
         '
         'dgvSortidorsElectrics
         '
@@ -1110,52 +1106,11 @@ Partial Class Form1
         Me.dgvSortidorsElectrics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSortidorsElectrics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.dgvSortidorsElectrics.DataSource = Me.SUBMINISTRAMENTBindingSource
-        Me.dgvSortidorsElectrics.Location = New System.Drawing.Point(26, 264)
+        Me.dgvSortidorsElectrics.Location = New System.Drawing.Point(26, 238)
         Me.dgvSortidorsElectrics.Name = "dgvSortidorsElectrics"
         Me.dgvSortidorsElectrics.ReadOnly = True
-        Me.dgvSortidorsElectrics.Size = New System.Drawing.Size(292, 266)
+        Me.dgvSortidorsElectrics.Size = New System.Drawing.Size(292, 292)
         Me.dgvSortidorsElectrics.TabIndex = 25
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "quantitat"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "quantitat"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "import_total"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "import_total"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "data"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'SUBMINISTRAMENTBindingSource
-        '
-        Me.SUBMINISTRAMENTBindingSource.DataMember = "SUBMINISTRAMENT"
-        Me.SUBMINISTRAMENTBindingSource.DataSource = Me.GasolineraDataSet
-        '
-        'GasolineraDataSet
-        '
-        Me.GasolineraDataSet.DataSetName = "GasolineraDataSet"
-        Me.GasolineraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(22, 230)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(74, 20)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Beneficis"
         '
         'dataIniciTotal
         '
@@ -1166,15 +1121,15 @@ Partial Class Form1
         Me.dataIniciTotal.TabIndex = 26
         Me.dataIniciTotal.Value = New Date(2025, 1, 1, 0, 0, 0, 0)
         '
-        'Label25
+        'lbPreuMitjaTotal
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(22, 172)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(87, 20)
-        Me.Label25.TabIndex = 32
-        Me.Label25.Text = "Preu mitjà: "
+        Me.lbPreuMitjaTotal.AutoSize = True
+        Me.lbPreuMitjaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPreuMitjaTotal.Location = New System.Drawing.Point(22, 172)
+        Me.lbPreuMitjaTotal.Name = "lbPreuMitjaTotal"
+        Me.lbPreuMitjaTotal.Size = New System.Drawing.Size(87, 20)
+        Me.lbPreuMitjaTotal.TabIndex = 32
+        Me.lbPreuMitjaTotal.Text = "Preu mitjà: "
         '
         'dataFiTotal
         '
@@ -1185,15 +1140,15 @@ Partial Class Form1
         Me.dataFiTotal.TabIndex = 27
         Me.dataFiTotal.Value = New Date(2025, 12, 31, 0, 0, 0, 0)
         '
-        'Label26
+        'lbVehiclesSubministratsEnergiaTotal
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(22, 114)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(178, 20)
-        Me.Label26.TabIndex = 30
-        Me.Label26.Text = "Vehicles Subministrats: "
+        Me.lbVehiclesSubministratsEnergiaTotal.AutoSize = True
+        Me.lbVehiclesSubministratsEnergiaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbVehiclesSubministratsEnergiaTotal.Location = New System.Drawing.Point(22, 114)
+        Me.lbVehiclesSubministratsEnergiaTotal.Name = "lbVehiclesSubministratsEnergiaTotal"
+        Me.lbVehiclesSubministratsEnergiaTotal.Size = New System.Drawing.Size(178, 20)
+        Me.lbVehiclesSubministratsEnergiaTotal.TabIndex = 30
+        Me.lbVehiclesSubministratsEnergiaTotal.Text = "Vehicles Subministrats: "
         '
         'btResetTotal
         '
@@ -1214,31 +1169,30 @@ Partial Class Form1
         Me.btOKTotal.Text = "OK"
         Me.btOKTotal.UseVisualStyleBackColor = True
         '
-        'Label27
+        'lbEnergiaTotal
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(22, 143)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(107, 20)
-        Me.Label27.TabIndex = 31
-        Me.Label27.Text = "Energia total: "
+        Me.lbEnergiaTotal.AutoSize = True
+        Me.lbEnergiaTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEnergiaTotal.Location = New System.Drawing.Point(22, 143)
+        Me.lbEnergiaTotal.Name = "lbEnergiaTotal"
+        Me.lbEnergiaTotal.Size = New System.Drawing.Size(107, 20)
+        Me.lbEnergiaTotal.TabIndex = 31
+        Me.lbEnergiaTotal.Text = "Energia total: "
         '
         'gbSortidor6Energia
         '
         Me.gbSortidor6Energia.Controls.Add(Me.Label8)
         Me.gbSortidor6Energia.Controls.Add(Me.Label6)
         Me.gbSortidor6Energia.Controls.Add(Me.Label15)
-        Me.gbSortidor6Energia.Controls.Add(Me.Label16)
+        Me.gbSortidor6Energia.Controls.Add(Me.lbIngressosS6)
         Me.gbSortidor6Energia.Controls.Add(Me.dgvSortidor6)
-        Me.gbSortidor6Energia.Controls.Add(Me.Label17)
         Me.gbSortidor6Energia.Controls.Add(Me.dataIniciS6)
-        Me.gbSortidor6Energia.Controls.Add(Me.Label18)
+        Me.gbSortidor6Energia.Controls.Add(Me.lbPreuMigS6)
         Me.gbSortidor6Energia.Controls.Add(Me.dataFiS6)
-        Me.gbSortidor6Energia.Controls.Add(Me.Label19)
+        Me.gbSortidor6Energia.Controls.Add(Me.lbVehiclesSubministratsEnergia6)
         Me.gbSortidor6Energia.Controls.Add(Me.btResetS6)
         Me.gbSortidor6Energia.Controls.Add(Me.btOKS6)
-        Me.gbSortidor6Energia.Controls.Add(Me.Label20)
+        Me.gbSortidor6Energia.Controls.Add(Me.lbEnergiaS6)
         Me.gbSortidor6Energia.Location = New System.Drawing.Point(378, 8)
         Me.gbSortidor6Energia.Name = "gbSortidor6Energia"
         Me.gbSortidor6Energia.Size = New System.Drawing.Size(330, 539)
@@ -1274,15 +1228,15 @@ Partial Class Form1
         Me.Label15.TabIndex = 23
         Me.Label15.Text = "Data inici:"
         '
-        'Label16
+        'lbIngressosS6
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(23, 206)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(87, 20)
-        Me.Label16.TabIndex = 22
-        Me.Label16.Text = "Ingressos: "
+        Me.lbIngressosS6.AutoSize = True
+        Me.lbIngressosS6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbIngressosS6.Location = New System.Drawing.Point(23, 206)
+        Me.lbIngressosS6.Name = "lbIngressosS6"
+        Me.lbIngressosS6.Size = New System.Drawing.Size(87, 20)
+        Me.lbIngressosS6.TabIndex = 22
+        Me.lbIngressosS6.Text = "Ingressos: "
         '
         'dgvSortidor6
         '
@@ -1292,42 +1246,11 @@ Partial Class Form1
         Me.dgvSortidor6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSortidor6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.dgvSortidor6.DataSource = Me.SUBMINISTRAMENTBindingSource
-        Me.dgvSortidor6.Location = New System.Drawing.Point(27, 269)
+        Me.dgvSortidor6.Location = New System.Drawing.Point(27, 238)
         Me.dgvSortidor6.Name = "dgvSortidor6"
         Me.dgvSortidor6.ReadOnly = True
-        Me.dgvSortidor6.Size = New System.Drawing.Size(292, 266)
+        Me.dgvSortidor6.Size = New System.Drawing.Size(292, 297)
         Me.dgvSortidor6.TabIndex = 13
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quantitat"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "quantitat"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "import_total"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "import_total"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "data"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "data"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(23, 235)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(74, 20)
-        Me.Label17.TabIndex = 21
-        Me.Label17.Text = "Beneficis"
         '
         'dataIniciS6
         '
@@ -1338,15 +1261,15 @@ Partial Class Form1
         Me.dataIniciS6.TabIndex = 14
         Me.dataIniciS6.Value = New Date(2025, 1, 1, 0, 0, 0, 0)
         '
-        'Label18
+        'lbPreuMigS6
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(23, 177)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(87, 20)
-        Me.Label18.TabIndex = 20
-        Me.Label18.Text = "Preu mitjà: "
+        Me.lbPreuMigS6.AutoSize = True
+        Me.lbPreuMigS6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPreuMigS6.Location = New System.Drawing.Point(23, 177)
+        Me.lbPreuMigS6.Name = "lbPreuMigS6"
+        Me.lbPreuMigS6.Size = New System.Drawing.Size(87, 20)
+        Me.lbPreuMigS6.TabIndex = 20
+        Me.lbPreuMigS6.Text = "Preu mitjà: "
         '
         'dataFiS6
         '
@@ -1357,15 +1280,15 @@ Partial Class Form1
         Me.dataFiS6.TabIndex = 15
         Me.dataFiS6.Value = New Date(2025, 12, 31, 0, 0, 0, 0)
         '
-        'Label19
+        'lbVehiclesSubministratsEnergia6
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(23, 119)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(178, 20)
-        Me.Label19.TabIndex = 18
-        Me.Label19.Text = "Vehicles Subministrats: "
+        Me.lbVehiclesSubministratsEnergia6.AutoSize = True
+        Me.lbVehiclesSubministratsEnergia6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbVehiclesSubministratsEnergia6.Location = New System.Drawing.Point(23, 119)
+        Me.lbVehiclesSubministratsEnergia6.Name = "lbVehiclesSubministratsEnergia6"
+        Me.lbVehiclesSubministratsEnergia6.Size = New System.Drawing.Size(178, 20)
+        Me.lbVehiclesSubministratsEnergia6.TabIndex = 18
+        Me.lbVehiclesSubministratsEnergia6.Text = "Vehicles Subministrats: "
         '
         'btResetS6
         '
@@ -1386,22 +1309,21 @@ Partial Class Form1
         Me.btOKS6.Text = "OK"
         Me.btOKS6.UseVisualStyleBackColor = True
         '
-        'Label20
+        'lbEnergiaS6
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(23, 148)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(107, 20)
-        Me.Label20.TabIndex = 19
-        Me.Label20.Text = "Energia total: "
+        Me.lbEnergiaS6.AutoSize = True
+        Me.lbEnergiaS6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEnergiaS6.Location = New System.Drawing.Point(23, 148)
+        Me.lbEnergiaS6.Name = "lbEnergiaS6"
+        Me.lbEnergiaS6.Size = New System.Drawing.Size(107, 20)
+        Me.lbEnergiaS6.TabIndex = 19
+        Me.lbEnergiaS6.Text = "Energia total: "
         '
         'gbSortidor5Energia
         '
         Me.gbSortidor5Energia.Controls.Add(Me.Label14)
         Me.gbSortidor5Energia.Controls.Add(Me.Label13)
-        Me.gbSortidor5Energia.Controls.Add(Me.Label12)
-        Me.gbSortidor5Energia.Controls.Add(Me.Label11)
+        Me.gbSortidor5Energia.Controls.Add(Me.lbIngressosS5)
         Me.gbSortidor5Energia.Controls.Add(Me.lbPreuMigS5)
         Me.gbSortidor5Energia.Controls.Add(Me.lbVehiclesSubministratsEnergia5)
         Me.gbSortidor5Energia.Controls.Add(Me.btOKS5)
@@ -1436,25 +1358,15 @@ Partial Class Form1
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "Data inici:"
         '
-        'Label12
+        'lbIngressosS5
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(15, 204)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 20)
-        Me.Label12.TabIndex = 10
-        Me.Label12.Text = "Ingressos: "
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(15, 233)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(74, 20)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "Beneficis"
+        Me.lbIngressosS5.AutoSize = True
+        Me.lbIngressosS5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbIngressosS5.Location = New System.Drawing.Point(15, 204)
+        Me.lbIngressosS5.Name = "lbIngressosS5"
+        Me.lbIngressosS5.Size = New System.Drawing.Size(87, 20)
+        Me.lbIngressosS5.TabIndex = 10
+        Me.lbIngressosS5.Text = "Ingressos: "
         '
         'lbPreuMigS5
         '
@@ -1531,32 +1443,11 @@ Partial Class Form1
         Me.dgvSortidor5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSortidor5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.QuantitatDataGridViewTextBoxColumn, Me.ImporttotalDataGridViewTextBoxColumn, Me.DataDataGridViewTextBoxColumn})
         Me.dgvSortidor5.DataSource = Me.SUBMINISTRAMENTBindingSource
-        Me.dgvSortidor5.Location = New System.Drawing.Point(19, 267)
+        Me.dgvSortidor5.Location = New System.Drawing.Point(19, 238)
         Me.dgvSortidor5.Name = "dgvSortidor5"
         Me.dgvSortidor5.ReadOnly = True
-        Me.dgvSortidor5.Size = New System.Drawing.Size(292, 266)
+        Me.dgvSortidor5.Size = New System.Drawing.Size(292, 295)
         Me.dgvSortidor5.TabIndex = 1
-        '
-        'QuantitatDataGridViewTextBoxColumn
-        '
-        Me.QuantitatDataGridViewTextBoxColumn.DataPropertyName = "quantitat"
-        Me.QuantitatDataGridViewTextBoxColumn.HeaderText = "Qty (kW/h)"
-        Me.QuantitatDataGridViewTextBoxColumn.Name = "QuantitatDataGridViewTextBoxColumn"
-        Me.QuantitatDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ImporttotalDataGridViewTextBoxColumn
-        '
-        Me.ImporttotalDataGridViewTextBoxColumn.DataPropertyName = "import_total"
-        Me.ImporttotalDataGridViewTextBoxColumn.HeaderText = "Import total (€)"
-        Me.ImporttotalDataGridViewTextBoxColumn.Name = "ImporttotalDataGridViewTextBoxColumn"
-        Me.ImporttotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DataDataGridViewTextBoxColumn
-        '
-        Me.DataDataGridViewTextBoxColumn.DataPropertyName = "data"
-        Me.DataDataGridViewTextBoxColumn.HeaderText = "Data"
-        Me.DataDataGridViewTextBoxColumn.Name = "DataDataGridViewTextBoxColumn"
-        Me.DataDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Label5
         '
@@ -1597,6 +1488,79 @@ Partial Class Form1
         Me.TabPagePreus.TabIndex = 3
         Me.TabPagePreus.Text = "Preus"
         Me.TabPagePreus.UseVisualStyleBackColor = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "quantitat"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Qty (kW/h)"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "import_total"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Import total (€)"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "data"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Data"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'SUBMINISTRAMENTBindingSource
+        '
+        Me.SUBMINISTRAMENTBindingSource.DataMember = "SUBMINISTRAMENT"
+        Me.SUBMINISTRAMENTBindingSource.DataSource = Me.GasolineraDataSet
+        '
+        'GasolineraDataSet
+        '
+        Me.GasolineraDataSet.DataSetName = "GasolineraDataSet"
+        Me.GasolineraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "quantitat"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Qty (kW/h)"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "import_total"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Import total (€)"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "data"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Data"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'QuantitatDataGridViewTextBoxColumn
+        '
+        Me.QuantitatDataGridViewTextBoxColumn.DataPropertyName = "quantitat"
+        Me.QuantitatDataGridViewTextBoxColumn.HeaderText = "Qty (kW/h)"
+        Me.QuantitatDataGridViewTextBoxColumn.Name = "QuantitatDataGridViewTextBoxColumn"
+        Me.QuantitatDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ImporttotalDataGridViewTextBoxColumn
+        '
+        Me.ImporttotalDataGridViewTextBoxColumn.DataPropertyName = "import_total"
+        Me.ImporttotalDataGridViewTextBoxColumn.HeaderText = "Import total (€)"
+        Me.ImporttotalDataGridViewTextBoxColumn.Name = "ImporttotalDataGridViewTextBoxColumn"
+        Me.ImporttotalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DataDataGridViewTextBoxColumn
+        '
+        Me.DataDataGridViewTextBoxColumn.DataPropertyName = "data"
+        Me.DataDataGridViewTextBoxColumn.HeaderText = "Data"
+        Me.DataDataGridViewTextBoxColumn.Name = "DataDataGridViewTextBoxColumn"
+        Me.DataDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DipositTableAdapter
         '
@@ -1643,14 +1607,14 @@ Partial Class Form1
         Me.gbSortidorsEnergia.ResumeLayout(False)
         Me.gbSortidorsEnergia.PerformLayout()
         CType(Me.dgvSortidorsElectrics, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbSortidor6Energia.ResumeLayout(False)
         Me.gbSortidor6Energia.PerformLayout()
         CType(Me.dgvSortidor6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbSortidor5Energia.ResumeLayout(False)
         Me.gbSortidor5Energia.PerformLayout()
         CType(Me.dgvSortidor5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SUBMINISTRAMENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GasolineraDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1746,8 +1710,7 @@ Partial Class Form1
     Friend WithEvents dgvSortidor5 As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lbIngressosS5 As Label
     Friend WithEvents lbPreuMigS5 As Label
     Friend WithEvents lbVehiclesSubministratsEnergia5 As Label
     Friend WithEvents btOKS5 As Button
@@ -1760,35 +1723,33 @@ Partial Class Form1
     Friend WithEvents SUBMINISTRAMENTBindingSource As BindingSource
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
+    Friend WithEvents lbIngressosTotal As Label
     Friend WithEvents dgvSortidorsElectrics As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents Label24 As Label
     Friend WithEvents dataIniciTotal As DateTimePicker
-    Friend WithEvents Label25 As Label
+    Friend WithEvents lbPreuMitjaTotal As Label
     Friend WithEvents dataFiTotal As DateTimePicker
-    Friend WithEvents Label26 As Label
+    Friend WithEvents lbVehiclesSubministratsEnergiaTotal As Label
     Friend WithEvents btResetTotal As Button
     Friend WithEvents btOKTotal As Button
-    Friend WithEvents Label27 As Label
+    Friend WithEvents lbEnergiaTotal As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lbIngressosS6 As Label
     Friend WithEvents dgvSortidor6 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents Label17 As Label
     Friend WithEvents dataIniciS6 As DateTimePicker
-    Friend WithEvents Label18 As Label
+    Friend WithEvents lbPreuMigS6 As Label
     Friend WithEvents dataFiS6 As DateTimePicker
-    Friend WithEvents Label19 As Label
+    Friend WithEvents lbVehiclesSubministratsEnergia6 As Label
     Friend WithEvents btResetS6 As Button
     Friend WithEvents btOKS6 As Button
-    Friend WithEvents Label20 As Label
+    Friend WithEvents lbEnergiaS6 As Label
     Friend WithEvents QuantitatDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ImporttotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DataDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
 End Class

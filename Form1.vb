@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+    Private Const ID_ENERGIA = "5"
     Private Sub PictureBox1_MouseHover(sender As Object, e As EventArgs) Handles pbSortidor1.MouseHover, pbSortidor2.MouseHover, pbSortidor3.MouseHover, pbSortidor4.MouseHover, pbSortidor5.MouseHover, pbSortidor6.MouseHover
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
         pbSeleccionada.BorderStyle = BorderStyle.Fixed3D
@@ -48,16 +49,73 @@
     End Sub
 
     Private Sub ActualitzarInfoEnergia()
-        'gestionar resultats nulls!!!
-        lbVehiclesSubministratsEnergia5.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value).ToString
-        lbEnergiaS5.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatSortidor(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value).ToString + "kW/h"
-        lbPreuMigS5.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData("5", dataIniciS5.Value, dataFiS5.Value).ToString + " €"
+        'Labels de cada groupbox
+        LabelsEnergia(lbVehiclesSubministratsEnergia5, lbEnergiaS5, lbPreuMigS5, lbIngressosS5, gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value)
+        LabelsEnergia(lbVehiclesSubministratsEnergia6, lbEnergiaS6, lbPreuMigS6, lbIngressosS6, gbSortidor6Energia.Tag.ToString, dataIniciS6.Value, dataFiS6.Value)
+        LabelsEnergia(lbVehiclesSubministratsEnergiaTotal, lbEnergiaTotal, lbPreuMitjaTotal, lbIngressosTotal, dataIniciTotal.Value, dataFiTotal.Value)
 
         'DataGrids
-        dgvSortidor5.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value)
-        dgvSortidor6.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor6Energia.Tag.ToString, dataIniciS6.Value, dataFiS6.Value)
-        dgvSortidorsElectrics.DataSource = SubministramentTableAdapter.GetDataEnergiaData(dataIniciTotal.Value, dataFiTotal.Value)
+        Try
+            dgvSortidor5.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor5Energia.Tag.ToString, dataIniciS5.Value, dataFiS5.Value)
+            dgvSortidor6.DataSource = SubministramentTableAdapter.GetDataByEnergiaSortidorData(gbSortidor6Energia.Tag.ToString, dataIniciS6.Value, dataFiS6.Value)
+            dgvSortidorsElectrics.DataSource = SubministramentTableAdapter.GetDataEnergiaData(dataIniciTotal.Value, dataFiTotal.Value)
+        Catch ex As Exception
+            MessageBox.Show("Error al carregar les dades", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
+    Private Sub LabelsEnergia(lbVehicles As Label, lbEnergia As Label, lbPreuMig As Label, lbIngressos As Label, idSortidor As String, dataInici As Date, dataFi As Date)
+        Dim incorrecte As Boolean = False
+
+        If dataInici <= dataFi Then
+            Try
+                lbVehicles.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(idSortidor, dataInici, dataFi).ToString
+                lbEnergia.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatSortidor(idSortidor, dataInici, dataFi).ToString + "kW"
+                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi).ToString + " €/kW"
+                lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportFromSortidorData(ID_ENERGIA, idSortidor, dataInici, dataFi).ToString + " €"
+            Catch ex As Exception
+                MessageBox.Show("No s'han trobat resultats ", "Sense resultats", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                incorrecte = True
+            End Try
+
+        Else
+            MessageBox.Show("La data final és menor que la data inicial", "Data incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            incorrecte = True
+        End If
+
+        If incorrecte Then
+            lbVehicles.Text = "Vehicles carregats: "
+            lbEnergia.Text = "Energia subministrada: "
+            lbPreuMig.Text = "Preu mitjà: "
+            lbIngressos.Text = "Ingressos: "
+        End If
+    End Sub
+
+    Private Sub LabelsEnergia(lbVehicles As Label, lbEnergia As Label, lbPreuMig As Label, lbIngressos As Label, dataInici As Date, dataFi As Date)
+        Dim incorrecte As Boolean = False
+
+        If dataInici <= dataFi Then
+            Try
+                lbVehicles.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectAllCountElectrics(dataInici, dataFi).ToString
+                lbEnergia.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatTotal(dataInici, dataFi).ToString + "kW"
+                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData("5", dataInici, dataFi).ToString + " €/kW"
+                lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportTotalData("5", dataInici, dataFi).ToString + " €"
+            Catch ex As Exception
+                MessageBox.Show("No s'han trobat resultats ", "Sense resultats", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                incorrecte = True
+            End Try
+
+        Else
+            MessageBox.Show("No s'han trobat resultats ", "Data incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            incorrecte = True
+        End If
+
+        If incorrecte Then
+            lbVehicles.Text = "Vehicles carregats: "
+            lbEnergia.Text = "Energia subministrada: "
+            lbPreuMig.Text = "Preu mitjà: "
+            lbIngressos.Text = "Ingressos: "
+        End If
     End Sub
 
     Private Sub ActualitzarInfoDiposits()

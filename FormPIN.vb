@@ -54,8 +54,12 @@
         segonsTimeout -= 1
 
         If segonsTimeout <= 0 Then
-            SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
-            If _idSortidor = "5" Or _idSortidor = 6 Then
+            Try
+                SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
+            Catch ex As Exception
+                Console.WriteLine("No 'sha pogut actualitzar l'estat del sortidor")
+            End Try
+            If _idSortidor = "5" Or _idSortidor = "6" Then
                 _formElectric.Close()
                 Me.Close()
             Else

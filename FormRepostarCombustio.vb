@@ -67,7 +67,11 @@
     End Sub
 
     Private Sub btFinalitzar_Click(sender As Object, e As EventArgs) Handles btFinalitzar.Click
-        SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
+        Try
+            SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
+        Catch ex As Exception
+            Console.WriteLine("No 'sha pogut actualitzar l'estat del sortidor")
+        End Try
         Me.Close()
     End Sub
 
@@ -79,8 +83,12 @@
 
         'En cas d'haver clicat a cancel·lar, si no s'ha repostat, no es farà cap consulta ja que no té sentit comptabilitzar 0 litres i un import de 0
         If quantitatRepostada > 0.00 Then
-            SubministramentTableAdapter.InsertSubministrament(_idSortidor, _idCombustible, importCombustible, quantitatRepostada, preuLitre)
-            DipositTableAdapter.UpdateCapacitatDiposit(quantitatRepostada, _idCombustible, _idSortidor)
+            Try
+                SubministramentTableAdapter.InsertSubministrament(_idSortidor, _idCombustible, importCombustible, quantitatRepostada, preuLitre)
+                DipositTableAdapter.UpdateCapacitatDiposit(quantitatRepostada, _idCombustible, _idSortidor)
+            Catch ex As Exception
+                Console.WriteLine("No s'ha pogut realitzar la consulta a la base de dades per guardar les dades del subministrament")
+            End Try
         End If
     End Sub
 End Class

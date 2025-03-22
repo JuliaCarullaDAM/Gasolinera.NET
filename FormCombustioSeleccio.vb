@@ -1,4 +1,5 @@
 ﻿Public Class FormCombustioSeleccio
+    Private Const IMPORT_MAXIM = "99"
 
     Private _idSortidor As String
     Dim idCombustible As String
@@ -11,10 +12,14 @@
     End Sub
 
     Private Sub FormCombustioSeleccio_Load(sender As Object, e As EventArgs) Handles Me.Load
-        lbPreuGas95.Text = CarburantTableAdapter.PreuCarburant(lbPreuGas95.Tag.ToString).ToString + "€/L"
-        lbPreuGas98.Text = CarburantTableAdapter.PreuCarburant(lbPreuGas98.Tag.ToString).ToString + "€/L"
-        lbPreuDiesel.Text = CarburantTableAdapter.PreuCarburant(lbPreuDiesel.Tag.ToString).ToString + "€/L"
-        lbPreuAdblue.Text = CarburantTableAdapter.PreuCarburant(lbPreuAdblue.Tag.ToString).ToString + "€/L"
+        Try
+            lbPreuGas95.Text = CarburantTableAdapter.PreuCarburant(lbPreuGas95.Tag.ToString).ToString + "€/L"
+            lbPreuGas98.Text = CarburantTableAdapter.PreuCarburant(lbPreuGas98.Tag.ToString).ToString + "€/L"
+            lbPreuDiesel.Text = CarburantTableAdapter.PreuCarburant(lbPreuDiesel.Tag.ToString).ToString + "€/L"
+            lbPreuAdblue.Text = CarburantTableAdapter.PreuCarburant(lbPreuAdblue.Tag.ToString).ToString + "€/L"
+        Catch ex As Exception
+            Console.WriteLine("Error. No s'han pogut obtenir els preus del carburant")
+        End Try
     End Sub
 
     Private Sub pbCombustible_click(sender As Object, e As EventArgs) Handles pbGasoilina95.Click, pbGasolina98.Click, pbDiesel.Click, pbAdBlue.Click
@@ -44,14 +49,18 @@
     End Sub
 
     Private Sub btPle_Click(sender As Object, e As EventArgs) Handles btPle.Click
-        tbImport.Text = "99"
+        tbImport.Text = IMPORT_MAXIM
     End Sub
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
 
         If idCombustible > 0 AndAlso tbImport.Text.Length > 0 Then
             import = CDbl(tbImport.Text)
-            nomCombustible = CarburantTableAdapter.NomCarburant(idCombustible)
+            Try
+                nomCombustible = CarburantTableAdapter.NomCarburant(idCombustible)
+            Catch ex As Exception
+                Console.WriteLine("idCombustible incorrecte. No existeix cap registre que coincideixi.")
+            End Try
 
             Dim resposta As DialogResult
             resposta = MessageBox.Show("Sortidor: " + _idSortidor + vbNewLine + "Combustible: " + nomCombustible + vbNewLine + "Import: " + import.ToString + "€", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -73,8 +82,12 @@
         resposta = MessageBox.Show("Vols cancel·lar l'operació?", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If resposta = DialogResult.Yes Then
-            SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
-            Me.Close()
+            Try
+                SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
+                Me.Close()
+            Catch ex As Exception
+                Console.WriteLine("Estat no actualitzat. Error al fer la consulta")
+            End Try
         End If
     End Sub
 
@@ -82,5 +95,4 @@
         Dim FormRepostar As New FormRepostarCombustio(_idSortidor, idCombustible, import)
         FormRepostar.Show()
     End Sub
-
 End Class

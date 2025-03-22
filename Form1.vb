@@ -76,8 +76,8 @@
             Try
                 lbVehicles.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectAllCountElectrics(dataInici, dataFi).ToString
                 lbEnergia.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatTotal(dataInici, dataFi).ToString + "kW"
-                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData("5", dataInici, dataFi).ToString + " €/kW"
-                lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportTotalData("5", dataInici, dataFi).ToString + " €"
+                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi).ToString + " €/kW"
+                lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportTotalData(ID_ENERGIA, dataInici, dataFi).ToString + " €"
             Catch ex As Exception
                 MessageBox.Show("No s'han trobat resultats ", "Sense resultats", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 incorrecte = True

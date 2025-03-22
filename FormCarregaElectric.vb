@@ -1,5 +1,6 @@
 ﻿Public Class FormCarregaElectric
     Private _idSortidor As String
+    Private Const ID_ENERGIA As String = "5"
 
     Dim capacitatVehicle As Double
     Dim percentatgeInicial As Integer
@@ -20,7 +21,7 @@
         capacitatVehicle = rnd.Next(50, 111)
         'els vehicles podran arribar amb un màxim de 80% de la càrrega
         percentatgeInicial = rnd.NextDouble * 80
-        preuKW = CarburantTableAdapter.PreuCarburant("5")
+        preuKW = CarburantTableAdapter.PreuCarburant(ID_ENERGIA)
 
         lbEstat.Text = "Estat: en espera"
         lbPreuKW.Text = "Preu kW/h: " + preuKW.ToString + " €"
@@ -55,8 +56,12 @@
         TimerCarrega.Stop()
 
         If energiaSubministrada > 0.00 Then
-            SubministramentTableAdapter.InsertSubministrament(_idSortidor, "5", importTotalCarrega, energiaSubministrada, preuKW)
-            DipositTableAdapter.UpdateQuantitatElectricitat(energiaSubministrada, 5, _idSortidor)
+            Try
+                SubministramentTableAdapter.InsertSubministrament(_idSortidor, ID_ENERGIA, importTotalCarrega, energiaSubministrada, preuKW)
+                DipositTableAdapter.UpdateQuantitatElectricitat(energiaSubministrada, ID_ENERGIA, _idSortidor)
+            Catch ex As Exception
+                MessageBox.Show("Error al inserir les dades del repostatge", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
         End If
     End Sub
 

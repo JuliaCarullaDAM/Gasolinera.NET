@@ -11,7 +11,11 @@
     End Sub
 
     Private Sub FormEstatSortidor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        estat = SortidorTableAdapter.EstatSortidor(_sortidor)
+        Try
+            estat = SortidorTableAdapter.EstatSortidor(_sortidor)
+        Catch ex As Exception
+            Console.WriteLine("No 'sha pogut actualitzar l'estat del sortidor")
+        End Try
 
         Label1.Text = "Sortidor: " + _sortidor
         Label2.Text = "Estat: " + estat
@@ -28,7 +32,11 @@
     End Sub
 
     Private Sub btRepostar_Click(sender As Object, e As EventArgs) Handles btRepostar.Click
-        SortidorTableAdapter.UpdateEstatOcupat(_sortidor)
+        Try
+            SortidorTableAdapter.UpdateEstatOcupat(_sortidor)
+        Catch ex As Exception
+            Console.WriteLine("No 'sha pogut actualitzar l'estat del sortidor")
+        End Try
 
         If _sortidor = "5" Or _sortidor = "6" Then
             Dim formSeleccio As New FormCarregaElectric(_sortidor)

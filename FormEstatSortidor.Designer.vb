@@ -22,12 +22,15 @@ Partial Class FormEstatSortidor
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEstatSortidor))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btRepostar = New System.Windows.Forms.Button()
         Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbEstat = New System.Windows.Forms.PictureBox()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        CType(Me.pbEstat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -64,26 +67,36 @@ Partial Class FormEstatSortidor
         '
         Me.SortidorTableAdapter.ClearBeforeFill = True
         '
-        'PictureBox1
+        'pbEstat
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(127, 139)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(229, 182)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
+        Me.pbEstat.Image = CType(resources.GetObject("pbEstat.Image"), System.Drawing.Image)
+        Me.pbEstat.Location = New System.Drawing.Point(137, 128)
+        Me.pbEstat.Name = "pbEstat"
+        Me.pbEstat.Size = New System.Drawing.Size(180, 180)
+        Me.pbEstat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbEstat.TabIndex = 3
+        Me.pbEstat.TabStop = False
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "iconaDisponible.png")
+        Me.ImageList1.Images.SetKeyName(1, "iconaOcupat.png")
+        Me.ImageList1.Images.SetKeyName(2, "warning-triangle2.png")
         '
         'FormEstatSortidor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(478, 429)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pbEstat)
         Me.Controls.Add(Me.btRepostar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormEstatSortidor"
         Me.Text = "Estat del sortidor"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbEstat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -93,5 +106,6 @@ Partial Class FormEstatSortidor
     Friend WithEvents Label2 As Label
     Friend WithEvents btRepostar As Button
     Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbEstat As PictureBox
+    Friend WithEvents ImageList1 As ImageList
 End Class

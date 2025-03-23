@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:COMANDA" ZOrder="3" X="926" Y="97" Height="210" Width="209" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:DIPOSIT" ZOrder="1" X="528" Y="100" Height="229" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:DIPOSITS_SORTIDOR" ZOrder="8" X="790" Y="380" Height="115" Width="267" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:HISTORIAL_PREUS" ZOrder="7" X="403" Y="648" Height="172" Width="251" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:HISTORIAL_PREUS" ZOrder="7" X="403" Y="648" Height="191" Width="251" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:SORTIDOR" ZOrder="6" X="863" Y="565" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:SUBMINISTRAMENT" ZOrder="2" X="403" Y="368" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
   </Shapes>

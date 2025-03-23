@@ -49,7 +49,7 @@
             Try
                 lbVehicles.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectCountVehiclesElectrics(idSortidor, dataInici, dataFi).ToString
                 lbEnergia.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatSortidor(idSortidor, dataInici, dataFi).ToString + "kW"
-                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi).ToString + " €/kW"
+                lbPreuMig.Text = "Preu mitjà: " + CDbl(SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi)).ToString("F3") + " €/kW"
                 lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportFromSortidorData(ID_ENERGIA, idSortidor, dataInici, dataFi).ToString + " €"
             Catch ex As Exception
                 MessageBox.Show("No s'han trobat resultats ", "Sense resultats", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -76,7 +76,7 @@
             Try
                 lbVehicles.Text = "Vehicles carregats: " + SubministramentTableAdapter.SelectAllCountElectrics(dataInici, dataFi).ToString
                 lbEnergia.Text = "Energia subministrada: " + SubministramentTableAdapter.SelectQuantitatTotal(dataInici, dataFi).ToString + "kW"
-                lbPreuMig.Text = "Preu mitjà: " + SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi).ToString + " €/kW"
+                lbPreuMig.Text = "Preu mitjà: " + CDbl(SubministramentTableAdapter.PreuMitjaData(ID_ENERGIA, dataInici, dataFi)).ToString("F3") + " €/kW"
                 lbIngressos.Text = "Ingressos: " + SubministramentTableAdapter.SelectImportTotalData(ID_ENERGIA, dataInici, dataFi).ToString + " €"
             Catch ex As Exception
                 MessageBox.Show("No s'han trobat resultats ", "Sense resultats", MessageBoxButtons.OK, MessageBoxIcon.Information)

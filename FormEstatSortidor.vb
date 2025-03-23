@@ -20,6 +20,14 @@
         Label1.Text = "Sortidor: " + _sortidor
         Label2.Text = "Estat: " + estat
 
+        If estat = "Fora de servei" Then
+            pbEstat.Image = ImageList1.Images(2)
+        ElseIf estat = "Ocupat"
+            pbEstat.Image = ImageList1.Images(1)
+        Else
+            pbEstat.Image = ImageList1.Images(0)
+        End If
+
         If _sortidor = "5" Or _sortidor = "6" Then
             btRepostar.Text = "Carregar vehicle"
         End If

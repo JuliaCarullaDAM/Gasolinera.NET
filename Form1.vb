@@ -1,5 +1,6 @@
 ﻿Public Class Form1
     Private Const ID_ENERGIA = "5"
+    Private _idPreuCombustible As String = ""
     Private Sub PictureBox_MouseHover(sender As Object, e As EventArgs) Handles pbSortidor1.MouseHover, pbSortidor2.MouseHover, pbSortidor3.MouseHover, pbSortidor4.MouseHover, pbSortidor5.MouseHover, pbSortidor6.MouseHover
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
         pbSeleccionada.BorderStyle = BorderStyle.Fixed3D
@@ -23,7 +24,21 @@
             ActualitzarInfoDiposits()
         ElseIf TabControl1.SelectedIndex = 2
             ActualitzarInfoEnergia()
+        ElseIf TabControl1.SelectedIndex = 5
+            CarregarDGV()
         End If
+    End Sub
+
+    Private Sub CarregarDGV()
+        Try
+            dgvPreuGas95.DataSource = HISTORIAL_PREUSTableAdapter.GetDataByIdCarburant(dgvPreuGas95.Tag.ToString)
+            dgvPreuGas98.DataSource = HISTORIAL_PREUSTableAdapter.GetDataByIdCarburant(dgvPreuGas98.Tag.ToString)
+            dgvPreuDiesel.DataSource = HISTORIAL_PREUSTableAdapter.GetDataByIdCarburant(dgvPreuDiesel.Tag.ToString)
+            dgvPreuAdblue.DataSource = HISTORIAL_PREUSTableAdapter.GetDataByIdCarburant(dgvPreuAdblue.Tag.ToString)
+            dgvPreuElectricitat.DataSource = HISTORIAL_PREUSTableAdapter.GetDataByIdCarburant(dgvPreuElectricitat.Tag.ToString)
+        Catch ex As Exception
+            Console.Write("No s'han trobat dades")
+        End Try
     End Sub
 
     Private Sub ActualitzarInfoEnergia()
@@ -181,6 +196,77 @@
             dataIniciTotal.Value = "01/01/2025"
             dataFiTotal.Value = "31/12/2025"
             ActualitzarInfoEnergia()
+        End If
+    End Sub
+
+    Private Sub btActualitzar_Click(sender As Object, e As EventArgs) Handles btActualitzar.Click
+        If DataIniciHistorial.Value <= DataFiHistorial.Value Then
+            Try
+                dgvPreuGas95.DataSource = HISTORIAL_PREUSTableAdapter.GetByIdCarburantAndData(dgvPreuGas95.Tag.ToString, DataIniciHistorial.Value, DataFiHistorial.Value)
+                dgvPreuGas98.DataSource = HISTORIAL_PREUSTableAdapter.GetByIdCarburantAndData(dgvPreuGas98.Tag.ToString, DataIniciHistorial.Value, DataFiHistorial.Value)
+                dgvPreuDiesel.DataSource = HISTORIAL_PREUSTableAdapter.GetByIdCarburantAndData(dgvPreuDiesel.Tag.ToString, DataIniciHistorial.Value, DataFiHistorial.Value)
+                dgvPreuAdblue.DataSource = HISTORIAL_PREUSTableAdapter.GetByIdCarburantAndData(dgvPreuAdblue.Tag.ToString, DataIniciHistorial.Value, DataFiHistorial.Value)
+                dgvPreuElectricitat.DataSource = HISTORIAL_PREUSTableAdapter.GetByIdCarburantAndData(dgvPreuElectricitat.Tag.ToString, DataIniciHistorial.Value, DataFiHistorial.Value)
+            Catch ex As Exception
+                Console.Write("No s'han trobat dades")
+            End Try
+        Else
+            MessageBox.Show("La data d'inici no pot ser major que la data final", "Data no vàlida", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub pbCombustible_click(sender As Object, e As EventArgs) Handles pbGasolina95.Click, pbGasolina98.Click, pbDiesel.Click, pbAdblue.Click, PbEnergia.Click
+        pbGasolina95.BorderStyle = BorderStyle.None
+        pbGasolina98.BorderStyle = BorderStyle.None
+        pbDiesel.BorderStyle = BorderStyle.None
+        pbAdblue.BorderStyle = BorderStyle.None
+
+        Dim combustibleSeleccionat As PictureBox = DirectCast(sender, PictureBox)
+        combustibleSeleccionat.BorderStyle = BorderStyle.Fixed3D
+
+        _idPreuCombustible = combustibleSeleccionat.Tag.ToString
+    End Sub
+
+    Private Sub tbImport_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbImport.KeyPress
+        Dim txt As TextBox = CType(sender, TextBox)
+
+        If Char.IsControl(e.KeyChar) Then
+            Return
+        End If
+
+        If Char.IsDigit(e.KeyChar) Then
+            If txt.SelectionStart = 0 AndAlso txt.Text.Length >= 1 AndAlso Not txt.SelectedText.Contains(txt.Text(0)) Then
+                e.Handled = True
+            End If
+            Return
+        End If
+
+        If e.KeyChar = "," Then
+            If txt.Text.Contains(",") Then
+                e.Handled = True
+            End If
+            Return
+        End If
+        e.Handled = True
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        If _idPreuCombustible.Length > 0 AndAlso tbImport.TextLength > 0 Then
+
+            Try
+                HISTORIAL_PREUSTableAdapter.SP_ActualitzarPreuCarburant(_idPreuCombustible, tbImport.Text.ToString)
+                tbImport.Clear()
+                CarregarDGV()
+                DataIniciHistorial.Value = "01/01/2025"
+                DataFiHistorial.Value = "31/12/2025"
+            Catch ex As Exception
+                Console.Write("Error al actualitzar preus")
+            End Try
+
+        ElseIf _idPreuCombustible.Length <= 0
+            MessageBox.Show("Si us plau, selecciona un combustible", "Combustible no seleccionat", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf tbImport.TextLength <= 0
+            MessageBox.Show("Si us plau, introdueix un import", "Import no vàlid", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 End Class

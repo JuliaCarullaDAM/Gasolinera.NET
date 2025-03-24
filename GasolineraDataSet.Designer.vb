@@ -5656,7 +5656,7 @@ Namespace GasolineraDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id, id_carburant, data_inici, data_fi, preu FROM dbo.HISTORIAL_PREUS"
@@ -5667,6 +5667,22 @@ Namespace GasolineraDataSetTableAdapters
                 "E id_carburant = @idCombustible"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCombustible", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_carburant", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT id, id_carburant, data_inici, data_fi, preu FROM dbo.HISTORIAL_PREUS"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHER"& _ 
+                "E id_carburant = @idCombustible"&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"AND (data_inici BETWEEN @dataInici AND @dataFi"& _ 
+                ")"&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCombustible", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_carburant", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dataInici", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data_inici", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@dataFi", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "data_inici", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "dbo.ActualitzarPreuCarburant"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_carburant", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@import", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 10, 3, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5709,6 +5725,76 @@ Namespace GasolineraDataSetTableAdapters
             End If
             Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
             Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByIdCarburant(ByVal idCombustible As Global.System.Nullable(Of Integer)) As GasolineraDataSet.HISTORIAL_PREUSDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (idCombustible.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCombustible.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            Dim dataTable As GasolineraDataSet.HISTORIAL_PREUSDataTable = New GasolineraDataSet.HISTORIAL_PREUSDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByIdCarburantAndData(ByVal dataTable As GasolineraDataSet.HISTORIAL_PREUSDataTable, ByVal idCombustible As Global.System.Nullable(Of Integer), ByVal dataInici As String, ByVal dataFi As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (idCombustible.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCombustible.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (dataInici Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("dataInici")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(dataInici,String)
+            End If
+            If (dataFi Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("dataFi")
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(dataFi,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetByIdCarburantAndData(ByVal idCombustible As Global.System.Nullable(Of Integer), ByVal dataInici As String, ByVal dataFi As String) As GasolineraDataSet.HISTORIAL_PREUSDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (idCombustible.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCombustible.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (dataInici Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("dataInici")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(dataInici,String)
+            End If
+            If (dataFi Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("dataFi")
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(dataFi,String)
+            End If
+            Dim dataTable As GasolineraDataSet.HISTORIAL_PREUSDataTable = New GasolineraDataSet.HISTORIAL_PREUSDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5884,6 +5970,37 @@ Namespace GasolineraDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal id_carburant As Global.System.Nullable(Of Integer), ByVal data_inici As Date, ByVal data_fi As Global.System.Nullable(Of Date), ByVal preu As Global.System.Nullable(Of Double), ByVal Original_id As Integer, ByVal Original_id_carburant As Global.System.Nullable(Of Integer), ByVal Original_data_inici As Date, ByVal Original_data_fi As Global.System.Nullable(Of Date), ByVal Original_preu As Global.System.Nullable(Of Double)) As Integer
             Return Me.Update(id_carburant, data_inici, data_fi, preu, Original_id, Original_id_carburant, Original_data_inici, Original_data_fi, Original_preu, Original_id)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function SP_ActualitzarPreuCarburant(ByVal id_carburant As Global.System.Nullable(Of Integer), ByVal import As Global.System.Nullable(Of Decimal)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            If (id_carburant.HasValue = true) Then
+                command.Parameters(1).Value = CType(id_carburant.Value,Integer)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (import.HasValue = true) Then
+                command.Parameters(2).Value = CType(import.Value,Decimal)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

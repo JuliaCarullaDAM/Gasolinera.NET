@@ -232,6 +232,11 @@ Used to sort self-referenced table's rows
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProjecteGasolinera.My.Resources.Resources.EnergiaLogo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProjecteGasolinera.My.Resources.Resources.Sortidor1">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

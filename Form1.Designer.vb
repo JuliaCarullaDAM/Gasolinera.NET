@@ -166,7 +166,7 @@ Partial Class Form1
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Button19 = New System.Windows.Forms.Button()
+        Me.btBuscarComandes = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabPagePreus = New System.Windows.Forms.TabPage()
@@ -223,22 +223,7 @@ Partial Class Form1
         Me.DatacomandaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DatasubministramentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HISTORIALPREUSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PreuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatainiciDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatafiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
         Me.HISTORIAL_PREUSTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.HISTORIAL_PREUSTableAdapter()
@@ -248,6 +233,21 @@ Partial Class Form1
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
+        Me.PreuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatainiciDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatafiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPageInici.SuspendLayout()
@@ -1749,7 +1749,7 @@ Partial Class Form1
         Me.TabPageComandes.Controls.Add(Me.Label18)
         Me.TabPageComandes.Controls.Add(Me.Label16)
         Me.TabPageComandes.Controls.Add(Me.Label17)
-        Me.TabPageComandes.Controls.Add(Me.Button19)
+        Me.TabPageComandes.Controls.Add(Me.btBuscarComandes)
         Me.TabPageComandes.Controls.Add(Me.DateTimePicker3)
         Me.TabPageComandes.Controls.Add(Me.DateTimePicker4)
         Me.TabPageComandes.Location = New System.Drawing.Point(4, 22)
@@ -1854,14 +1854,14 @@ Partial Class Form1
         Me.Label17.TabIndex = 16
         Me.Label17.Text = "Data inici"
         '
-        'Button19
+        'btBuscarComandes
         '
-        Me.Button19.Location = New System.Drawing.Point(250, 86)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(75, 23)
-        Me.Button19.TabIndex = 15
-        Me.Button19.Text = "Button19"
-        Me.Button19.UseVisualStyleBackColor = True
+        Me.btBuscarComandes.Location = New System.Drawing.Point(250, 86)
+        Me.btBuscarComandes.Name = "btBuscarComandes"
+        Me.btBuscarComandes.Size = New System.Drawing.Size(75, 23)
+        Me.btBuscarComandes.TabIndex = 15
+        Me.btBuscarComandes.Text = "Buscar"
+        Me.btBuscarComandes.UseVisualStyleBackColor = True
         '
         'DateTimePicker3
         '
@@ -1973,20 +1973,20 @@ Partial Class Form1
         '
         'Button18
         '
-        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.Location = New System.Drawing.Point(445, 487)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(117, 23)
+        Me.Button18.Size = New System.Drawing.Size(117, 24)
         Me.Button18.TabIndex = 16
         Me.Button18.Text = "Modificar preu"
         Me.Button18.UseVisualStyleBackColor = True
         '
         'tbImport
         '
-        Me.tbImport.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbImport.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbImport.Location = New System.Drawing.Point(445, 460)
         Me.tbImport.Name = "tbImport"
-        Me.tbImport.Size = New System.Drawing.Size(100, 22)
+        Me.tbImport.Size = New System.Drawing.Size(117, 24)
         Me.tbImport.TabIndex = 15
         '
         'Label11
@@ -2361,130 +2361,10 @@ Partial Class Form1
         Me.EstatDataGridViewTextBoxColumn.HeaderText = "estat"
         Me.EstatDataGridViewTextBoxColumn.Name = "EstatDataGridViewTextBoxColumn"
         '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "preu"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        Me.DataGridViewTextBoxColumn16.Width = 40
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "data_inici"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.Width = 70
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "data_fi"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.Width = 70
-        '
         'HISTORIALPREUSBindingSource
         '
         Me.HISTORIALPREUSBindingSource.DataMember = "HISTORIAL_PREUS"
         Me.HISTORIALPREUSBindingSource.DataSource = Me.GasolineraDataSet
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "preu"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Width = 40
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "data_inici"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        Me.DataGridViewTextBoxColumn14.Width = 70
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "data_fi"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        Me.DataGridViewTextBoxColumn15.Width = 70
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "preu"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Width = 40
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "data_inici"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        Me.DataGridViewTextBoxColumn11.Width = 70
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "data_fi"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Width = 70
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "preu"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 40
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "data_inici"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 70
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "data_fi"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Width = 70
-        '
-        'PreuDataGridViewTextBoxColumn
-        '
-        Me.PreuDataGridViewTextBoxColumn.DataPropertyName = "preu"
-        Me.PreuDataGridViewTextBoxColumn.HeaderText = "preu"
-        Me.PreuDataGridViewTextBoxColumn.Name = "PreuDataGridViewTextBoxColumn"
-        Me.PreuDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PreuDataGridViewTextBoxColumn.Width = 40
-        '
-        'DatainiciDataGridViewTextBoxColumn
-        '
-        Me.DatainiciDataGridViewTextBoxColumn.DataPropertyName = "data_inici"
-        Me.DatainiciDataGridViewTextBoxColumn.HeaderText = "data_inici"
-        Me.DatainiciDataGridViewTextBoxColumn.Name = "DatainiciDataGridViewTextBoxColumn"
-        Me.DatainiciDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DatainiciDataGridViewTextBoxColumn.Width = 70
-        '
-        'DatafiDataGridViewTextBoxColumn
-        '
-        Me.DatafiDataGridViewTextBoxColumn.DataPropertyName = "data_fi"
-        Me.DatafiDataGridViewTextBoxColumn.HeaderText = "data_fi"
-        Me.DatafiDataGridViewTextBoxColumn.Name = "DatafiDataGridViewTextBoxColumn"
-        Me.DatafiDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DatafiDataGridViewTextBoxColumn.Width = 70
         '
         'DipositTableAdapter
         '
@@ -2546,11 +2426,131 @@ Partial Class Form1
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(922, 89)
+        Me.Label35.Location = New System.Drawing.Point(928, 89)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(88, 18)
+        Me.Label35.Size = New System.Drawing.Size(65, 18)
         Me.Label35.TabIndex = 26
-        Me.Label35.Text = "Electricitat"
+        Me.Label35.Text = "Energia"
+        '
+        'PreuDataGridViewTextBoxColumn
+        '
+        Me.PreuDataGridViewTextBoxColumn.DataPropertyName = "Preu"
+        Me.PreuDataGridViewTextBoxColumn.HeaderText = "Preu"
+        Me.PreuDataGridViewTextBoxColumn.Name = "PreuDataGridViewTextBoxColumn"
+        Me.PreuDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PreuDataGridViewTextBoxColumn.Width = 40
+        '
+        'DatainiciDataGridViewTextBoxColumn
+        '
+        Me.DatainiciDataGridViewTextBoxColumn.DataPropertyName = "Inici"
+        Me.DatainiciDataGridViewTextBoxColumn.HeaderText = "Inici"
+        Me.DatainiciDataGridViewTextBoxColumn.Name = "DatainiciDataGridViewTextBoxColumn"
+        Me.DatainiciDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DatainiciDataGridViewTextBoxColumn.Width = 70
+        '
+        'DatafiDataGridViewTextBoxColumn
+        '
+        Me.DatafiDataGridViewTextBoxColumn.DataPropertyName = "Fi"
+        Me.DatafiDataGridViewTextBoxColumn.HeaderText = "Fi"
+        Me.DatafiDataGridViewTextBoxColumn.Name = "DatafiDataGridViewTextBoxColumn"
+        Me.DatafiDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DatafiDataGridViewTextBoxColumn.Width = 70
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 40
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 70
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 70
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 40
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        Me.DataGridViewTextBoxColumn11.Width = 70
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        Me.DataGridViewTextBoxColumn12.Width = 70
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Width = 40
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        Me.DataGridViewTextBoxColumn14.Width = 70
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        Me.DataGridViewTextBoxColumn15.Width = 70
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Preu"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.Width = 40
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "Data inici"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Width = 70
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "Data fi"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Width = 70
         '
         'Form1
         '
@@ -2762,35 +2762,20 @@ Partial Class Form1
     Friend WithEvents lbHisotrial As Label
     Friend WithEvents HISTORIALPREUSBindingSource As BindingSource
     Friend WithEvents HISTORIAL_PREUSTableAdapter As GasolineraDataSetTableAdapters.HISTORIAL_PREUSTableAdapter
-    Friend WithEvents PreuDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DatainiciDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DatafiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents btActualitzar As Button
     Friend WithEvents DataFiHistorial As DateTimePicker
     Friend WithEvents DataIniciHistorial As DateTimePicker
     Friend WithEvents lbEditarPreus As Label
     Friend WithEvents dgvPreuElectricitat As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
     Friend WithEvents dgvPreuAdblue As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
     Friend WithEvents dgvPreuDiesel As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents dgvPreuGas98 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView6 As DataGridView
     Friend WithEvents GasolineraDataSetBindingSource As BindingSource
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Button19 As Button
+    Friend WithEvents btBuscarComandes As Button
     Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Button18 As Button
@@ -2851,4 +2836,19 @@ Partial Class Form1
     Friend WithEvents Label33 As Label
     Friend WithEvents Label28 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents PreuDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DatainiciDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DatafiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -1,8 +1,10 @@
 ﻿Public Class Form1
     Private Const ID_ENERGIA = "5"
     Private _idPreuCombustible As String = ""
-    Dim ticksForaDeServei As Integer = 0
-    Dim idSortidor As Integer = 0
+    Private ticksForaDeServei As Integer = 0
+    Private idSortidor As Integer = 0
+    Private informeCombustible As Integer = 0
+    Private informeFiltrarCombustible As Boolean = False
 
     Private Sub PictureBox_MouseHover(sender As Object, e As EventArgs) Handles pbSortidor1.MouseHover, pbSortidor2.MouseHover, pbSortidor3.MouseHover, pbSortidor4.MouseHover, pbSortidor5.MouseHover, pbSortidor6.MouseHover
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
@@ -27,10 +29,12 @@
             ActualitzarInfoDiposits()
         ElseIf TabControl1.SelectedIndex = 2
             ActualitzarInfoEnergia()
-        ElseIf TabControl1.SelectedIndex = 4
+        ElseIf TabControl1.SelectedIndex = 3
             CarregarComandes()
-        ElseIf TabControl1.SelectedIndex = 5
+        ElseIf TabControl1.SelectedIndex = 4
             CarregarDGV()
+        ElseIf TabControl1.SelectedIndex = 5
+            comboInformeTrimestre.SelectedIndex = 0
         End If
     End Sub
 
@@ -235,6 +239,7 @@
         pbGasolina98.BorderStyle = BorderStyle.None
         pbDiesel.BorderStyle = BorderStyle.None
         pbAdblue.BorderStyle = BorderStyle.None
+        PbEnergia.BorderStyle = BorderStyle.None
 
         Dim combustibleSeleccionat As PictureBox = DirectCast(sender, PictureBox)
         combustibleSeleccionat.BorderStyle = BorderStyle.Fixed3D
@@ -343,5 +348,77 @@
                 Console.Write("Error al actualitzar informació del sortidor!")
             End Try
         End If
+    End Sub
+
+    Private Sub btInformeReset_Click(sender As Object, e As EventArgs) Handles btInformeReset.Click
+        dataIniciInforme.Value = "01/01/2025"
+        dataFiInforme.Value = "31/12/2025"
+    End Sub
+
+    Private Sub btInformeData_Click(sender As Object, e As EventArgs) Handles btInformeData.Click
+        Try
+            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetAllByData(dataIniciInforme.Value, dataFiInforme.Value)
+            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetComandesByData(dataIniciInforme.Value, dataFiInforme.Value)
+            calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
+        Catch ex As Exception
+            Console.Write("Error al obtenir informació de les vendes!")
+        End Try
+    End Sub
+
+    Private Sub btInformeAny_Click(sender As Object, e As EventArgs) Handles btInformeAny.Click
+        Try
+            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYear(AnyInforme.Value.Year)
+            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYear(AnyInforme.Value.Year)
+            calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
+        Catch ex As Exception
+            Console.Write("Error al obtenir informació de les vendes!")
+        End Try
+    End Sub
+
+    Private Sub calcularBeneficis(dgvIngressos As DataGridView, dgvDespeses As DataGridView)
+        Dim ingressos As Integer = 0
+        For Each row As DataGridViewRow In dgvIngressos.Rows
+            ingressos += row.Cells(4).Value
+        Next
+
+        Dim despeses As Integer = 0
+        For Each row As DataGridViewRow In dgvDespeses.Rows
+            despeses += row.Cells(3).Value
+        Next
+
+        If dgvInformesBeneficis.RowCount > 0 Then dgvInformesBeneficis.Rows.RemoveAt(0)
+        dgvInformesBeneficis.Rows.Insert(0, ingressos.ToString, despeses.ToString, (ingressos - despeses).ToString)
+    End Sub
+
+    Private Sub btInformeTrimestre_Click(sender As Object, e As EventArgs) Handles btInformeTrimestre.Click
+        Try
+            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYearQuarter(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
+            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYearTrimestre(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
+            calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
+        Catch ex As Exception
+            Console.Write("Error al obtenir informació de les vendes!")
+        End Try
+    End Sub
+
+    Private Sub btEsborrarInforme_Click(sender As Object, e As EventArgs) Handles btEsborrarInforme.Click
+        TreureSeleccioInformes()
+        informeFiltrarCombustible = False
+    End Sub
+
+    Private Sub pbInformeCombustible_click(sender As Object, e As EventArgs) Handles pbInformeGas95.Click, pbInformeGas98.Click, pbInformeDiesel.Click, pbInformeAdblue.Click, pbInformeEnergia.Click
+        TreureSeleccioInformes()
+
+        Dim combustibleSeleccionat As PictureBox = DirectCast(sender, PictureBox)
+        combustibleSeleccionat.BorderStyle = BorderStyle.Fixed3D
+
+        informeCombustible = combustibleSeleccionat.Tag.ToString
+        informeFiltrarCombustible = True
+    End Sub
+    Private Sub TreureSeleccioInformes()
+        pbInformeGas95.BorderStyle = BorderStyle.None
+        pbInformeGas98.BorderStyle = BorderStyle.None
+        pbInformeDiesel.BorderStyle = BorderStyle.None
+        pbInformeAdblue.BorderStyle = BorderStyle.None
+        pbInformeEnergia.BorderStyle = BorderStyle.None
     End Sub
 End Class

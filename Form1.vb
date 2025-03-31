@@ -6,6 +6,7 @@
     Private informeCombustible As Integer = 0
     Private informeFiltrarCombustible As Boolean = False
 
+    'Els 2 primers subs animen les picturebox, per a que l'usuari pugui veure què està seleccionant i intueixi que es pot fer clic
     Private Sub PictureBox_MouseHover(sender As Object, e As EventArgs) Handles pbSortidor1.MouseHover, pbSortidor2.MouseHover, pbSortidor3.MouseHover, pbSortidor4.MouseHover, pbSortidor5.MouseHover, pbSortidor6.MouseHover
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
         pbSeleccionada.BorderStyle = BorderStyle.Fixed3D
@@ -16,6 +17,7 @@
         pbSeleccionada.BorderStyle = BorderStyle.FixedSingle
     End Sub
 
+    'Cada picturebox té un tag que guarda l'id del sortidor que representa. Aquest id es passa per paràmetre al nou formulari, que necessitarà aquesta informació
     Private Sub pbSortidor_Click(sender As Object, e As EventArgs) Handles pbSortidor1.Click, pbSortidor2.Click, pbSortidor3.Click, pbSortidor4.Click, pbSortidor5.Click, pbSortidor6.Click
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
         Dim idSortidor = pbSeleccionada.Tag.ToString
@@ -24,18 +26,21 @@
         formNou.Show()
     End Sub
 
+    'Gestiono cada pestanya del form 1, que segons la selecció executarà les consultes necessàries
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        If TabControl1.SelectedIndex = 1 Then
-            ActualitzarInfoDiposits()
-        ElseIf TabControl1.SelectedIndex = 2
-            ActualitzarInfoEnergia()
-        ElseIf TabControl1.SelectedIndex = 3
-            CarregarComandes()
-        ElseIf TabControl1.SelectedIndex = 4
-            CarregarDGV()
-        ElseIf TabControl1.SelectedIndex = 5
-            comboInformeTrimestre.SelectedIndex = 0
-        End If
+        Select Case TabControl1.SelectedIndex
+            Case 1
+                ActualitzarInfoDiposits()
+            Case 2
+                ActualitzarInfoEnergia()
+            Case 3
+                CarregarComandes()
+            Case 4
+                CarregarDGV()
+            Case 5
+                TreureSeleccioInformes()
+                comboInformeTrimestre.SelectedIndex = 0
+        End Select
     End Sub
 
     Private Sub CarregarComandes()
@@ -247,6 +252,7 @@
         _idPreuCombustible = combustibleSeleccionat.Tag.ToString
     End Sub
 
+    'Només permeto caràcters numèrics i una única coma per a evitar errors al modificar el preu dels combustibles
     Private Sub tbImport_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbImport.KeyPress
         Dim txt As TextBox = CType(sender, TextBox)
 
@@ -307,6 +313,7 @@
         End If
     End Sub
 
+    'En el cas de plenar un diposit, actualitzo l'estat de la comanda i el dipòsit. També inicio un timer per a bloquejar temporalment el sortidor
     Private Sub btPlenarDiposit_Click(sender As Object, e As EventArgs) Handles btPlenarDiposit.Click
         Dim fila As DataGridViewRow
         Dim idComanda As Integer
@@ -334,6 +341,7 @@
         End If
     End Sub
 
+    'Aquest timer gestiona quant de temps estarà el sortidor fora de servei. En aquest cas serà un minut. Un cop arriba al temps objectiu, fa un update a l'estat del sortidor i para el timer
     Private Sub TimerForaDeServei_Tick(sender As Object, e As EventArgs) Handles TimerForaDeServei.Tick
         ticksForaDeServei += 1
 
@@ -355,6 +363,7 @@
         dataFiInforme.Value = "31/12/2025"
     End Sub
 
+    'En la pantalla d'informes s'executaran certes consultes segons si es vol filtrar per data, any o trimestre. També si volem un resultat general o filtrar per combustible
     Private Sub btInformeData_Click(sender As Object, e As EventArgs) Handles btInformeData.Click
         Try
             If informeFiltrarCombustible Then
@@ -400,6 +409,7 @@
         End Try
     End Sub
 
+    'Els beneficis es mostraran en un dgv que no està enllaçat a la base de dades. Agafa els resultats dels altres dgv i fa el càlcul per al benefici
     Private Sub calcularBeneficis(dgvIngressos As DataGridView, dgvDespeses As DataGridView)
         Dim ingressos As Double = 0
         For Each row As DataGridViewRow In dgvIngressos.Rows
@@ -415,11 +425,13 @@
         dgvInformesBeneficis.Rows.Insert(0, ingressos.ToString, despeses.ToString, (ingressos - despeses).ToString)
     End Sub
 
+    'Aquest botó fa que es deixi de filtrar per combustible
     Private Sub btEsborrarInforme_Click(sender As Object, e As EventArgs) Handles btEsborrarInforme.Click
         TreureSeleccioInformes()
         informeFiltrarCombustible = False
     End Sub
 
+    'Aquest botó permet filtrar per combustible
     Private Sub pbInformeCombustible_click(sender As Object, e As EventArgs) Handles pbInformeGas95.Click, pbInformeGas98.Click, pbInformeDiesel.Click, pbInformeAdblue.Click, pbInformeEnergia.Click
         TreureSeleccioInformes()
 
@@ -435,5 +447,13 @@
         pbInformeDiesel.BorderStyle = BorderStyle.None
         pbInformeAdblue.BorderStyle = BorderStyle.None
         pbInformeEnergia.BorderStyle = BorderStyle.None
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        AboutBox1.Show()
+    End Sub
+
+    Private Sub AjudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjudaToolStripMenuItem.Click
+        FormHelp.Show()
     End Sub
 End Class

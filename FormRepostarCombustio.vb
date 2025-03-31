@@ -40,10 +40,13 @@
 
     Private Sub TimerRepostar_Tick(sender As Object, e As EventArgs) Handles TimerRepostar.Tick
 
+        'Per cada tick, comprovo que el diposit no estigui ple o s'hagi superat l'import que vol pagar l'usuari. 
+        'Si es compleixen aquestes condicions, faig les gestions corresponents.
         If importCombustible.CompareTo(_import) >= 0 Then
             DipositPle()
         ElseIf combustible_actual.CompareTo(capacitat) >= 0
             DipositPle()
+            'Cada tick va augmentant la quantitat i mostra les dades en temps real
         Else
             quantitatRepostada += 0.01
             importCombustible = quantitatRepostada * preuLitre
@@ -54,6 +57,7 @@
             combustible_actual += 0.01
             lbCombustibleActual.Text = "Combustible actual: " + combustible_actual.ToString("F2") + " L"
 
+            'També hi ha un progress bar per fer-ho més visual
             ProgressBar1.Value = CInt(combustible_actual * 100 / capacitat)
         End If
     End Sub
@@ -66,6 +70,7 @@
         DipositPle()
     End Sub
 
+    'Un cop s'ha finalitzat el procés s'actualitza l'estat del sortidor i es tanca el formulari del repostatge
     Private Sub btFinalitzar_Click(sender As Object, e As EventArgs) Handles btFinalitzar.Click
         Try
             SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
@@ -75,7 +80,9 @@
         Me.Close()
     End Sub
 
+    'Si l'usuari vol parar de repostar o s'han complert els requisits de diposit ple / màxim import, realitzo les consultes a la base de dades
     Private Sub DipositPle()
+        'Deshabilito botons per a evitar errors d'usuari
         TimerRepostar.Stop()
         btCarregar.Enabled = False
         btParar.Enabled = False

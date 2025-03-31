@@ -11,6 +11,7 @@
         _idSortidor = sortidor
     End Sub
 
+    'Mostro el preu actual de cada combustible
     Private Sub FormCombustioSeleccio_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             lbPreuGas95.Text = CarburantTableAdapter.PreuCarburant(lbPreuGas95.Tag.ToString).ToString + "€/L"
@@ -22,6 +23,7 @@
         End Try
     End Sub
 
+    'Agafo les dades del pb seleccionat per a guardar en una variable l'id del combustible i gestionar-ho posteriorment
     Private Sub pbCombustible_click(sender As Object, e As EventArgs) Handles pbGasoilina95.Click, pbGasolina98.Click, pbDiesel.Click, pbAdBlue.Click
         pbGasoilina95.BorderStyle = BorderStyle.None
         pbGasolina98.BorderStyle = BorderStyle.None
@@ -34,6 +36,7 @@
         idCombustible = combustibleSeleccionat.Tag.ToString
     End Sub
 
+    'Gestiono un teclat numèric en pantalla que permet un nombre màxim de 99
     Private Sub bt_click(sender As Object, e As EventArgs) Handles bt1.Click, bt2.Click, bt3.Click, bt4.Click, bt5.Click, bt6.Click, bt7.Click, bt8.Click, bt9.Click, bt0.Click
         Dim numSeleccionat As Button = DirectCast(sender, Button)
 
@@ -54,6 +57,7 @@
 
     Private Sub btOK_Click(sender As Object, e As EventArgs) Handles btOK.Click
 
+        'M'asseguro que s'ha introduit un import i s'ha seleccionat el combustible
         If idCombustible > 0 AndAlso tbImport.Text.Length > 0 Then
             import = CDbl(tbImport.Text)
             Try
@@ -62,9 +66,11 @@
                 Console.WriteLine("idCombustible incorrecte. No existeix cap registre que coincideixi.")
             End Try
 
+            'Es confirmen les dades a l'usuari
             Dim resposta As DialogResult
             resposta = MessageBox.Show("Sortidor: " + _idSortidor + vbNewLine + "Combustible: " + nomCombustible + vbNewLine + "Import: " + import.ToString + "€", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
+            'Si les dades són correctes, es procedeix al pagament, si no, es permet modificar-les
             If resposta = DialogResult.Yes Then
                 Dim formPin As New FormPIN(_idSortidor, Me)
                 formPin.Show()
@@ -77,6 +83,7 @@
         End If
     End Sub
 
+    'Si l'usuari al final no vol repostar, pot cancel·lar i el sortidor tornarà a estar disponible
     Private Sub btCancelar_Click(sender As Object, e As EventArgs) Handles btCancelar.Click
         Dim resposta As DialogResult
         resposta = MessageBox.Show("Vols cancel·lar l'operació?", "Confirmació", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -91,6 +98,7 @@
         End If
     End Sub
 
+    'A partir de les dades obtingudes amb la selecció d'aquest formulari, puc instanciar el formulari del repostatge des del formulari on introdueixo el PIN
     Public Sub FormRepostatge_show()
         Dim FormRepostar As New FormRepostarCombustio(_idSortidor, idCombustible, import)
         FormRepostar.Show()

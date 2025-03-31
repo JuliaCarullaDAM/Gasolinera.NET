@@ -10,6 +10,7 @@
         _sortidor = sortidor
     End Sub
 
+    'Segons l'estat del sortidor, mostro la informació adient
     Private Sub FormEstatSortidor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             estat = SortidorTableAdapter.EstatSortidor(_sortidor)
@@ -28,6 +29,7 @@
             pbEstat.Image = ImageList1.Images(0)
         End If
 
+        'També personalitzo el formulari en cas de que s'hagi instanciat a través d'un sortidor que correspon a vehicles elèctrics
         If _sortidor = "5" Or _sortidor = "6" Then
             btRepostar.Text = "Carregar vehicle"
         End If
@@ -39,6 +41,7 @@
         End If
     End Sub
 
+    'Si el sortidor està disponible, obro el formulari que correspon per al repostatge/càrrega
     Private Sub btRepostar_Click(sender As Object, e As EventArgs) Handles btRepostar.Click
         Try
             SortidorTableAdapter.UpdateEstatOcupat(_sortidor)
@@ -55,4 +58,5 @@
         End If
         Me.Close()
     End Sub
+
 End Class

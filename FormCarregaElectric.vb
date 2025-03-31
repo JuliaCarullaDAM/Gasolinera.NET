@@ -15,6 +15,7 @@
         InitializeComponent()
         _idSortidor = sortidor
     End Sub
+
     Private Sub FormCarregaElectric_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim rnd As Random = New Random
         'els vehicles tindran una capacitat aleatòria d'entre 50 i 110kW/h
@@ -32,6 +33,8 @@
         btFinalitzar.Enabled = False
         ProgressBar1.Value = percentatgeInicial
     End Sub
+
+    'Si l'usuari vol carregar el vehicle, haurà de passar primer la targeta
     Private Sub btCarregar_Click(sender As Object, e As EventArgs) Handles btCarregar.Click
         Dim formPin As New FormPIN(_idSortidor, Me)
         formPin.Show()
@@ -39,15 +42,19 @@
         btCarregar.Enabled = False
         lbEstat.Text = "Estat: carregant"
     End Sub
+
+    'Al parar la càrrega, es gestionen les consultes 
     Private Sub btParar_Click(sender As Object, e As EventArgs) Handles btParar.Click
         lbEstat.Text = "Estat: finalitzat"
         CarregaFeta()
     End Sub
+
     Private Sub btFinalitzar_Click(sender As Object, e As EventArgs) Handles btFinalitzar.Click
         btCarregar.Enabled = False
         SortidorTableAdapter.UpdateEstatDisponible(_idSortidor)
         Me.Close()
     End Sub
+
     Private Sub CarregaFeta()
         btFinalitzar.Enabled = True
         btCarregar.Enabled = False
@@ -55,6 +62,7 @@
 
         TimerCarrega.Stop()
 
+        'Si s'ha carregat energia, es fan les consultes
         If energiaSubministrada > 0.00 Then
             Try
                 SubministramentTableAdapter.InsertSubministrament(_idSortidor, ID_ENERGIA, importTotalCarrega, energiaSubministrada, preuKW)
@@ -68,6 +76,8 @@
     Dim minuts As Integer = 0
     Dim segons As Integer = 0
     Dim ticks As Integer = 0
+
+    'Aquest timer s'inicia un cop s'ha autoritzat el pagament. Mostra les dades en temps real sobre la càrrega
     Private Sub TimerCarrega_Tick(sender As Object, e As EventArgs) Handles TimerCarrega.Tick
         energiaSubministrada += 0.025
         importTotalCarrega = preuKW * energiaSubministrada
@@ -79,6 +89,7 @@
         lbCostCarrega.Text = "Cost: " + importTotalCarrega.ToString("F2") + " €"
     End Sub
 
+    'Amb les variables, calculo el temps i el formato per a que sigui llegible
     Private Sub FormatarTemps(ByRef ticks As Integer, ByRef minuts As Integer, ByRef segons As Integer)
         ticks += 1
 
@@ -94,6 +105,7 @@
         lbTemps.Text = "Temps transcorregut: " + String.Format("{0:D2}:{1:D2}", minuts, segons)
     End Sub
 
+    'Simulo la càrrega del cotxe i calculo els percentatges. Un cop carregat, es para automàticament
     Private Sub CarregarBateria()
         Dim percentatgeCarregat As Double = (energiaSubministrada / capacitatVehicle) * 100
         percentatgeActual = CInt(percentatgeInicial + percentatgeCarregat)

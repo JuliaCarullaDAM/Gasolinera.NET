@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
       <DependentUpon>FormEstatSortidor.vb</DependentUpon>
     </Compile>
     <Compile Include="FormEstatSortidor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelp.Designer.vb">
+      <DependentUpon>FormHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPIN.Designer.vb">
@@ -134,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEstatSortidor.resx">
       <DependentUpon>FormEstatSortidor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelp.resx">
+      <DependentUpon>FormHelp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPIN.resx">
       <DependentUpon>FormPIN.vb</DependentUpon>

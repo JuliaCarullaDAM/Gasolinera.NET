@@ -39,17 +39,13 @@ Partial Class Form1
         Me.lbDisponibleAdBlue = New System.Windows.Forms.Label()
         Me.lbTotalAdblue = New System.Windows.Forms.Label()
         Me.tAs4 = New System.Windows.Forms.Label()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.tAs3 = New System.Windows.Forms.Label()
-        Me.Button14 = New System.Windows.Forms.Button()
         Me.tAs2 = New System.Windows.Forms.Label()
-        Me.Button15 = New System.Windows.Forms.Button()
         Me.tAs1 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
-        Me.Button16 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.gbGasolina98 = New System.Windows.Forms.GroupBox()
         Me.lbDisponible98 = New System.Windows.Forms.Label()
@@ -57,47 +53,35 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.tg98s4 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.tg98s3 = New System.Windows.Forms.Label()
         Me.tg98s1 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.tg98s2 = New System.Windows.Forms.Label()
         Me.gbDiesel = New System.Windows.Forms.GroupBox()
         Me.lbDisponibleDiesel = New System.Windows.Forms.Label()
         Me.lbTotalDiesel = New System.Windows.Forms.Label()
         Me.tDs4 = New System.Windows.Forms.Label()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.tDs3 = New System.Windows.Forms.Label()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.tDs2 = New System.Windows.Forms.Label()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.tDs1 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.Button12 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.gbGasolina95 = New System.Windows.Forms.GroupBox()
         Me.lbDisponible95 = New System.Windows.Forms.Label()
         Me.lbTotal95 = New System.Windows.Forms.Label()
         Me.tg95s4 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.tg95s3 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.tg95s2 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.tg95s1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPageElectricitat = New System.Windows.Forms.TabPage()
         Me.gbSortidorsEnergia = New System.Windows.Forms.GroupBox()
@@ -156,13 +140,12 @@ Partial Class Form1
         Me.DataGridView10 = New System.Windows.Forms.DataGridView()
         Me.DataGridView9 = New System.Windows.Forms.DataGridView()
         Me.TabPageComandes = New System.Windows.Forms.TabPage()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.DataGridView8 = New System.Windows.Forms.DataGridView()
+        Me.btPlenarDiposit = New System.Windows.Forms.Button()
+        Me.btCancelarComanda = New System.Windows.Forms.Button()
+        Me.dgvComandesCancelades = New System.Windows.Forms.DataGridView()
         Me.COMANDABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridView7 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.dgvComandesProces = New System.Windows.Forms.DataGridView()
+        Me.dgvComandesRebudes = New System.Windows.Forms.DataGridView()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -170,12 +153,17 @@ Partial Class Form1
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabPagePreus = New System.Windows.Forms.TabPage()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PbEnergia = New System.Windows.Forms.PictureBox()
         Me.pbAdblue = New System.Windows.Forms.PictureBox()
         Me.pbGasolina98 = New System.Windows.Forms.PictureBox()
         Me.pbDiesel = New System.Windows.Forms.PictureBox()
         Me.pbGasolina95 = New System.Windows.Forms.PictureBox()
-        Me.Button18 = New System.Windows.Forms.Button()
+        Me.btModificarPreu = New System.Windows.Forms.Button()
         Me.tbImport = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -185,11 +173,14 @@ Partial Class Form1
         Me.DataIniciHistorial = New System.Windows.Forms.DateTimePicker()
         Me.lbEditarPreus = New System.Windows.Forms.Label()
         Me.dgvPreuElectricitat = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvPreuAdblue = New System.Windows.Forms.DataGridView()
         Me.dgvPreuDiesel = New System.Windows.Forms.DataGridView()
         Me.dgvPreuGas98 = New System.Windows.Forms.DataGridView()
         Me.dgvPreuGas95 = New System.Windows.Forms.DataGridView()
+        Me.preu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lbHisotrial = New System.Windows.Forms.Label()
+        Me.TimerForaDeServei = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -207,7 +198,6 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GasolineraDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -215,39 +205,32 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdcomandaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IddipositDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.QuantitatDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImportDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DatacomandaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DatasubministramentDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HISTORIALPREUSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatainiciDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DatafiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DipositTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITTableAdapter()
         Me.SubministramentTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SUBMINISTRAMENTTableAdapter()
         Me.HISTORIAL_PREUSTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.HISTORIAL_PREUSTableAdapter()
         Me.COMANDATableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.COMANDATableAdapter()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PreuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatainiciDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DatafiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SortidorTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.SORTIDORTableAdapter()
+        Me.DipositS_SORTIDORTableAdapter = New ProjecteGasolinera.GasolineraDataSetTableAdapters.DIPOSITS_SORTIDORTableAdapter()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPageInici.SuspendLayout()
@@ -277,10 +260,10 @@ Partial Class Form1
         CType(Me.DataGridView10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPageComandes.SuspendLayout()
-        CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvComandesCancelades, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.COMANDABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvComandesProces, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvComandesRebudes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPagePreus.SuspendLayout()
         CType(Me.PbEnergia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbAdblue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -435,17 +418,13 @@ Partial Class Form1
         Me.gbAdBlue.Controls.Add(Me.lbDisponibleAdBlue)
         Me.gbAdBlue.Controls.Add(Me.lbTotalAdblue)
         Me.gbAdBlue.Controls.Add(Me.tAs4)
-        Me.gbAdBlue.Controls.Add(Me.Button13)
         Me.gbAdBlue.Controls.Add(Me.tAs3)
-        Me.gbAdBlue.Controls.Add(Me.Button14)
         Me.gbAdBlue.Controls.Add(Me.tAs2)
-        Me.gbAdBlue.Controls.Add(Me.Button15)
         Me.gbAdBlue.Controls.Add(Me.tAs1)
         Me.gbAdBlue.Controls.Add(Me.Label61)
         Me.gbAdBlue.Controls.Add(Me.Label62)
         Me.gbAdBlue.Controls.Add(Me.Label63)
         Me.gbAdBlue.Controls.Add(Me.Label64)
-        Me.gbAdBlue.Controls.Add(Me.Button16)
         Me.gbAdBlue.Controls.Add(Me.PictureBox4)
         Me.gbAdBlue.Location = New System.Drawing.Point(563, 278)
         Me.gbAdBlue.Name = "gbAdBlue"
@@ -486,16 +465,6 @@ Partial Class Form1
         Me.tAs4.Tag = "4"
         Me.tAs4.Text = "Total: 40000"
         '
-        'Button13
-        '
-        Me.Button13.Enabled = False
-        Me.Button13.Location = New System.Drawing.Point(397, 208)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(48, 23)
-        Me.Button13.TabIndex = 40
-        Me.Button13.Text = "Plenar"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
         'tAs3
         '
         Me.tAs3.AutoSize = True
@@ -507,16 +476,6 @@ Partial Class Form1
         Me.tAs3.Tag = "3"
         Me.tAs3.Text = "Total: 40000"
         '
-        'Button14
-        '
-        Me.Button14.Enabled = False
-        Me.Button14.Location = New System.Drawing.Point(397, 168)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(48, 23)
-        Me.Button14.TabIndex = 36
-        Me.Button14.Text = "Plenar"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
         'tAs2
         '
         Me.tAs2.AutoSize = True
@@ -527,16 +486,6 @@ Partial Class Form1
         Me.tAs2.TabIndex = 33
         Me.tAs2.Tag = "2"
         Me.tAs2.Text = "Total: 40000"
-        '
-        'Button15
-        '
-        Me.Button15.Enabled = False
-        Me.Button15.Location = New System.Drawing.Point(397, 128)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(48, 23)
-        Me.Button15.TabIndex = 32
-        Me.Button15.Text = "Plenar"
-        Me.Button15.UseVisualStyleBackColor = True
         '
         'tAs1
         '
@@ -589,16 +538,6 @@ Partial Class Form1
         Me.Label64.TabIndex = 25
         Me.Label64.Text = "S1"
         '
-        'Button16
-        '
-        Me.Button16.Enabled = False
-        Me.Button16.Location = New System.Drawing.Point(397, 85)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(48, 23)
-        Me.Button16.TabIndex = 24
-        Me.Button16.Text = "Plenar"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.ProjecteGasolinera.My.Resources.Resources.adblue
@@ -616,15 +555,11 @@ Partial Class Form1
         Me.gbGasolina98.Controls.Add(Me.PictureBox2)
         Me.gbGasolina98.Controls.Add(Me.Label32)
         Me.gbGasolina98.Controls.Add(Me.tg98s4)
-        Me.gbGasolina98.Controls.Add(Me.Button8)
-        Me.gbGasolina98.Controls.Add(Me.Button5)
         Me.gbGasolina98.Controls.Add(Me.Label31)
         Me.gbGasolina98.Controls.Add(Me.Label30)
         Me.gbGasolina98.Controls.Add(Me.Label29)
         Me.gbGasolina98.Controls.Add(Me.tg98s3)
         Me.gbGasolina98.Controls.Add(Me.tg98s1)
-        Me.gbGasolina98.Controls.Add(Me.Button6)
-        Me.gbGasolina98.Controls.Add(Me.Button7)
         Me.gbGasolina98.Controls.Add(Me.tg98s2)
         Me.gbGasolina98.Location = New System.Drawing.Point(563, 22)
         Me.gbGasolina98.Name = "gbGasolina98"
@@ -685,26 +620,6 @@ Partial Class Form1
         Me.tg98s4.Tag = "4"
         Me.tg98s4.Text = "Total: 40000"
         '
-        'Button8
-        '
-        Me.Button8.Enabled = False
-        Me.Button8.Location = New System.Drawing.Point(397, 93)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(48, 23)
-        Me.Button8.TabIndex = 24
-        Me.Button8.Text = "Plenar"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Enabled = False
-        Me.Button5.Location = New System.Drawing.Point(397, 216)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(48, 23)
-        Me.Button5.TabIndex = 40
-        Me.Button5.Text = "Plenar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Label31
         '
         Me.Label31.AutoSize = True
@@ -757,26 +672,6 @@ Partial Class Form1
         Me.tg98s1.Tag = "1"
         Me.tg98s1.Text = "Total: 40000"
         '
-        'Button6
-        '
-        Me.Button6.Enabled = False
-        Me.Button6.Location = New System.Drawing.Point(397, 176)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(48, 23)
-        Me.Button6.TabIndex = 36
-        Me.Button6.Text = "Plenar"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Enabled = False
-        Me.Button7.Location = New System.Drawing.Point(397, 136)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(48, 23)
-        Me.Button7.TabIndex = 32
-        Me.Button7.Text = "Plenar"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'tg98s2
         '
         Me.tg98s2.AutoSize = True
@@ -793,17 +688,13 @@ Partial Class Form1
         Me.gbDiesel.Controls.Add(Me.lbDisponibleDiesel)
         Me.gbDiesel.Controls.Add(Me.lbTotalDiesel)
         Me.gbDiesel.Controls.Add(Me.tDs4)
-        Me.gbDiesel.Controls.Add(Me.Button9)
         Me.gbDiesel.Controls.Add(Me.tDs3)
-        Me.gbDiesel.Controls.Add(Me.Button10)
         Me.gbDiesel.Controls.Add(Me.tDs2)
-        Me.gbDiesel.Controls.Add(Me.Button11)
         Me.gbDiesel.Controls.Add(Me.tDs1)
         Me.gbDiesel.Controls.Add(Me.Label45)
         Me.gbDiesel.Controls.Add(Me.Label46)
         Me.gbDiesel.Controls.Add(Me.Label47)
         Me.gbDiesel.Controls.Add(Me.Label48)
-        Me.gbDiesel.Controls.Add(Me.Button12)
         Me.gbDiesel.Controls.Add(Me.PictureBox3)
         Me.gbDiesel.Location = New System.Drawing.Point(35, 278)
         Me.gbDiesel.Name = "gbDiesel"
@@ -844,16 +735,6 @@ Partial Class Form1
         Me.tDs4.Tag = "4"
         Me.tDs4.Text = "Total: 40000"
         '
-        'Button9
-        '
-        Me.Button9.Enabled = False
-        Me.Button9.Location = New System.Drawing.Point(397, 208)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(48, 23)
-        Me.Button9.TabIndex = 40
-        Me.Button9.Text = "Plenar"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
         'tDs3
         '
         Me.tDs3.AutoSize = True
@@ -865,16 +746,6 @@ Partial Class Form1
         Me.tDs3.Tag = "3"
         Me.tDs3.Text = "Total: 40000"
         '
-        'Button10
-        '
-        Me.Button10.Enabled = False
-        Me.Button10.Location = New System.Drawing.Point(397, 168)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(48, 23)
-        Me.Button10.TabIndex = 36
-        Me.Button10.Text = "Plenar"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
         'tDs2
         '
         Me.tDs2.AutoSize = True
@@ -885,16 +756,6 @@ Partial Class Form1
         Me.tDs2.TabIndex = 33
         Me.tDs2.Tag = "2"
         Me.tDs2.Text = "Total: 40000"
-        '
-        'Button11
-        '
-        Me.Button11.Enabled = False
-        Me.Button11.Location = New System.Drawing.Point(397, 128)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(48, 23)
-        Me.Button11.TabIndex = 32
-        Me.Button11.Text = "Plenar"
-        Me.Button11.UseVisualStyleBackColor = True
         '
         'tDs1
         '
@@ -947,16 +808,6 @@ Partial Class Form1
         Me.Label48.TabIndex = 25
         Me.Label48.Text = "S1"
         '
-        'Button12
-        '
-        Me.Button12.Enabled = False
-        Me.Button12.Location = New System.Drawing.Point(397, 85)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(48, 23)
-        Me.Button12.TabIndex = 24
-        Me.Button12.Text = "Plenar"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.ProjecteGasolinera.My.Resources.Resources.diesel_e
@@ -972,17 +823,13 @@ Partial Class Form1
         Me.gbGasolina95.Controls.Add(Me.lbDisponible95)
         Me.gbGasolina95.Controls.Add(Me.lbTotal95)
         Me.gbGasolina95.Controls.Add(Me.tg95s4)
-        Me.gbGasolina95.Controls.Add(Me.Button4)
         Me.gbGasolina95.Controls.Add(Me.tg95s3)
-        Me.gbGasolina95.Controls.Add(Me.Button3)
         Me.gbGasolina95.Controls.Add(Me.tg95s2)
-        Me.gbGasolina95.Controls.Add(Me.Button2)
         Me.gbGasolina95.Controls.Add(Me.tg95s1)
         Me.gbGasolina95.Controls.Add(Me.Label4)
         Me.gbGasolina95.Controls.Add(Me.Label3)
         Me.gbGasolina95.Controls.Add(Me.Label2)
         Me.gbGasolina95.Controls.Add(Me.Label1)
-        Me.gbGasolina95.Controls.Add(Me.Button1)
         Me.gbGasolina95.Controls.Add(Me.PictureBox1)
         Me.gbGasolina95.Location = New System.Drawing.Point(35, 22)
         Me.gbGasolina95.Name = "gbGasolina95"
@@ -1023,16 +870,6 @@ Partial Class Form1
         Me.tg95s4.Tag = "4"
         Me.tg95s4.Text = "Total: 40000"
         '
-        'Button4
-        '
-        Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(397, 216)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(48, 23)
-        Me.Button4.TabIndex = 20
-        Me.Button4.Text = "Plenar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'tg95s3
         '
         Me.tg95s3.AutoSize = True
@@ -1044,16 +881,6 @@ Partial Class Form1
         Me.tg95s3.Tag = "3"
         Me.tg95s3.Text = "Total: 40000"
         '
-        'Button3
-        '
-        Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(397, 176)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(48, 23)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "Plenar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'tg95s2
         '
         Me.tg95s2.AutoSize = True
@@ -1064,16 +891,6 @@ Partial Class Form1
         Me.tg95s2.TabIndex = 13
         Me.tg95s2.Tag = "2"
         Me.tg95s2.Text = "Total: 40000"
-        '
-        'Button2
-        '
-        Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(397, 136)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(48, 23)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Plenar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'tg95s1
         '
@@ -1125,16 +942,6 @@ Partial Class Form1
         Me.Label1.Size = New System.Drawing.Size(26, 16)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "S1"
-        '
-        'Button1
-        '
-        Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(397, 93)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(48, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Plenar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -1740,12 +1547,11 @@ Partial Class Form1
         '
         'TabPageComandes
         '
-        Me.TabPageComandes.Controls.Add(Me.Button20)
-        Me.TabPageComandes.Controls.Add(Me.Label20)
-        Me.TabPageComandes.Controls.Add(Me.Label19)
-        Me.TabPageComandes.Controls.Add(Me.DataGridView8)
-        Me.TabPageComandes.Controls.Add(Me.DataGridView7)
-        Me.TabPageComandes.Controls.Add(Me.DataGridView6)
+        Me.TabPageComandes.Controls.Add(Me.btPlenarDiposit)
+        Me.TabPageComandes.Controls.Add(Me.btCancelarComanda)
+        Me.TabPageComandes.Controls.Add(Me.dgvComandesCancelades)
+        Me.TabPageComandes.Controls.Add(Me.dgvComandesProces)
+        Me.TabPageComandes.Controls.Add(Me.dgvComandesRebudes)
         Me.TabPageComandes.Controls.Add(Me.Label18)
         Me.TabPageComandes.Controls.Add(Me.Label16)
         Me.TabPageComandes.Controls.Add(Me.Label17)
@@ -1760,71 +1566,77 @@ Partial Class Form1
         Me.TabPageComandes.Text = "Comandes"
         Me.TabPageComandes.UseVisualStyleBackColor = True
         '
-        'Button20
+        'btPlenarDiposit
         '
-        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button20.Location = New System.Drawing.Point(784, 335)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(136, 34)
-        Me.Button20.TabIndex = 24
-        Me.Button20.Text = "Cancel·lar comanda"
-        Me.Button20.UseVisualStyleBackColor = True
+        Me.btPlenarDiposit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btPlenarDiposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btPlenarDiposit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btPlenarDiposit.Location = New System.Drawing.Point(693, 335)
+        Me.btPlenarDiposit.Name = "btPlenarDiposit"
+        Me.btPlenarDiposit.Size = New System.Drawing.Size(133, 34)
+        Me.btPlenarDiposit.TabIndex = 25
+        Me.btPlenarDiposit.Text = "Plenar dipòsit"
+        Me.btPlenarDiposit.UseVisualStyleBackColor = False
         '
-        'Label20
+        'btCancelarComanda
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(804, 287)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(232, 13)
-        Me.Label20.TabIndex = 23
-        Me.Label20.Text = "estat es canvai a cancelat i es recarreguen dgv"
+        Me.btCancelarComanda.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btCancelarComanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btCancelarComanda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCancelarComanda.Location = New System.Drawing.Point(861, 335)
+        Me.btCancelarComanda.Name = "btCancelarComanda"
+        Me.btCancelarComanda.Size = New System.Drawing.Size(162, 34)
+        Me.btCancelarComanda.TabIndex = 24
+        Me.btCancelarComanda.Text = "Cancel·lar comanda"
+        Me.btCancelarComanda.UseVisualStyleBackColor = False
         '
-        'Label19
+        'dgvComandesCancelades
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(804, 263)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(251, 13)
-        Me.Label19.TabIndex = 22
-        Me.Label19.Text = "fer que seleccioni tota la columna i faci update by id"
-        '
-        'DataGridView8
-        '
-        Me.DataGridView8.AutoGenerateColumns = False
-        Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView8.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32})
-        Me.DataGridView8.DataSource = Me.COMANDABindingSource
-        Me.DataGridView8.Location = New System.Drawing.Point(28, 400)
-        Me.DataGridView8.Name = "DataGridView8"
-        Me.DataGridView8.Size = New System.Drawing.Size(740, 106)
-        Me.DataGridView8.TabIndex = 21
+        Me.dgvComandesCancelades.AllowUserToAddRows = False
+        Me.dgvComandesCancelades.AllowUserToDeleteRows = False
+        Me.dgvComandesCancelades.AutoGenerateColumns = False
+        Me.dgvComandesCancelades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvComandesCancelades.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31})
+        Me.dgvComandesCancelades.DataSource = Me.COMANDABindingSource
+        Me.dgvComandesCancelades.Location = New System.Drawing.Point(28, 400)
+        Me.dgvComandesCancelades.Name = "dgvComandesCancelades"
+        Me.dgvComandesCancelades.ReadOnly = True
+        Me.dgvComandesCancelades.Size = New System.Drawing.Size(646, 106)
+        Me.dgvComandesCancelades.TabIndex = 21
         '
         'COMANDABindingSource
         '
         Me.COMANDABindingSource.DataMember = "COMANDA"
         Me.COMANDABindingSource.DataSource = Me.GasolineraDataSetBindingSource
         '
-        'DataGridView7
+        'dgvComandesProces
         '
-        Me.DataGridView7.AutoGenerateColumns = False
-        Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView7.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25})
-        Me.DataGridView7.DataSource = Me.COMANDABindingSource
-        Me.DataGridView7.Location = New System.Drawing.Point(28, 263)
-        Me.DataGridView7.Name = "DataGridView7"
-        Me.DataGridView7.Size = New System.Drawing.Size(740, 106)
-        Me.DataGridView7.TabIndex = 20
+        Me.dgvComandesProces.AllowUserToAddRows = False
+        Me.dgvComandesProces.AllowUserToDeleteRows = False
+        Me.dgvComandesProces.AutoGenerateColumns = False
+        Me.dgvComandesProces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvComandesProces.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24})
+        Me.dgvComandesProces.DataSource = Me.COMANDABindingSource
+        Me.dgvComandesProces.Location = New System.Drawing.Point(28, 263)
+        Me.dgvComandesProces.MultiSelect = False
+        Me.dgvComandesProces.Name = "dgvComandesProces"
+        Me.dgvComandesProces.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvComandesProces.Size = New System.Drawing.Size(646, 106)
+        Me.dgvComandesProces.TabIndex = 20
         '
-        'DataGridView6
+        'dgvComandesRebudes
         '
-        Me.DataGridView6.AutoGenerateColumns = False
-        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdcomandaDataGridViewTextBoxColumn, Me.IddipositDataGridViewTextBoxColumn, Me.QuantitatDataGridViewTextBoxColumn1, Me.ImportDataGridViewTextBoxColumn, Me.DatacomandaDataGridViewTextBoxColumn, Me.DatasubministramentDataGridViewTextBoxColumn, Me.EstatDataGridViewTextBoxColumn})
-        Me.DataGridView6.DataSource = Me.COMANDABindingSource
-        Me.DataGridView6.Location = New System.Drawing.Point(28, 132)
-        Me.DataGridView6.Name = "DataGridView6"
-        Me.DataGridView6.Size = New System.Drawing.Size(740, 106)
-        Me.DataGridView6.TabIndex = 19
+        Me.dgvComandesRebudes.AllowUserToAddRows = False
+        Me.dgvComandesRebudes.AllowUserToDeleteRows = False
+        Me.dgvComandesRebudes.AutoGenerateColumns = False
+        Me.dgvComandesRebudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvComandesRebudes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdcomandaDataGridViewTextBoxColumn, Me.IddipositDataGridViewTextBoxColumn, Me.QuantitatDataGridViewTextBoxColumn1, Me.ImportDataGridViewTextBoxColumn, Me.DatacomandaDataGridViewTextBoxColumn, Me.DatasubministramentDataGridViewTextBoxColumn})
+        Me.dgvComandesRebudes.DataSource = Me.COMANDABindingSource
+        Me.dgvComandesRebudes.Location = New System.Drawing.Point(28, 132)
+        Me.dgvComandesRebudes.Name = "dgvComandesRebudes"
+        Me.dgvComandesRebudes.ReadOnly = True
+        Me.dgvComandesRebudes.Size = New System.Drawing.Size(646, 106)
+        Me.dgvComandesRebudes.TabIndex = 19
         '
         'Label18
         '
@@ -1893,7 +1705,7 @@ Partial Class Form1
         Me.TabPagePreus.Controls.Add(Me.pbGasolina98)
         Me.TabPagePreus.Controls.Add(Me.pbDiesel)
         Me.TabPagePreus.Controls.Add(Me.pbGasolina95)
-        Me.TabPagePreus.Controls.Add(Me.Button18)
+        Me.TabPagePreus.Controls.Add(Me.btModificarPreu)
         Me.TabPagePreus.Controls.Add(Me.tbImport)
         Me.TabPagePreus.Controls.Add(Me.Label11)
         Me.TabPagePreus.Controls.Add(Me.Label10)
@@ -1915,6 +1727,56 @@ Partial Class Form1
         Me.TabPagePreus.TabIndex = 3
         Me.TabPagePreus.Text = "Preus"
         Me.TabPagePreus.UseVisualStyleBackColor = True
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(928, 89)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(65, 18)
+        Me.Label35.TabIndex = 26
+        Me.Label35.Text = "Energia"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(727, 89)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(60, 18)
+        Me.Label34.TabIndex = 25
+        Me.Label34.Text = "AdBlue"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(507, 89)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(55, 18)
+        Me.Label33.TabIndex = 24
+        Me.Label33.Text = "Diesel"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(275, 89)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(98, 18)
+        Me.Label28.TabIndex = 23
+        Me.Label28.Text = "Gasolina 98"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(52, 89)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(98, 18)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "Gasolina 95"
         '
         'PbEnergia
         '
@@ -1971,15 +1833,15 @@ Partial Class Form1
         Me.pbGasolina95.TabStop = False
         Me.pbGasolina95.Tag = "1"
         '
-        'Button18
+        'btModificarPreu
         '
-        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.Location = New System.Drawing.Point(445, 487)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(117, 24)
-        Me.Button18.TabIndex = 16
-        Me.Button18.Text = "Modificar preu"
-        Me.Button18.UseVisualStyleBackColor = True
+        Me.btModificarPreu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btModificarPreu.Location = New System.Drawing.Point(445, 487)
+        Me.btModificarPreu.Name = "btModificarPreu"
+        Me.btModificarPreu.Size = New System.Drawing.Size(117, 24)
+        Me.btModificarPreu.TabIndex = 16
+        Me.btModificarPreu.Text = "Modificar preu"
+        Me.btModificarPreu.UseVisualStyleBackColor = True
         '
         'tbImport
         '
@@ -2062,7 +1924,7 @@ Partial Class Form1
         Me.dgvPreuElectricitat.AllowUserToResizeRows = False
         Me.dgvPreuElectricitat.AutoGenerateColumns = False
         Me.dgvPreuElectricitat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPreuElectricitat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18})
+        Me.dgvPreuElectricitat.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn25})
         Me.dgvPreuElectricitat.DataSource = Me.HISTORIALPREUSBindingSource
         Me.dgvPreuElectricitat.Location = New System.Drawing.Point(873, 110)
         Me.dgvPreuElectricitat.Name = "dgvPreuElectricitat"
@@ -2071,6 +1933,14 @@ Partial Class Form1
         Me.dgvPreuElectricitat.Size = New System.Drawing.Size(184, 262)
         Me.dgvPreuElectricitat.TabIndex = 6
         Me.dgvPreuElectricitat.Tag = "5"
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Width = 40
         '
         'dgvPreuAdblue
         '
@@ -2134,7 +2004,7 @@ Partial Class Form1
         Me.dgvPreuGas95.AllowUserToResizeRows = False
         Me.dgvPreuGas95.AutoGenerateColumns = False
         Me.dgvPreuGas95.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPreuGas95.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PreuDataGridViewTextBoxColumn, Me.DatainiciDataGridViewTextBoxColumn, Me.DatafiDataGridViewTextBoxColumn})
+        Me.dgvPreuGas95.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.preu, Me.DatainiciDataGridViewTextBoxColumn, Me.DatafiDataGridViewTextBoxColumn})
         Me.dgvPreuGas95.DataSource = Me.HISTORIALPREUSBindingSource
         Me.dgvPreuGas95.Location = New System.Drawing.Point(13, 110)
         Me.dgvPreuGas95.Name = "dgvPreuGas95"
@@ -2143,6 +2013,14 @@ Partial Class Form1
         Me.dgvPreuGas95.Size = New System.Drawing.Size(184, 262)
         Me.dgvPreuGas95.TabIndex = 2
         Me.dgvPreuGas95.Tag = "1"
+        '
+        'preu
+        '
+        Me.preu.DataPropertyName = "preu"
+        Me.preu.HeaderText = "Preu"
+        Me.preu.Name = "preu"
+        Me.preu.ReadOnly = True
+        Me.preu.Width = 40
         '
         'lbHisotrial
         '
@@ -2153,6 +2031,10 @@ Partial Class Form1
         Me.lbHisotrial.Size = New System.Drawing.Size(212, 25)
         Me.lbHisotrial.TabIndex = 1
         Me.lbHisotrial.Text = "Historial de preus: "
+        '
+        'TimerForaDeServei
+        '
+        Me.TimerForaDeServei.Interval = 1000
         '
         'DataGridViewTextBoxColumn4
         '
@@ -2239,36 +2121,35 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn27.DataPropertyName = "id_diposit"
         Me.DataGridViewTextBoxColumn27.HeaderText = "id_diposit"
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
         '
         'DataGridViewTextBoxColumn28
         '
         Me.DataGridViewTextBoxColumn28.DataPropertyName = "quantitat"
         Me.DataGridViewTextBoxColumn28.HeaderText = "quantitat"
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
         '
         'DataGridViewTextBoxColumn29
         '
         Me.DataGridViewTextBoxColumn29.DataPropertyName = "import"
         Me.DataGridViewTextBoxColumn29.HeaderText = "import"
         Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
         '
         'DataGridViewTextBoxColumn30
         '
         Me.DataGridViewTextBoxColumn30.DataPropertyName = "data_comanda"
         Me.DataGridViewTextBoxColumn30.HeaderText = "data_comanda"
         Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
         '
         'DataGridViewTextBoxColumn31
         '
         Me.DataGridViewTextBoxColumn31.DataPropertyName = "data_subministrament"
         Me.DataGridViewTextBoxColumn31.HeaderText = "data_subministrament"
         Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
-        '
-        'DataGridViewTextBoxColumn32
-        '
-        Me.DataGridViewTextBoxColumn32.DataPropertyName = "estat"
-        Me.DataGridViewTextBoxColumn32.HeaderText = "estat"
-        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
         '
         'GasolineraDataSetBindingSource
         '
@@ -2312,12 +2193,6 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn24.HeaderText = "data_subministrament"
         Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
         '
-        'DataGridViewTextBoxColumn25
-        '
-        Me.DataGridViewTextBoxColumn25.DataPropertyName = "estat"
-        Me.DataGridViewTextBoxColumn25.HeaderText = "estat"
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        '
         'IdcomandaDataGridViewTextBoxColumn
         '
         Me.IdcomandaDataGridViewTextBoxColumn.DataPropertyName = "id_comanda"
@@ -2330,155 +2205,56 @@ Partial Class Form1
         Me.IddipositDataGridViewTextBoxColumn.DataPropertyName = "id_diposit"
         Me.IddipositDataGridViewTextBoxColumn.HeaderText = "id_diposit"
         Me.IddipositDataGridViewTextBoxColumn.Name = "IddipositDataGridViewTextBoxColumn"
+        Me.IddipositDataGridViewTextBoxColumn.ReadOnly = True
         '
         'QuantitatDataGridViewTextBoxColumn1
         '
         Me.QuantitatDataGridViewTextBoxColumn1.DataPropertyName = "quantitat"
         Me.QuantitatDataGridViewTextBoxColumn1.HeaderText = "quantitat"
         Me.QuantitatDataGridViewTextBoxColumn1.Name = "QuantitatDataGridViewTextBoxColumn1"
+        Me.QuantitatDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'ImportDataGridViewTextBoxColumn
         '
         Me.ImportDataGridViewTextBoxColumn.DataPropertyName = "import"
         Me.ImportDataGridViewTextBoxColumn.HeaderText = "import"
         Me.ImportDataGridViewTextBoxColumn.Name = "ImportDataGridViewTextBoxColumn"
+        Me.ImportDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DatacomandaDataGridViewTextBoxColumn
         '
         Me.DatacomandaDataGridViewTextBoxColumn.DataPropertyName = "data_comanda"
         Me.DatacomandaDataGridViewTextBoxColumn.HeaderText = "data_comanda"
         Me.DatacomandaDataGridViewTextBoxColumn.Name = "DatacomandaDataGridViewTextBoxColumn"
+        Me.DatacomandaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DatasubministramentDataGridViewTextBoxColumn
         '
         Me.DatasubministramentDataGridViewTextBoxColumn.DataPropertyName = "data_subministrament"
         Me.DatasubministramentDataGridViewTextBoxColumn.HeaderText = "data_subministrament"
         Me.DatasubministramentDataGridViewTextBoxColumn.Name = "DatasubministramentDataGridViewTextBoxColumn"
+        Me.DatasubministramentDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'EstatDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn18
         '
-        Me.EstatDataGridViewTextBoxColumn.DataPropertyName = "estat"
-        Me.EstatDataGridViewTextBoxColumn.HeaderText = "estat"
-        Me.EstatDataGridViewTextBoxColumn.Name = "EstatDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Width = 70
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn25.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.Width = 70
         '
         'HISTORIALPREUSBindingSource
         '
         Me.HISTORIALPREUSBindingSource.DataMember = "HISTORIAL_PREUS"
         Me.HISTORIALPREUSBindingSource.DataSource = Me.GasolineraDataSet
-        '
-        'DipositTableAdapter
-        '
-        Me.DipositTableAdapter.ClearBeforeFill = True
-        '
-        'SubministramentTableAdapter
-        '
-        Me.SubministramentTableAdapter.ClearBeforeFill = True
-        '
-        'HISTORIAL_PREUSTableAdapter
-        '
-        Me.HISTORIAL_PREUSTableAdapter.ClearBeforeFill = True
-        '
-        'COMANDATableAdapter
-        '
-        Me.COMANDATableAdapter.ClearBeforeFill = True
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(52, 89)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(98, 18)
-        Me.Label12.TabIndex = 22
-        Me.Label12.Text = "Gasolina 95"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(275, 89)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(98, 18)
-        Me.Label28.TabIndex = 23
-        Me.Label28.Text = "Gasolina 98"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(507, 89)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(55, 18)
-        Me.Label33.TabIndex = 24
-        Me.Label33.Text = "Diesel"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(727, 89)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(60, 18)
-        Me.Label34.TabIndex = 25
-        Me.Label34.Text = "AdBlue"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(928, 89)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(65, 18)
-        Me.Label35.TabIndex = 26
-        Me.Label35.Text = "Energia"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Preu"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 40
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Inici"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 70
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Fi"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Width = 70
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "preu"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Preu"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Width = 40
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Inici"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        Me.DataGridViewTextBoxColumn11.Width = 70
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Fi"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Width = 70
         '
         'DataGridViewTextBoxColumn13
         '
@@ -2504,13 +2280,53 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn15.ReadOnly = True
         Me.DataGridViewTextBoxColumn15.Width = 70
         '
-        'PreuDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn10
         '
-        Me.PreuDataGridViewTextBoxColumn.DataPropertyName = "Preu"
-        Me.PreuDataGridViewTextBoxColumn.HeaderText = "Preu"
-        Me.PreuDataGridViewTextBoxColumn.Name = "PreuDataGridViewTextBoxColumn"
-        Me.PreuDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PreuDataGridViewTextBoxColumn.Width = 40
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 40
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        Me.DataGridViewTextBoxColumn11.Width = 70
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        Me.DataGridViewTextBoxColumn12.Width = 70
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "preu"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Preu"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 40
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "data_inici"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Inici"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 70
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "data_fi"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Fi"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 70
         '
         'DatainiciDataGridViewTextBoxColumn
         '
@@ -2528,29 +2344,29 @@ Partial Class Form1
         Me.DatafiDataGridViewTextBoxColumn.ReadOnly = True
         Me.DatafiDataGridViewTextBoxColumn.Width = 70
         '
-        'DataGridViewTextBoxColumn16
+        'DipositTableAdapter
         '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Preu"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Preu"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        Me.DataGridViewTextBoxColumn16.Width = 40
+        Me.DipositTableAdapter.ClearBeforeFill = True
         '
-        'DataGridViewTextBoxColumn17
+        'SubministramentTableAdapter
         '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "data_inici"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "Inici"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.Width = 70
+        Me.SubministramentTableAdapter.ClearBeforeFill = True
         '
-        'DataGridViewTextBoxColumn18
+        'HISTORIAL_PREUSTableAdapter
         '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "data_fi"
-        Me.DataGridViewTextBoxColumn18.HeaderText = "Fi"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.Width = 70
+        Me.HISTORIAL_PREUSTableAdapter.ClearBeforeFill = True
+        '
+        'COMANDATableAdapter
+        '
+        Me.COMANDATableAdapter.ClearBeforeFill = True
+        '
+        'SortidorTableAdapter
+        '
+        Me.SortidorTableAdapter.ClearBeforeFill = True
+        '
+        'DipositS_SORTIDORTableAdapter
+        '
+        Me.DipositS_SORTIDORTableAdapter.ClearBeforeFill = True
         '
         'Form1
         '
@@ -2601,10 +2417,10 @@ Partial Class Form1
         CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPageComandes.ResumeLayout(False)
         Me.TabPageComandes.PerformLayout()
-        CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvComandesCancelades, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.COMANDABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvComandesProces, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvComandesRebudes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPagePreus.ResumeLayout(False)
         Me.TabPagePreus.PerformLayout()
         CType(Me.PbEnergia, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2654,49 +2470,33 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents tg95s4 As Label
-    Friend WithEvents Button4 As Button
     Friend WithEvents tg95s3 As Label
-    Friend WithEvents Button3 As Button
     Friend WithEvents tg95s2 As Label
-    Friend WithEvents Button2 As Button
     Friend WithEvents tAs4 As Label
-    Friend WithEvents Button13 As Button
     Friend WithEvents tAs3 As Label
-    Friend WithEvents Button14 As Button
     Friend WithEvents tAs2 As Label
-    Friend WithEvents Button15 As Button
     Friend WithEvents tAs1 As Label
     Friend WithEvents Label61 As Label
     Friend WithEvents Label62 As Label
     Friend WithEvents Label63 As Label
     Friend WithEvents Label64 As Label
-    Friend WithEvents Button16 As Button
     Friend WithEvents Label32 As Label
     Friend WithEvents tg98s4 As Label
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label31 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents tg98s3 As Label
     Friend WithEvents tg98s1 As Label
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
     Friend WithEvents tg98s2 As Label
     Friend WithEvents tDs4 As Label
-    Friend WithEvents Button9 As Button
     Friend WithEvents tDs3 As Label
-    Friend WithEvents Button10 As Button
     Friend WithEvents tDs2 As Label
-    Friend WithEvents Button11 As Button
     Friend WithEvents tDs1 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
-    Friend WithEvents Button12 As Button
     Friend WithEvents lbDisponible95 As Label
     Friend WithEvents lbTotal95 As Label
     Friend WithEvents TabPageComandes As TabPage
@@ -2770,7 +2570,7 @@ Partial Class Form1
     Friend WithEvents dgvPreuAdblue As DataGridView
     Friend WithEvents dgvPreuDiesel As DataGridView
     Friend WithEvents dgvPreuGas98 As DataGridView
-    Friend WithEvents DataGridView6 As DataGridView
+    Friend WithEvents dgvComandesRebudes As DataGridView
     Friend WithEvents GasolineraDataSetBindingSource As BindingSource
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
@@ -2778,39 +2578,16 @@ Partial Class Form1
     Friend WithEvents btBuscarComandes As Button
     Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents Button18 As Button
+    Friend WithEvents btModificarPreu As Button
     Friend WithEvents tbImport As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents COMANDABindingSource As BindingSource
     Friend WithEvents COMANDATableAdapter As GasolineraDataSetTableAdapters.COMANDATableAdapter
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents DataGridView8 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn30 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn32 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView7 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
-    Friend WithEvents IdcomandaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IddipositDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuantitatDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ImportDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DatacomandaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DatasubministramentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstatDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btCancelarComanda As Button
+    Friend WithEvents dgvComandesCancelades As DataGridView
+    Friend WithEvents dgvComandesProces As DataGridView
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker7 As DateTimePicker
     Friend WithEvents Label26 As Label
@@ -2846,9 +2623,33 @@ Partial Class Form1
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents PreuDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn30 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents IdcomandaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IddipositDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantitatDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ImportDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DatacomandaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DatasubministramentDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents preu As DataGridViewTextBoxColumn
     Friend WithEvents DatainiciDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DatafiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents btPlenarDiposit As Button
+    Friend WithEvents TimerForaDeServei As Timer
+    Friend WithEvents SortidorTableAdapter As GasolineraDataSetTableAdapters.SORTIDORTableAdapter
+    Friend WithEvents DipositS_SORTIDORTableAdapter As GasolineraDataSetTableAdapters.DIPOSITS_SORTIDORTableAdapter
 End Class

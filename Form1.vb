@@ -1,6 +1,9 @@
 ﻿Public Class Form1
     Private Const ID_ENERGIA = "5"
     Private _idPreuCombustible As String = ""
+    Dim ticksForaDeServei As Integer = 0
+    Dim idSortidor As Integer = 0
+
     Private Sub PictureBox_MouseHover(sender As Object, e As EventArgs) Handles pbSortidor1.MouseHover, pbSortidor2.MouseHover, pbSortidor3.MouseHover, pbSortidor4.MouseHover, pbSortidor5.MouseHover, pbSortidor6.MouseHover
         Dim pbSeleccionada As PictureBox = DirectCast(sender, PictureBox)
         pbSeleccionada.BorderStyle = BorderStyle.Fixed3D
@@ -24,9 +27,21 @@
             ActualitzarInfoDiposits()
         ElseIf TabControl1.SelectedIndex = 2
             ActualitzarInfoEnergia()
+        ElseIf TabControl1.SelectedIndex = 4
+            CarregarComandes()
         ElseIf TabControl1.SelectedIndex = 5
             CarregarDGV()
         End If
+    End Sub
+
+    Private Sub CarregarComandes()
+        Try
+            dgvComandesRebudes.DataSource = COMANDATableAdapter.GetComandesByEstat("Rebut")
+            dgvComandesProces.DataSource = COMANDATableAdapter.GetComandesByEstat("En procés")
+            dgvComandesCancelades.DataSource = COMANDATableAdapter.GetComandesByEstat("Cancel·lat")
+        Catch ex As Exception
+            Console.Write("Error al carregar les dades.")
+        End Try
     End Sub
 
     Private Sub CarregarDGV()
@@ -250,7 +265,7 @@
         e.Handled = True
     End Sub
 
-    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+    Private Sub btModificarPreu_Click(sender As Object, e As EventArgs) Handles btModificarPreu.Click
         If _idPreuCombustible.Length > 0 AndAlso tbImport.TextLength > 0 Then
 
             Try
@@ -267,6 +282,66 @@
             MessageBox.Show("Si us plau, selecciona un combustible", "Combustible no seleccionat", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ElseIf tbImport.TextLength <= 0
             MessageBox.Show("Si us plau, introdueix un import", "Import no vàlid", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub btCancelarComanda_Click(sender As Object, e As EventArgs) Handles btCancelarComanda.Click
+        Dim fila As DataGridViewRow
+        Dim idComanda As Integer
+
+        If dgvComandesProces.RowCount > 0 Then
+            fila = dgvComandesProces.SelectedRows(0)
+            idComanda = fila.Cells(0).Value
+
+            Try
+                COMANDATableAdapter.UpdateToCancelat(idComanda)
+                CarregarComandes()
+            Catch ex As Exception
+                Console.Write("No s'ha pogut actualitzar l'estat de la comanda")
+            End Try
+        End If
+    End Sub
+
+    Private Sub btPlenarDiposit_Click(sender As Object, e As EventArgs) Handles btPlenarDiposit.Click
+        Dim fila As DataGridViewRow
+        Dim idComanda As Integer
+        Dim idDiposit As Integer
+        Dim quantitat As Double
+
+        If dgvComandesProces.RowCount > 0 Then
+            fila = dgvComandesProces.SelectedRows(0)
+            idComanda = fila.Cells(0).Value
+            idDiposit = fila.Cells(1).Value
+            quantitat = fila.Cells(2).Value
+
+            Try
+                COMANDATableAdapter.UpdateToRebut(idComanda)
+                DipositTableAdapter.UpdateEmplenarDiposit(quantitat, idDiposit)
+                idSortidor = DipositS_SORTIDORTableAdapter.SelectSortidorFromDiposit(idDiposit)
+                CarregarComandes()
+
+                TimerForaDeServei.Start()
+                SortidorTableAdapter.UpdateEstatForaServei(idSortidor)
+
+            Catch ex As Exception
+                Console.Write("No s'ha pogut actualitzar l'estat de la comanda")
+            End Try
+        End If
+    End Sub
+
+    Private Sub TimerForaDeServei_Tick(sender As Object, e As EventArgs) Handles TimerForaDeServei.Tick
+        ticksForaDeServei += 1
+
+        If ticksForaDeServei >= 60 Then
+            ticksForaDeServei = 0
+            TimerForaDeServei.Stop()
+
+            Try
+                SortidorTableAdapter.UpdateEstatDisponible(idSortidor)
+                idSortidor = 0
+            Catch ex As Exception
+                Console.Write("Error al actualitzar informació del sortidor!")
+            End Try
         End If
     End Sub
 End Class

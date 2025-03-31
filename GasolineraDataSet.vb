@@ -4,6 +4,9 @@ Partial Class GasolineraDataSet
 End Class
 
 Namespace GasolineraDataSetTableAdapters
+    Partial Public Class DIPOSITTableAdapter
+    End Class
+
     Partial Public Class HISTORIAL_PREUSTableAdapter
     End Class
 

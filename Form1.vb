@@ -357,8 +357,13 @@
 
     Private Sub btInformeData_Click(sender As Object, e As EventArgs) Handles btInformeData.Click
         Try
-            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetAllByData(dataIniciInforme.Value, dataFiInforme.Value)
-            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetComandesByData(dataIniciInforme.Value, dataFiInforme.Value)
+            If informeFiltrarCombustible Then
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectAllByDataCombustible(dataIniciInforme.Value, dataFiInforme.Value, informeCombustible)
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesDataCombustible(dataIniciInforme.Value, dataFiInforme.Value, informeCombustible)
+            Else
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetAllByData(dataIniciInforme.Value, dataFiInforme.Value)
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetComandesByData(dataIniciInforme.Value, dataFiInforme.Value)
+            End If
             calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
         Catch ex As Exception
             Console.Write("Error al obtenir informació de les vendes!")
@@ -367,8 +372,28 @@
 
     Private Sub btInformeAny_Click(sender As Object, e As EventArgs) Handles btInformeAny.Click
         Try
-            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYear(AnyInforme.Value.Year)
-            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYear(AnyInforme.Value.Year)
+            If informeFiltrarCombustible Then
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYearCombustible(AnyInforme.Value.Year, informeCombustible)
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYearCombustible(AnyInforme.Value.Year, informeCombustible)
+            Else
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYear(AnyInforme.Value.Year)
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYear(AnyInforme.Value.Year)
+            End If
+            calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
+        Catch ex As Exception
+            Console.Write("Error al obtenir informació de les vendes!")
+        End Try
+    End Sub
+
+    Private Sub btInformeTrimestre_Click(sender As Object, e As EventArgs) Handles btInformeTrimestre.Click
+        Try
+            If informeFiltrarCombustible Then
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYearQuarterCombustible(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1), informeCombustible)
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYearTrimestreCombustible(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1), informeCombustible)
+            Else
+                dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYearQuarter(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
+                dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYearTrimestre(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
+            End If
             calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
         Catch ex As Exception
             Console.Write("Error al obtenir informació de les vendes!")
@@ -376,28 +401,18 @@
     End Sub
 
     Private Sub calcularBeneficis(dgvIngressos As DataGridView, dgvDespeses As DataGridView)
-        Dim ingressos As Integer = 0
+        Dim ingressos As Double = 0
         For Each row As DataGridViewRow In dgvIngressos.Rows
             ingressos += row.Cells(4).Value
         Next
 
-        Dim despeses As Integer = 0
+        Dim despeses As Double = 0
         For Each row As DataGridViewRow In dgvDespeses.Rows
             despeses += row.Cells(3).Value
         Next
 
         If dgvInformesBeneficis.RowCount > 0 Then dgvInformesBeneficis.Rows.RemoveAt(0)
         dgvInformesBeneficis.Rows.Insert(0, ingressos.ToString, despeses.ToString, (ingressos - despeses).ToString)
-    End Sub
-
-    Private Sub btInformeTrimestre_Click(sender As Object, e As EventArgs) Handles btInformeTrimestre.Click
-        Try
-            dgvInformesIngressos.DataSource = SubministramentTableAdapter.GetSelectSubministramentYearQuarter(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
-            dgvInformesDespeses.DataSource = COMANDATableAdapter.GetSelectComandesYearTrimestre(AnyInforme.Value.Year, (comboInformeTrimestre.SelectedIndex + 1))
-            calcularBeneficis(dgvInformesIngressos, dgvInformesDespeses)
-        Catch ex As Exception
-            Console.Write("Error al obtenir informació de les vendes!")
-        End Try
     End Sub
 
     Private Sub btEsborrarInforme_Click(sender As Object, e As EventArgs) Handles btEsborrarInforme.Click
